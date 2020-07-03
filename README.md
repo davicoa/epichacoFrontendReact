@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### `1_ Libreria apexcharts`
+npm install --save react-apexcharts apexcharts
+
+### `2_ Libreria spinner de carga`
+npm install --save react-spinners
+
+### `3_ Libreria react-router-dom`
+npm install --save react-router-dom
+
+### `4_ datePicker`
+npm install react-datepicker --save
+

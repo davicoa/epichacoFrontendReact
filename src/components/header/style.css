@@ -1,0 +1,30 @@
+.headerContainer {
+  flex-direction: column;
+}
+.logoHeaderContainer {
+  margin-top: 0%;
+  height: 4em;
+}
+.logoHeader {
+  background: url(../../images/header.png) no-repeat;
+  background-size: 100%;
+  width: 28em;
+  height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.fullCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+@media (max-width: 600px) {
+  .logoHeader {
+    background: url(../../images/headerLogo.png) no-repeat;
+    background-size: 100%;
+    width: 10em;
+    height: 3em;
+    margin: auto;
+  }
+}

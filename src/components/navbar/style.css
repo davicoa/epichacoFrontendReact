@@ -1,0 +1,19 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 3em;
+  background-color: rgba(245, 245, 245, 0.938);
+  align-items: center;
+}
+nav {
+  cursor: pointer;
+  font-family: Arial;
+  color: #4b4b4b;
+  transition: color 0.4s ease 0s;
+  padding-left: 2em;
+  padding-right: 5em;
+}
+ul {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
