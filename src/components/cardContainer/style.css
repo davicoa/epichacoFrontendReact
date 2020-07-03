@@ -1,0 +1,5 @@
+.containerCards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 4em 6.5em 4em;
+}
