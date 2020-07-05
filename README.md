@@ -79,3 +79,12 @@ npm install --save react-router-dom
 ### `4_ datePicker`
 npm install react-datepicker --save
 
+### `5_ auth`
+npm install react-jwt-auth
+
+### `6_ axios`
+npm install axios
+
+### `7_ axios`
+npm install react-validation validator
+

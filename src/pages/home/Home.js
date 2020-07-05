@@ -1,9 +1,10 @@
 import React from "react"
-import Header from 'components/header/Header'
-import Footer from 'components/footer/Footer'
-import Navbar from 'components/navbar/Navbar'
-import CardContainer from 'components/cardContainer/CardContainer'
-//import Admin from 'pages/Form/Admin'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar'
+import CardContainer from '../../components/CardContainer/CardContainer'
+import Login from '../../components/Login/Login';
+import Admin from 'pages/Form/Admin'
 import '../../App.css'
 import {
   BrowserRouter as Router,
@@ -27,7 +28,7 @@ const Home = () => {
               {/* <Login /> */}
             </Route>
             <Route path="/admin">
-             {/*  <Admin /> */}
+              <Admin />
             </Route>
           </Switch>
         </div>
