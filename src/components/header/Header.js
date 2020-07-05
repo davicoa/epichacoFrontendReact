@@ -11,11 +11,11 @@ const Header = () => {
         </div>
       </div>
       {user && (
-        <div>
-          <span>logout</span>
+        <div className="logoutAdministrar">
           {user.roles.some(role => role === "ROLE_ADMIN" || role === "ROLE_MODERATOR") && (
-            <span>Administtrar </span>
+            <span className="logoutAdministrar2"> Administrar </span>
           )}
+          <span className="logoutAdministrar2">Logout</span>
         </div>
       )}
     </header>

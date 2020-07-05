@@ -31,14 +31,7 @@ const Faena = () => {
 
     return (
         <div className="formContainer">
-            <div className="divContaniner">
-                <p className="textinput">Faena:</p>
-                <select>
-                    <option>La primera opción</option>
-                    <option>La segunda opción</option>
-                    <option>La tercera opción</option>
-                </select>
-            </div>
+            <span className="tituloDatoACargar">Faena</span>
             <form>
                 <div className="divContaniner">
                     <p className="textinput">Fecha:</p>

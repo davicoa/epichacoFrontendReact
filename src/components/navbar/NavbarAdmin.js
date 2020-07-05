@@ -5,7 +5,7 @@ const NavbarAdmin = props => {
     return (
         <nav className="navbarContainer">
             <ul>
-                <span
+                <span 
                     onClick={() => props.screen('produccionprimaria')}
                 >
                     Produccion Primaria
@@ -38,7 +38,7 @@ const NavbarAdmin = props => {
             <span>|</span>
             <ul>
                 <span
-                    onClick={() => props.screen('consumo/servicios')}
+                    onClick={() => props.screen('consumoServicios')}
                 >
                     Consumo/Servicios
                     </span>
