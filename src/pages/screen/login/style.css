@@ -1,0 +1,69 @@
+label {
+  display: block;
+  margin-top: 10px;
+  padding-bottom: 0.5vh;
+  font-size: 18px;
+  color: #888888;
+}
+
+.inputData {
+  font: normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,
+    sans-serif;
+  font-size: 16px;
+  width: 30vw;
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+  border-left-width: 0 !important;
+  border-bottom: 1px solid;
+  border-color: rgba(212, 212, 210, 1);
+  height: 4vh;
+  padding: 2px;
+}
+.card-container.card {
+  max-width: 350px;
+  padding: 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+}
+
+.loginheader {
+  align-items: center;
+  font-size: 48px;
+  line-height: 0.8em;
+  margin-bottom: 23px;
+  margin-top: 10px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  color: #212121;
+}
+
+.bottonLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  color: #ffffff;
+  width: 100%;
+  background-color: rgba(0, 229, 201, 1);
+  cursor: pointer;
+  border-radius: 1px;
+  font-size: 24px;
+  padding: 1vh;
+}
+.bottonLogin:hover {
+  background-color: rgba(0, 229, 202, 0.726);
+}
+
+.alert-danger{
+    color: red;
+    margin: 0.5vh;
+}

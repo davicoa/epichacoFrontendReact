@@ -4,12 +4,13 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "services/AuthService";
+import "./style.css"
 
 const required = value => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
-        This field is required!
+      <div className="alert-danger" role="alert">
+        ¡Este campo es requerido!
       </div>
     );
   }
@@ -82,11 +83,8 @@ export default class Login extends Component {
     return (
       <div className="col-md-12">
         <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
+
+          <span className="loginheader">Iniciar sesión</span>
 
           <Form
             onSubmit={this.handleLogin}
@@ -94,11 +92,11 @@ export default class Login extends Component {
               this.form = c;
             }}
           >
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
+            <div className="">
+              <label >Usuario</label>
               <Input
-                type="text"
-                className="form-control"
+                type="texto"
+                className="inputData"
                 name="username"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
@@ -106,11 +104,11 @@ export default class Login extends Component {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
+            <div className="">
+              <label >Clave</label>
               <Input
                 type="password"
-                className="form-control"
+                className="inputData"
                 name="password"
                 value={this.state.password}
                 onChange={this.onChangePassword}
@@ -118,15 +116,15 @@ export default class Login extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className="">
               <button
-                className="btn btn-primary btn-block"
+                className="bottonLogin"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Login</span>
+                <span>Iniciar sesión</span>
               </button>
             </div>
 
