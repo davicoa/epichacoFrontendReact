@@ -1,0 +1,95 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5em 4em 6.5em 4em;
+}
+
+input[type="text"] {
+  height: 4vh;
+  width: 14.5vw;
+  margin-bottom: 0.3em;
+}
+
+select {
+  height: 4.5vh;
+  width: 15vw;
+  margin-bottom: 0.3em;
+}
+
+button[type="button"] {
+  margin-bottom: 0.3em;
+}
+
+.botton {
+  background-color: rgba(92, 187, 209, 1);
+  border: none;
+  color: white;
+  padding: 0.4em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.botton:hover {
+  background-color: rgb(128, 187, 200);
+  border: 0.1em rgba(92, 187, 209, 1) solid;
+}
+
+.divContaniner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textinput {
+  padding-right: 1em;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.mainMenu {
+  flex: 1;
+  border-style: double;
+  margin-top: 5vh;
+}
+
+.mainForm {
+  flex: 3;
+  margin: 1vh;
+  border-style: double;
+}
+
+.menuContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .textinput {
+    display: none;
+  }
+  input[type="text"] {
+    height: 4vh;
+    width: 40vw;
+    margin-bottom: 0.3em;
+  }
+  select {
+    height: 4.5vh;
+    width: 42vw;
+    margin-bottom: 0.3em;
+  }
+}

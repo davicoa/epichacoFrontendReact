@@ -1,40 +1,43 @@
-import React from "react"
-import Header from 'components/header/Header'
-import Footer from 'components/footer/Footer'
-import Navbar from 'components/navbar/Navbar'
-import CardContainer from 'components/cardContainer/CardContainer'
-//import Admin from 'pages/Form/Admin'
-import '../../App.css'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom"
+import React, { useEffect } from "react";
+import Header from "components/header/Header";
+import Footer from "components/footer/Footer";
+import MainView from "pages/screen/main/MainView";
+import Login from "pages/screen/login/Login";
+import Admin from "pages/screen/admin/Admin";
+import "../../App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import isLoginIn from "services/VerifyToken";
 
 const Home = () => {
-
+  const user = JSON.parse(localStorage.getItem('user'))
   return (
-    <div className="App" >
+    <div className="App">
       <Header />
       <Router>
         <div>
           <Switch>
-            <Route exact path="/">
-              
-              <Navbar />
-              <CardContainer /> 
-             
-              {/* <Login /> */}
-            </Route>
-            <Route path="/admin">
-             {/*  <Admin /> */}
-            </Route>
+            {isLoginIn() ?
+              user.roles.some(role => role === "ROLE_ADMIN")?
+              <div>
+                <Route exact path="/">
+                  <MainView />
+                </Route>
+                <Route path="/admin">
+                  <Admin />
+                </Route>
+              </div>
+              :
+              <Route exact path="/">
+                <MainView />
+              </Route>
+             :
+              <Login />
+            }
           </Switch>
         </div>
       </Router>
       <Footer />
     </div>
-  )
-
-}
-export default Home
+  );
+};
+export default Home;
