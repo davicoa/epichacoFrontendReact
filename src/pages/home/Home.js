@@ -17,7 +17,7 @@ const Home = () => {
         <div>
           <Switch>
             {isLoginIn() ?
-              user.roles.some(role => role === "ROLE_ADMIN")?
+              user.roles.some(role => role === "ROLE_ADMIN" || role === "ROLE_MODERATOR")?
               <div>
                 <Route exact path="/">
                   <MainView />
