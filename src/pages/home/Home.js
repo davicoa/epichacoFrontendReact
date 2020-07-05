@@ -23,7 +23,7 @@ const Home = () => {
                   <MainView />
                 </Route>
                 <Route path="/admin">
-                  <MainView />
+                  <Admin />
                 </Route>
               </div>
               :
