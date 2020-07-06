@@ -12,10 +12,13 @@ import AdminService from "services/AdminService";
 
 const Main = () => {
   const [screen, setScreen] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const saveToDb = (route, body) => {
-    AdminService.adminPost(route ,body);
-  }
+  const saveToDb = async (route, body)  => {
+    setLoading(true)
+    await AdminService.adminPost(route ,body)
+    setLoading(false)
+  };
 
   const screenHandler = (val) => {
     setScreen(val);
@@ -40,7 +43,10 @@ const Main = () => {
           ) : screen === "Faena" ? (
             <Faena />
           ) : (
-            <ForestalPrimario saveToDb={saveToDb} />
+            <ForestalPrimario 
+              saveToDb={saveToDb} 
+              loading = {loading}
+            />
           )}
         </div>
       </div>

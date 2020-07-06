@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
@@ -46,62 +47,72 @@ const ForestalPrimario = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Forestal Primario</span>
-      <form onSubmit={savetobd}>
-        <div className="divContaniner">
-          <p className="textinput">Fecha:</p>
-          <DatePicker
-            className="divContaniner"
-            selected={fecha}
-            name="fecha"
-            onChange={setImputHandler}
-          />
-        </div>
-        <div className="divContaniner">
-          <p className="textinput">producto:</p>
-          <input
-            placeholder="producto"
-            name="producto"
-            value={producto}
-            onChange={setImputHandler}
-            type="text"
-          />
-        </div>
-        <div className="divContaniner">
-          <p className="textinput">Toneladas:</p>
-          <input
-            placeholder="Toneladas"
-            name="toneladas"
-            value={toneladas}
-            onChange={setImputHandler}
-            type="text"
-          />
-        </div>
-        <div className="divContaniner">
-          <p className="textinput">Var mens:</p>
-          <input
-            placeholder="Var mens"
-            name="var_mens"
-            value={var_mens}
-            onChange={setImputHandler}
-            type="text"
-          />
-        </div>
-        <div className="divContaniner">
-          <p className="textinput">Var i.a.:</p>
-          <input
-            placeholder="Var i.a."
-            name="var_ia"
-            value={var_ia}
-            onChange={setImputHandler}
-            type="text"
-          />
-        </div>
-        <div className="divContaninerCenter">
-          <button className="botton" type="submit">
-            Guardar
-          </button>
-        </div>
-      </form>
+       {props.loading?
+          <ClipLoader
+          css={"display: block", "margin: 0 auto", "border-color: blue"}
+          size={150}
+          color={"#123abc"}
+          loading={props.loading}
+        />
+        :
+        <form onSubmit={savetobd}>
+          <div className="divContaniner">
+            <p className="textinput">Fecha:</p>
+            <DatePicker
+              className="divContaniner"
+              selected={fecha}
+              name="fecha"
+              onChange={setImputHandler}
+            />
+          </div>
+          <div className="divContaniner">
+            <p className="textinput">producto:</p>
+            <input
+              placeholder="producto"
+              name="producto"
+              value={producto}
+              onChange={setImputHandler}
+              type="text"
+            />
+          </div>
+          <div className="divContaniner">
+            <p className="textinput">Toneladas:</p>
+            <input
+              placeholder="Toneladas"
+              name="toneladas"
+              value={toneladas}
+              onChange={setImputHandler}
+              type="text"
+            />
+          </div>
+          <div className="divContaniner">
+            <p className="textinput">Var mens:</p>
+            <input
+              placeholder="Var mens"
+              name="var_mens"
+              value={var_mens}
+              onChange={setImputHandler}
+              type="text"
+            />
+          </div>
+          <div className="divContaniner">
+            <p className="textinput">Var i.a.:</p>
+            <input
+              placeholder="Var i.a."
+              name="var_ia"
+              value={var_ia}
+              onChange={setImputHandler}
+              type="text"
+            />
+          </div>
+          <div className="divContaninerCenter">
+            <button className="botton" type="submit">
+              Guardar
+            </button>
+          </div>
+        </form>
+      }
+      
     </div>
   );
 };
