@@ -28,7 +28,7 @@ const ForestalPrimario = () => {
                 break;
         }
     }
-    
+
     return (
         <div className="formContainer">
             <span className="tituloDatoACargar">Forestal Primario</span>
@@ -71,12 +71,14 @@ const ForestalPrimario = () => {
                         type="text"
                     />
                 </div>
-                <button
-                    className="botton"
-                    type="submit"
-                >
-                    Guardar
+                <div className="divContaninerCenter">
+                    <button
+                        className="botton"
+                        type="submit"
+                    >
+                        Guardar
                 </button>
+                </div>
             </form>
         </div>
     );

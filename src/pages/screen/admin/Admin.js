@@ -24,7 +24,7 @@ const Admin = () => {
             {screen === 'consumoServicios' && <MainConsumoServicios />}
             {screen === '' &&
                 <div className="defaultScreen">
-                    <span>BETA: Area para Carga de datos</span>
+                    <span>BETA en construcción: Area para Carga de datos</span>
                 </div>
             }
 

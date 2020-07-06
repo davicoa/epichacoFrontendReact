@@ -11,7 +11,7 @@ const Faena = () => {
     const [varIA, setVarIA] = useState("")
 
     const onDateChangeHandler = newDate => {
-       //setDate(newDate)
+        //setDate(newDate)
     }
     const setImputHandler = e => {
         switch (e.target.name) {
@@ -33,7 +33,7 @@ const Faena = () => {
         <div className="formContainer">
             <span className="tituloDatoACargar">Faena</span>
             <form>
-                <div className="divContaniner">
+                <div className="divContaninerCenter">
                     <p className="textinput">Fecha:</p>
                     <DatePicker
                         className="divContaniner"
@@ -41,42 +41,69 @@ const Faena = () => {
                         onChange={onDateChangeHandler}
                     />
                 </div>
-                <div className="divContaniner">
-                    <p className="textinput">Toneladas:</p>
+                <div className="divExterno">
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">Chaco:</p>
+                            <input
+                                placeholder="Chaco"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Var mens Chaco</p>
+                            <input
+                                placeholder="Var mens Chaco"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Var i.a. Chaco</p>
+                            <input
+                                placeholder="Var i.a. Chaco"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">Nación:</p>
+                            <input
+                                placeholder="Nación"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Var mens Nación</p>
+                            <input
+                                placeholder="Var mens Nación"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Var i.a. Nación</p>
+                            <input
+                                placeholder="Var i.a. Nación"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="divContaninerCenter">
+                    <p className="textinput">Categorías</p>
                     <input
-                        placeholder="Toneladas"
-                        name="tonelada"
-                        value={tonelada}
-                        onChange={setImputHandler}
+                        placeholder="Categorías"
                         type="text"
                     />
                 </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var mens:</p>
-                    <input
-                        placeholder="Var mens"
-                        name="varMens"
-                        value={varMens}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var i.a.:</p>
-                    <input
-                        placeholder="Var i.a."
-                        name="varIA"
-                        value={varIA}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <button
-                    className="botton"
-                    type="submit"
-                >
-                    Guardar
+                <div className="divContaninerCenter">
+                    <button
+                        className="botton"
+                        type="submit"
+                    >
+                        Guardar
                 </button>
+                </div>
             </form>
         </div>
     );

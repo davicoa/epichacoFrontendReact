@@ -28,19 +28,12 @@ const StockBovinoPorcino = () => {
                 break;
         }
     }
-    
+
     return (
         <div className="formContainer">
-            <div className="divContaniner">
-                <p className="textinput">StockBovinoPorcino:</p>
-                <select>
-                    <option>La primera opción</option>
-                    <option>La segunda opción</option>
-                    <option>La tercera opción</option>
-                </select>
-            </div>
-            <form>
-                <div className="divContaniner">
+            <span className="tituloDatoACargar">Stock Bovino/Porcino</span>
+            <form >
+                <div className="divContaninerCenter">
                     <p className="textinput">Fecha:</p>
                     <DatePicker
                         className="divContaniner"
@@ -48,42 +41,118 @@ const StockBovinoPorcino = () => {
                         onChange={onDateChangeHandler}
                     />
                 </div>
-                <div className="divContaniner">
-                    <p className="textinput">Toneladas:</p>
-                    <input
-                        placeholder="Toneladas"
-                        name="tonelada"
-                        value={tonelada}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
+                <div className="divExterno">
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">sector_id</p>
+                            <input
+                                placeholder="sector_id"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">sector_nombre</p>
+                            <input
+                                placeholder="sector_nombre"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">variable_id</p>
+                            <input
+                                placeholder="variable_id"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">actividad_producto_nombre</p>
+                            <input
+                                placeholder="actividad_producto_nombre"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Indicador</p>
+                            <input
+                                placeholder="Indicador"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">unidad_de_medida</p>
+                            <input
+                                placeholder="unidad_de_medida"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">fuerte</p>
+                            <input
+                                placeholder="fuerte"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">frecuencia_nombre</p>
+                            <input
+                                placeholder="frecuencia_nombre"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">cobertura_nombre</p>
+                            <input
+                                placeholder="cobertura_nombre"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">alcance_tipo</p>
+                            <input
+                                placeholder="alcance_tipo"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">alcance_id</p>
+                            <input
+                                placeholder="alcance_id"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">alcance_nombre</p>
+                            <input
+                                placeholder="alcance_nombre"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">valor</p>
+                            <input
+                                placeholder="valor"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Total Cabezas</p>
+                            <input
+                                placeholder="Total Cabezas"
+                                type="text"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var mens:</p>
-                    <input
-                        placeholder="Var mens"
-                        name="varMens"
-                        value={varMens}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var i.a.:</p>
-                    <input
-                        placeholder="Var i.a."
-                        name="varIA"
-                        value={varIA}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <button
-                    className="botton"
-                    type="submit"
-                >
-                    Guardar
+                <div className="divContaninerCenter">
+                    <button
+                        className="botton"
+                        type="submit"
+                    >
+                        Guardar
                 </button>
+                </div>
             </form>
         </div>
     );

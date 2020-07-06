@@ -28,64 +28,113 @@ const PreciosGanaderos = () => {
                 break;
         }
     }
-    
+
     return (
         <div className="formContainer">
-            <div className="divContaniner">
-                <p className="textinput">PreciosGanaderos:</p>
-                <select>
-                    <option>La primera opción</option>
-                    <option>La segunda opción</option>
-                    <option>La tercera opción</option>
-                </select>
-            </div>
+            <span className="tituloDatoACargar">Precios Ganaderos</span>
             <form>
-                <div className="divContaniner">
-                    <p className="textinput">Fecha:</p>
-                    <DatePicker
-                        className="divContaniner"
-                        selected={date}
-                        onChange={onDateChangeHandler}
-                    />
+                <div className="divExterno">
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">Fecha:</p>
+                            <DatePicker
+                                className="divContaniner"
+                                selected={date}
+                                onChange={onDateChangeHandler}
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Vaca abasto</p>
+                            <input
+                                placeholder="Vaca abasto"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Vaca ivernada</p>
+                            <input
+                                placeholder="Vaca ivernada"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Vaquilla preñana</p>
+                            <input
+                                placeholder="Vaquilla preñana"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Novillo</p>
+                            <input
+                                placeholder="Novillo"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Novillitos</p>
+                            <input
+                                placeholder="Novillitos"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div className="divInterno">
+                        <div className="divContaniner">
+                            <p className="textinput">Zona</p>
+                            <input
+                                placeholder="Zona"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Vaquilla</p>
+                            <input
+                                placeholder="Vaquilla"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Toro</p>
+                            <input
+                                placeholder="Toro"
+                                type="text"
+                            />
+                        </div>
+                        
+                        <div className="divContaniner">
+                            <p className="textinput">Ternero</p>
+                            <input
+                                placeholder="Ternero"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Ternera</p>
+                            <input
+                                placeholder="Ternera"
+                                type="text"
+                            />
+                        </div>
+                        <div className="divContaniner">
+                            <p className="textinput">Ternero/as</p>
+                            <input
+                                placeholder="Ternero/as"
+                                type="text"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className="divContaniner">
-                    <p className="textinput">Toneladas:</p>
-                    <input
-                        placeholder="Toneladas"
-                        name="tonelada"
-                        value={tonelada}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var mens:</p>
-                    <input
-                        placeholder="Var mens"
-                        name="varMens"
-                        value={varMens}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <div className="divContaniner">
-                    <p className="textinput">Var i.a.:</p>
-                    <input
-                        placeholder="Var i.a."
-                        name="varIA"
-                        value={varIA}
-                        onChange={setImputHandler}
-                        type="text"
-                    />
-                </div>
-                <button
-                    className="botton"
-                    type="submit"
-                >
-                    Guardar
+                <div className="divContaninerCenter">
+                    <button
+                        className="botton"
+                        type="submit"
+                    >
+                        Guardar
                 </button>
+                </div>
             </form>
-        </div>
+        </div >
     );
 }
 export default PreciosGanaderos

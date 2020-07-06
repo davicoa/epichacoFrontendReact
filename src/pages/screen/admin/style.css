@@ -4,9 +4,21 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 5em 4em 6.5em 4em;
 }
 
+.divExterno{
+  display: flex;
+  flex-direction: row;
+}
+.divInterno{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5vh;
+}
+.divContaninerCenter{
+  display: flex;
+  justify-content: center;
+}
 input[type="text"] {
   height: 4vh;
   width: 14.5vw;
@@ -55,7 +67,6 @@ button[type="button"] {
 .mainContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
 }
 
