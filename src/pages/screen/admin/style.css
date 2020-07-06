@@ -109,6 +109,9 @@ button[type="button"] {
   border: rgba(92, 187, 209, 1) 0.2vh solid;
 }
 
+.divMsgBottom{
+  padding-top: 3vh;
+}
 
 .tituloDatoACargar{
   font-size: 6vh;

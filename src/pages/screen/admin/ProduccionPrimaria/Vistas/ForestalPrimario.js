@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const ForestalPrimario = (props) => {
+
   const [fecha, setFecha] = useState(new Date());
   const [producto, setProducto] = useState("");
   const [toneladas, setToneladas] = useState("");
@@ -112,7 +113,11 @@ const ForestalPrimario = (props) => {
           </div>
         </form>
       }
-      
+      <div className="divMsgBottom">
+        <span style={{color: props.msg==='Fallo en la carga'?'red':'green'}}>
+          {props.msg}
+        </span>
+      </div>
     </div>
   );
 };
