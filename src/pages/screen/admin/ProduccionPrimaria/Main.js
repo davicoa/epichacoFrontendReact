@@ -16,7 +16,8 @@ const Main = () => {
 
   const saveToDb = async (route, body)  => {
     setLoading(true)
-    await AdminService.adminPost(route ,body)
+    const res = await AdminService.adminPost(route ,body)
+    console.log(res);
     setLoading(false)
   };
 
