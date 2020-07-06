@@ -42,6 +42,14 @@ const ForestalPrimario = () => {
                     />
                 </div>
                 <div className="divContaniner">
+                    <p className="textinput">producto:</p>
+                    <input
+                        placeholder="Toneladas"
+                        name="tonelada"
+                        type="text"
+                    />
+                </div>
+                <div className="divContaniner">
                     <p className="textinput">Toneladas:</p>
                     <input
                         placeholder="Toneladas"
