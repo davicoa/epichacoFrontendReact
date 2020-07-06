@@ -1,10 +1,10 @@
 import axios from "axios"
-const API_URL = "http://www.epichaco.tk/api/auth/"
+import API_URL from "constant/apiUrl"
 
 class AuthService {
   login(username, password) {
     return axios
-      .post(API_URL + "signin", {
+      .post(API_URL + "auth/signin", {
         username,
         password
       })

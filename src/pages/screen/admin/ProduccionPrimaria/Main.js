@@ -8,25 +8,14 @@ import PreciosGanaderos from "./Vistas/PreciosGanaderos";
 import StockBovinoPorcino from "./Vistas/StockBovinoPorcino";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
+import AdminService from "services/AdminService";
 
 const Main = () => {
   const [screen, setScreen] = useState("");
 
-  const saveToDb = async (e) => {
-    e.preventDefault();
-    const rawResponse = await fetch(
-      "http://127.0.0.1:4000/api/produccionPrimaria",
-      {
-        method: "POST",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-          "X-Requested-With": "XMLHttpRequest",
-        },
-        body: JSON.stringify({}),
-      }
-    );
-  };
+  const saveToDb = (route, body) => {
+    AdminService.adminPost(route ,body);
+  }
 
   const screenHandler = (val) => {
     setScreen(val);
@@ -51,7 +40,7 @@ const Main = () => {
           ) : screen === "Faena" ? (
             <Faena />
           ) : (
-            <ForestalPrimario />
+            <ForestalPrimario saveToDb={saveToDb} />
           )}
         </div>
       </div>
