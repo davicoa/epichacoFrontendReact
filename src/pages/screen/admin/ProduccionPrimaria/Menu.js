@@ -5,14 +5,14 @@ const Menu = props => {
     return (
         <nav className="menuContainer">
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('')}
                 >
                     Forestal Primario
                 </span>
             </ul>
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('StockBovinoPorcino')}
                 >
                     Stock BovinoPorcino
@@ -20,7 +20,7 @@ const Menu = props => {
             </ul>
             
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('PreciosAgrosDiarios')}
                 >
                     Precios Agros Diarios
@@ -28,7 +28,7 @@ const Menu = props => {
             </ul>
             
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('PreciosAgrosMensuales')}
                 >
                     Precios Agros Mensuales
@@ -36,7 +36,7 @@ const Menu = props => {
             </ul>
             
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('PreciosGanaderos')}
                 >
                     Precios Ganaderos
@@ -44,7 +44,7 @@ const Menu = props => {
             </ul>
             
             <ul>
-                <span
+                <span className="menuProduccionprimaria"
                     onClick={() => props.screen('Faena')}
                 >
                     Faena

@@ -13,31 +13,21 @@ const Admin = () => {
         setScreen(val)
     }
     return (
-        <div>
+        <div className="screenPrimary">
             <NavbarAdmin
                 screen={screenHandler}
             />
-            {
-                (screen === 'produccionprimaria') ?
-                    <MainProduccionPrimaria />
-                    :
-                    (
-                        (screen === 'produccionindustrial') ?
-                            <MainProduccionIndustrial />
-                            :
-                            (
-                                (screen === 'imach') ?
-                                    <MainImach />
-                                    :
-                                    (
-                                        (screen === 'empleo') ?
-                                            <MainEmpleo />
-                                            :
-                                            <MainConsumoServicios />
-                                    )
-                            )
-                    )
+            {screen === 'produccionprimaria' && <MainProduccionPrimaria />}
+            {screen === 'produccionindustrial' && <MainProduccionIndustrial />}
+            {screen === 'imach' && <MainImach />}
+            {screen === 'empleo' && <MainEmpleo />}
+            {screen === 'consumoServicios' && <MainConsumoServicios />}
+            {screen === '' &&
+                <div className="defaultScreen">
+                    <span>BETA en construcción: Area para Carga de datos</span>
+                </div>
             }
+
         </div>
     )
 

@@ -8,24 +8,18 @@ import PreciosGanaderos from "./Vistas/PreciosGanaderos";
 import StockBovinoPorcino from "./Vistas/StockBovinoPorcino";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
+import AdminService from "services/AdminService";
 
 const Main = () => {
   const [screen, setScreen] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsd] = useState("");
 
-  const saveToDb = async (e) => {
-    e.preventDefault();
-    const rawResponse = await fetch(
-      "http://127.0.0.1:4000/api/produccionPrimaria",
-      {
-        method: "POST",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-          "X-Requested-With": "XMLHttpRequest",
-        },
-        body: JSON.stringify({}),
-      }
-    );
+  const saveToDb = async (route, body) => {
+    setLoading(true);
+    const res = await AdminService.adminPost(route, body);
+    setMsd(res);
+    setLoading(false);
   };
 
   const screenHandler = (val) => {
@@ -41,17 +35,41 @@ const Main = () => {
       <div className="mainForm">
         <div>
           {screen === "StockBovinoPorcino" ? (
-            <StockBovinoPorcino />
+            <StockBovinoPorcino
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosAgrosDiarios" ? (
-            <PreciosAgrosDiarios />
+            <PreciosAgrosDiarios
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosAgrosMensuales" ? (
-            <PreciosAgrosMensuales />
+            <PreciosAgrosMensuales
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosGanaderos" ? (
-            <PreciosGanaderos />
+            <PreciosGanaderos 
+              saveToDb={saveToDb} 
+              loading={loading}
+              msg={msg} 
+             />
           ) : screen === "Faena" ? (
-            <Faena />
+            <Faena 
+              saveToDb={saveToDb} 
+              loading={loading} 
+              msg={msg} 
+            />
           ) : (
-            <ForestalPrimario />
+            <ForestalPrimario 
+              saveToDb={saveToDb} 
+              loading={loading} 
+              msg={msg} 
+            />
           )}
         </div>
       </div>
