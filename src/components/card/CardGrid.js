@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-//import DataCard from "components/dataCard/DataCard";
-import Card from "components/dataCard/card"
+import DataCard from "components/dataCard/DataCard";
+//import Card from "components/dataCard/card"
 import LINK from "constant/Links";
 
 const CardGrid = () => {
@@ -10,7 +10,7 @@ const CardGrid = () => {
   const reloadCard = () => {
     setCards(
       LINK.map(
-        (element, i) => <div className="grid_item"><Card links={element} key={i} posicion={i} /></div> //i id dinamico
+        (element, i) => <div className="grid_item"><DataCard links={element} key={i} posicion={i} /></div> //i id dinamico
       )
     );
   };
