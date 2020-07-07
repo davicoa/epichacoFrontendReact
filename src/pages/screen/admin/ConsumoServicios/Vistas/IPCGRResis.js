@@ -35,7 +35,7 @@ const IPCGResis = props => {
   
     const savetobd = (e) => {
       e.preventDefault();
-      props.saveToDb("ipcgrresis", {
+      props.saveToDb("ipcgrResis", {
         fecha,
         sector,
         ipc,
