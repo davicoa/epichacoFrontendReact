@@ -35,7 +35,7 @@ const IPCGResis = props => {
   
     const savetobd = (e) => {
       e.preventDefault();
-      props.saveToDb("preciosAgroMensuales", {
+      props.saveToDb("ipcgrresis", {
         fecha,
         sector,
         ipc,

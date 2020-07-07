@@ -70,7 +70,7 @@ const Supermercado = props => {
 
      const savetobd = (e) => {
           e.preventDefault();
-          props.saveToDb("preciosGanaderos", {
+          props.saveToDb("supermercado", {
                fecha,
                producto,
                valor_sin_est_chaco,

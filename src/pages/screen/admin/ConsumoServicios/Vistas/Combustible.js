@@ -71,7 +71,7 @@ const Combustible = props => {
 
      const savetobd = (e) => {
           e.preventDefault();
-          props.saveToDb("preciosGanaderos", {
+          props.saveToDb("combustible", {
                fecha,
                producto,
                valor_sin_est_chaco,

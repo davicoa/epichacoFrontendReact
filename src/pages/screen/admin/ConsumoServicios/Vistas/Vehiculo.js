@@ -71,7 +71,7 @@ const Vehiculo = props => {
 
      const savetobd = (e) => {
           e.preventDefault();
-          props.saveToDb("preciosGanaderos", {
+          props.saveToDb("vehiculo", {
                fecha,
                categoria,
                chaco_original,

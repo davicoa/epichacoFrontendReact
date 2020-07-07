@@ -71,7 +71,7 @@ const Cemento = props => {
 
      const savetobd = (e) => {
           e.preventDefault();
-          props.saveToDb("preciosGanaderos", {
+          props.saveToDb("cemento", {
                fecha,
                producto,
                valor_sin_est_chaco,
