@@ -3,8 +3,8 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10vh;
-  background-color: rgb(212, 212, 212);
+  margin-bottom: 5vh;
+  background-color:#EBEBEB;
 }
 .grid_items > div {
   padding: 2px;
