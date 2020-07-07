@@ -7,11 +7,11 @@ const Supermercado = props => {
      const [fecha, setFecha] = useState(new Date())
      const [producto, setProducto] = useState("")
      const [valor_sin_est_chaco, setValor_sin_est_chaco] = useState("")
-     const [var_mens_s_e_chaco, setVar_mens_s_e_chaco] = useState("")
-     const [var_ia_s_e_chaco, setVar_ia_s_e_chaco] = useState("")
+     const [var_mens_chaco, setVar_mens_chaco] = useState("")
+     const [var_ia_chaco, setVar_ia_chaco] = useState("")
      const [valor_sin_est_nacion, setValor_sin_est_nacion] = useState("")
-     const [var_mens_s_e_nacion, setVar_mens_s_e_nacion] = useState("")
-     const [var_ia_s_e_nacion, setVar_ia_s_e_nacion] = useState("")
+     const [var_mens_nacion, setVar_mens_nacion] = useState("")
+     const [var_ia_nacion, setVar_ia_nacion] = useState("")
      const [valor_con_est_chaco, setValor_con_est_chaco] = useState("")
      const [var_mens_c_e_chaco, setVar_mens_c_e_chaco] = useState("")
      const [var_ia_c_e_chaco, setVar_ia_c_e_chaco] = useState("")
@@ -30,20 +30,20 @@ const Supermercado = props => {
                case "valor_sin_est_chaco":
                     setValor_sin_est_chaco(e.target.value);
                     break;
-               case "var_mens_s_e_chaco":
-                    setVar_mens_s_e_chaco(e.target.value);
+               case "var_mens_chaco":
+                    setVar_mens_chaco(e.target.value);
                     break;
-               case "var_ia_s_e_chaco":
-                    setVar_ia_s_e_chaco(e.target.value);
+               case "var_ia_chaco":
+                    setVar_ia_chaco(e.target.value);
                     break;
                case "valor_sin_est_nacion":
                     setValor_sin_est_nacion(e.target.value);
                     break;
-               case "var_mens_s_e_nacion":
-                    setVar_mens_s_e_nacion(e.target.value);
+               case "var_mens_nacion":
+                    setVar_mens_nacion(e.target.value);
                     break;
-               case "var_ia_s_e_nacion":
-                    setVar_ia_s_e_nacion(e.target.value);
+               case "var_ia_nacion":
+                    setVar_ia_nacion(e.target.value);
                     break;
                case "valor_con_est_chaco":
                     setValor_con_est_chaco(e.target.value);
@@ -74,11 +74,11 @@ const Supermercado = props => {
                fecha,
                producto,
                valor_sin_est_chaco,
-               var_mens_s_e_chaco,
-               var_ia_s_e_chaco,
+               var_mens_chaco,
+               var_ia_chaco,
                valor_sin_est_nacion,
-               var_mens_s_e_nacion,
-               var_ia_s_e_nacion,
+               var_mens_nacion,
+               var_ia_nacion,
                valor_con_est_chaco,
                var_mens_c_e_chaco,
                var_ia_c_e_chaco,
@@ -123,22 +123,22 @@ const Supermercado = props => {
                                              />
                                         </div>
                                         <div className="divContaniner">
-                                             <p className="textinput">var_mens_s_e_chaco</p>
+                                             <p className="textinput">var_mens_chaco</p>
                                              <input
-                                                  placeholder="var_mens_s_e_chaco"
+                                                  placeholder="var_mens_chaco"
                                                   type="text"
-                                                  value={var_mens_s_e_chaco}
-                                                  name="var_mens_s_e_chaco"
+                                                  value={var_mens_chaco}
+                                                  name="var_mens_chaco"
                                                   onChange={setImputHandler}
                                              />
                                         </div>
                                         <div className="divContaniner">
-                                             <p className="textinput">var_ia_s_e_chaco</p>
+                                             <p className="textinput">var_ia_chaco</p>
                                              <input
-                                                  placeholder="var_ia_s_e_chaco"
+                                                  placeholder="var_ia_chaco"
                                                   type="text"
-                                                  value={var_ia_s_e_chaco}
-                                                  name="var_ia_s_e_chaco"
+                                                  value={var_ia_chaco}
+                                                  name="var_ia_chaco"
                                                   onChange={setImputHandler}
                                              />
                                         </div>
@@ -197,22 +197,22 @@ const Supermercado = props => {
                                              />
                                         </div>
                                         <div className="divContaniner">
-                                             <p className="textinput">var_mens_s_e_nacion</p>
+                                             <p className="textinput">var_mens_nacion</p>
                                              <input
                                                   placeholder="var_mens_s_e_nacion"
                                                   type="text"
-                                                  value={var_mens_s_e_nacion}
-                                                  name="var_mens_s_e_nacion"
+                                                  value={var_mens_nacion}
+                                                  name="var_mens_nacion"
                                                   onChange={setImputHandler}
                                              />
                                         </div>
                                         <div className="divContaniner">
-                                             <p className="textinput">var_ia_s_e_nacion</p>
+                                             <p className="textinput">var_ia_nacion</p>
                                              <input
-                                                  placeholder="var_ia_s_e_nacion"
+                                                  placeholder="var_ia_nacion"
                                                   type="text"
-                                                  value={var_ia_s_e_nacion}
-                                                  name="var_ia_s_e_nacion"
+                                                  value={var_ia_nacion}
+                                                  name="var_ia_nacion"
                                                   onChange={setImputHandler}
                                              />
                                         </div>
