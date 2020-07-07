@@ -1,135 +1,283 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
-import "../../style.css"
+import DatePicker from "react-datepicker";
+import ClipLoader from "react-spinners/ClipLoader";
+import "react-datepicker/dist/react-datepicker.css";
+import "../../style.css";
 
 const StockBovinoPorcino = (props) => {
+  const [fecha, setFecha] = useState(new Date());
+  const [sector_id, setSector_id] = useState("");
+  const [sector_nombre, setSector_nombre] = useState("");
+  const [variable_id, setVariable_id] = useState("");
+  const [actividad_producto_nombre, setActividad_producto_nombre] = useState(
+    ""
+  );
+  const [indicador, setIndicador] = useState("");
+  const [unidad_de_medida, setUnidad_de_medida] = useState("");
+  const [fuerte, setFuerte] = useState("");
+  const [frecuencia_nombre, setfrecuencia_nombre] = useState("");
+  const [cobertura_nombre, setCobertura_nombre] = useState("");
+  const [alcance_tipo, setAlcance_tipo] = useState("");
+  const [alcance_id, setAlcance_id] = useState("");
+  const [alcance_nombre, setAlcance_nombre] = useState("");
+  const [valor, setValor] = useState("");
+  const [total_cabezas, setTotal_cabezas] = useState("");
 
-    return (
-        <div className="formContainer">
-            <span className="tituloDatoACargar">Stock Bovino/Porcino</span>
-            <form >
-                <div className="divContaninerCenter">
-                    <p className="textinput">Fecha:</p>
-                    <DatePicker
-                        className="divContaniner"
-                        
-                    />
-                </div>
-                <div className="divExterno">
-                    <div className="divInterno">
-                        <div className="divContaniner">
-                            <p className="textinput">sector_id</p>
-                            <input
-                                placeholder="sector_id"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">sector_nombre</p>
-                            <input
-                                placeholder="sector_nombre"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">variable_id</p>
-                            <input
-                                placeholder="variable_id"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">actividad_producto_nombre</p>
-                            <input
-                                placeholder="actividad_producto_nombre"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">Indicador</p>
-                            <input
-                                placeholder="Indicador"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">unidad_de_medida</p>
-                            <input
-                                placeholder="unidad_de_medida"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">fuerte</p>
-                            <input
-                                placeholder="fuerte"
-                                type="text"
-                            />
-                        </div>
-                    </div>
-                    <div className="divInterno">
-                        <div className="divContaniner">
-                            <p className="textinput">frecuencia_nombre</p>
-                            <input
-                                placeholder="frecuencia_nombre"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">cobertura_nombre</p>
-                            <input
-                                placeholder="cobertura_nombre"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">alcance_tipo</p>
-                            <input
-                                placeholder="alcance_tipo"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">alcance_id</p>
-                            <input
-                                placeholder="alcance_id"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">alcance_nombre</p>
-                            <input
-                                placeholder="alcance_nombre"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">valor</p>
-                            <input
-                                placeholder="valor"
-                                type="text"
-                            />
-                        </div>
-                        <div className="divContaniner">
-                            <p className="textinput">Total Cabezas</p>
-                            <input
-                                placeholder="Total Cabezas"
-                                type="text"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="divContaninerCenter">
-                    <button
-                        className="botton"
-                        type="submit"
-                    >
-                        Guardar
-                </button>
-                </div>
-            </form>
-        </div>
-    );
-}
-export default StockBovinoPorcino
+  const setImputHandler = (e) => {
+    switch (e.target.name) {
+      case "fecha":
+        setFecha(e.target.value);
+        break;
+      case "sector_id":
+        setSector_id(e.target.value);
+        break;
+      case "sector_nombre":
+        setSector_nombre(e.target.value);
+        break;
+      case "variable_id":
+        setVariable_id(e.target.value);
+        break;
+      case "actividad_producto_nombre":
+        setActividad_producto_nombre(e.target.value);
+        break;
+      case "indicador":
+        setIndicador(e.target.value);
+        break;
+      case "unidad_de_medida":
+        setUnidad_de_medida(e.target.value);
+        break;
+      case "fuerte":
+        setFuerte(e.target.value);
+        break;
+      case "frecuencia_nombre":
+        setfrecuencia_nombre(e.target.value);
+        break;
+      case "cobertura_nombre":
+        setCobertura_nombre(e.target.value);
+        break;
+      case "alcance_tipo":
+        setAlcance_tipo(e.target.value);
+        break;
+      case "alcance_id":
+        setAlcance_id(e.target.value);
+        break;
+      case "alcance_nombre":
+        setAlcance_nombre(e.target.value);
+        break;
+      case "valor":
+        setValor(e.target.value);
+        break;
+      case "total_cabezas":
+        setTotal_cabezas(e.target.value);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const savetobd = (e) => {
+    e.preventDefault();
+    props.saveToDb("stockBovinoPorcino", {
+      fecha,
+      sector_id,
+      sector_nombre,
+      variable_id,
+      actividad_producto_nombre,
+      indicador,
+      unidad_de_medida,
+      fuerte,
+      frecuencia_nombre,
+      cobertura_nombre,
+      alcance_tipo,
+      alcance_id,
+      alcance_nombre,
+      valor,
+      total_cabezas,
+    });
+  };
+
+  return (
+    <div className="formContainer">
+      <span className="tituloDatoACargar">Stock Bovino/Porcino</span>
+      {props.loading ? (
+        <ClipLoader
+          css={("display: block", "margin: 0 auto", "border-color: blue")}
+          size={150}
+          color={"#123abc"}
+          loading={props.loading}
+        />
+      ) : (
+        <form onSubmit={savetobd}>
+          <div className="divContaninerCenter">
+            <p className="textinput">Fecha:</p>
+            <DatePicker
+              className="divContaniner"
+              selected={fecha}
+              name="fecha"
+              onChange={setImputHandler}
+            />
+          </div>
+          <div className="divExterno">
+            <div className="divInterno">
+              <div className="divContaniner">
+                <p className="textinput">sector id</p>
+                <input
+                  placeholder="sector id"
+                  type="text"
+                  value={sector_id}
+                  name="sector_id"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">sector nombre</p>
+                <input
+                  placeholder="sector nombre"
+                  type="text"
+                  value={sector_nombre}
+                  name="sector_nombre"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">variable id</p>
+                <input
+                  placeholder="variable id"
+                  type="text"
+                  value={variable_id}
+                  name="variable_id"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">actividad producto nombre</p>
+                <input
+                  placeholder="actividad producto nombre"
+                  type="text"
+                  value={actividad_producto_nombre}
+                  name="actividad_producto_nombre"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">Indicador</p>
+                <input
+                  placeholder="indicador"
+                  type="text"
+                  value={indicador}
+                  name="indicador"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">unidad de medida</p>
+                <input
+                  placeholder="unidad de medida"
+                  type="text"
+                  value={unidad_de_medida}
+                  name="unidad_de_medida"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">fuerte</p>
+                <input
+                  placeholder="fuerte"
+                  type="text"
+                  value={fuerte}
+                  name="fuerte"
+                  onChange={setImputHandler}
+                />
+              </div>
+            </div>
+            <div className="divInterno">
+              <div className="divContaniner">
+                <p className="textinput">frecuencia nombre</p>
+                <input
+                  placeholder="frecuencia nombre"
+                  type="text"
+                  value={frecuencia_nombre}
+                  name="frecuencia_nombre"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">cobertura nombre</p>
+                <input
+                  placeholder="cobertura nombre"
+                  type="text"
+                  value={cobertura_nombre}
+                  name="cobertura_nombre"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">alcance tipo</p>
+                <input
+                  placeholder="alcance tipo"
+                  type="text"
+                  value={alcance_tipo}
+                  name="alcance_tipo"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">alcance id</p>
+                <input
+                  placeholder="alcance id"
+                  type="text"
+                  value={alcance_id}
+                  name="alcance_id"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">alcance nombre</p>
+                <input
+                  placeholder="alcance_nombre"
+                  type="text"
+                  value={alcance_nombre}
+                  name="alcance_nombre"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">valor</p>
+                <input
+                  placeholder="valor"
+                  type="text"
+                  value={valor}
+                  name="valor"
+                  onChange={setImputHandler}
+                />
+              </div>
+              <div className="divContaniner">
+                <p className="textinput">Total Cabezas</p>
+                <input
+                  placeholder="Total Cabezas"
+                  type="text"
+                  value={total_cabezas}
+                  name="total_cabezas"
+                  onChange={setImputHandler}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="divContaninerCenter">
+            <button className="botton" type="submit">
+              Guardar
+            </button>
+          </div>
+        </form>
+      )}
+      <div className="divMsgBottom">
+        <span
+          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
+        >
+          {props.msg}
+        </span>
+      </div>
+    </div>
+  );
+};
+export default StockBovinoPorcino;
