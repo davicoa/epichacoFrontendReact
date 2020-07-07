@@ -10,6 +10,8 @@ class AuthService {
       })
       .then(response => {
         if (response.data.accessToken) {
+          localStorage.removeItem("user");
+          localStorage.removeItem("userfecha");
           localStorage.setItem("user", JSON.stringify(response.data));
           localStorage.setItem("userfecha", new Date());
         }

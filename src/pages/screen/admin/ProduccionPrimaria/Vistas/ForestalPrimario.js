@@ -5,7 +5,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const ForestalPrimario = (props) => {
-
   const [fecha, setFecha] = useState(new Date());
   const [producto, setProducto] = useState("");
   const [toneladas, setToneladas] = useState("");
@@ -36,7 +35,7 @@ const ForestalPrimario = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
-    props.saveToDb("forestalPrimario",{
+    props.saveToDb("forestalPrimario", {
       fecha,
       producto,
       toneladas,
@@ -48,14 +47,14 @@ const ForestalPrimario = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Forestal Primario</span>
-       {props.loading?
-          <ClipLoader
-          css={"display: block", "margin: 0 auto", "border-color: blue"}
+      {props.loading ? (
+        <ClipLoader
+          css={("display: block", "margin: 0 auto", "border-color: blue")}
           size={150}
           color={"#123abc"}
           loading={props.loading}
         />
-        :
+      ) : (
         <form onSubmit={savetobd}>
           <div className="divContaniner">
             <p className="textinput">Fecha:</p>
@@ -112,9 +111,11 @@ const ForestalPrimario = (props) => {
             </button>
           </div>
         </form>
-      }
+      )}
       <div className="divMsgBottom">
-        <span style={{color: props.msg==='Fallo en la carga'?'red':'green'}}>
+        <span
+          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
+        >
           {props.msg}
         </span>
       </div>

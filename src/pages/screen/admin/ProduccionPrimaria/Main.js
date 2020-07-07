@@ -15,11 +15,11 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [msg, setMsd] = useState("");
 
-  const saveToDb = async (route, body)  => {
-    setLoading(true)
-    const res = await AdminService.adminPost(route ,body)
-    setMsd(res)
-    setLoading(false)
+  const saveToDb = async (route, body) => {
+    setLoading(true);
+    const res = await AdminService.adminPost(route, body);
+    setMsd(res);
+    setLoading(false);
   };
 
   const screenHandler = (val) => {
@@ -35,20 +35,40 @@ const Main = () => {
       <div className="mainForm">
         <div>
           {screen === "StockBovinoPorcino" ? (
-            <StockBovinoPorcino />
+            <StockBovinoPorcino
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosAgrosDiarios" ? (
-            <PreciosAgrosDiarios />
+            <PreciosAgrosDiarios
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosAgrosMensuales" ? (
-            <PreciosAgrosMensuales />
+            <PreciosAgrosMensuales
+              saveToDb={saveToDb}
+              loading={loading}
+              msg={msg}
+            />
           ) : screen === "PreciosGanaderos" ? (
-            <PreciosGanaderos />
+            <PreciosGanaderos 
+              saveToDb={saveToDb} 
+              loading={loading}
+              msg={msg} 
+             />
           ) : screen === "Faena" ? (
-            <Faena />
+            <Faena 
+              saveToDb={saveToDb} 
+              loading={loading} 
+              msg={msg} 
+            />
           ) : (
             <ForestalPrimario 
               saveToDb={saveToDb} 
-              loading = {loading}
-              msg = {msg}
+              loading={loading} 
+              msg={msg} 
             />
           )}
         </div>

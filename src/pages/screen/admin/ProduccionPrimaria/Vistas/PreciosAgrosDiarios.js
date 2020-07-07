@@ -3,31 +3,9 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import "../../style.css"
 
-const PreciosAgrosDiarios = () => {
+const PreciosAgrosDiarios =(props) => {
 
-    const [date, setDate] = useState(new Date())
-    const [tonelada, setTonelada] = useState("")
-    const [varMens, setVarMens] = useState("")
-    const [varIA, setVarIA] = useState("")
-
-    const onDateChangeHandler = newDate => {
-        //setDate(newDate)
-    }
-    const setImputHandler = e => {
-        switch (e.target.name) {
-            case "tonelada":
-                //setTonelada(e.target.value)
-                break;
-            case "varMens":
-                //setVarMens(e.target.value)
-                break;
-            case "varIA":
-                //setVarIA(e.target.value)
-                break;
-            default:
-                break;
-        }
-    }
+  
 
     return (
         <div className="formContainer">
@@ -37,8 +15,7 @@ const PreciosAgrosDiarios = () => {
                     <p className="textinput">Fecha:</p>
                     <DatePicker
                         className="divContaniner"
-                        selected={date}
-                        onChange={onDateChangeHandler}
+                       
                     />
                 </div>
                 <div className="divExterno">
