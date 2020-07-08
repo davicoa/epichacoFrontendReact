@@ -5,6 +5,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 import logoChaco from "images/ISO_Mesadetrabajo_1.png"
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
+import upArrow from "images/Up_green_arrow-2.png";
+import downArrow from "images/Down_red_arrow-2.png";
 
 const DataCard = (props) => {
   const [loading, setLoading] = useState(true);
@@ -12,6 +14,7 @@ const DataCard = (props) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
+  const [arrowAndColor, setArrowAndColor] = useState(""); 
 
   useEffect(() => {
     dataFromApi();
@@ -22,6 +25,7 @@ const DataCard = (props) => {
     let EjeY = [];
     let name = "";
     let valor = [];
+
     const rawData = await ApiGraphsDataService.getDataGraph(
       props.dataGraph.link
     );
@@ -42,6 +46,10 @@ const DataCard = (props) => {
         }
       }
     });
+    //Arrow
+    setArrowAndColor(
+      (EjeY.slice(-2)[0] - EjeY.slice(-1)[0])
+    )
     //tittle
     setTitle(
         props.dataGraph.title[0] + " " + name + " " + props.dataGraph.title[2]
@@ -116,7 +124,10 @@ const DataCard = (props) => {
                 }}
               >
                 <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
+                <img src={arrowAndColor > 0 ? upArrow : arrowAndColor < 0 ? downArrow : ""} alt="" height="auto" width="7%"></img>
+                <span style={{color: arrowAndColor > 0 ? "green" : arrowAndColor < 0 ? "red" : "black"}}>
                 {valueView}
+                </span>
                 </span>
               </div>
             </div>

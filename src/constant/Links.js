@@ -33,6 +33,15 @@ export default [
   "Energia Industrial", //Energia Industrial//Consumo Eléctrico Industrial
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/capacidad_instalada_de_la_industria.json",
   //Producción Forestal Muebles
+  {
+    link: "http://epichaco.tk/api/forestalPrimario",
+    title: ["", "producto", ""],
+    subtitle: ["variacion mensual al"],
+    valor: ["", "var_mens", "%"],
+    variable: ["producto", "Carbón en bolsa"],
+    grafico: ["fecha", "var_mens"],
+    graficoTexto: ["", "var_mens", ""],
+  },
   "Aberturas", //Producción Forestal Aberturas
   //Producción Tanino
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC
