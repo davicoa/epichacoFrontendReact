@@ -3,12 +3,13 @@ import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
 import logoChaco from "images/ISO_Mesadetrabajo_1.png"
+import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
 import upArrow from "images/Up_green_arrow-2.png";
 import downArrow from "images/Down_red_arrow-2.png";
 
-const DataCard = (props) => {
+const Card = (props) => {
   const [loading, setLoading] = useState(true);
   const [options, setOptions] = useState();
   const [title, setTitle] = useState("");
@@ -25,56 +26,55 @@ const DataCard = (props) => {
     let EjeY = [];
     let name = "";
     let valor = [];
-
     const rawData = await ApiGraphsDataService.getDataGraph(
       props.dataGraph.link
     );
 
     rawData.data.forEach((item) => {
       if (
-        item[props.dataGraph.variable[0]] === props.dataGraph.variable[1] ||
-        (props.dataGraph.variable[1] === "" &&
-          item[props.dataGraph.variable[0]] !== "")
+        item[props.dataGraph.variable.dondebuscar] === props.dataGraph.variable.quebuscar ||
+        (props.dataGraph.variable.quebuscar === "" &&
+          item[props.dataGraph.variable.dondebuscar] !== "")
       ) {
         try {
-          EjeX.push(item[props.dataGraph.grafico[0]]); //fecha
-          EjeY.push(parseFloat(item[props.dataGraph.grafico[1]].replace(/,/g, "."))); //dato
-
-          if (item[props.dataGraph.title[1]]) {
-            name = item[props.dataGraph.title[1]];
-          }
-          if (item[props.dataGraph.valor[1]]) {
-            valor.push(parseFloat(item[props.dataGraph.valor[1]].replace(/,/g, "."))); // valor mostrado
+          if ((item[props.dataGraph.grafico.ejey] !== null)) {
+            EjeX.push(item[props.dataGraph.grafico.ejex]) //fecha
+            EjeY.push(parseFloat(item[props.dataGraph.grafico.ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, ''))) //dato
+            if (item[props.dataGraph.title.campotitle]) {
+              name = item[props.dataGraph.title.campotitle];
+            }
+            if (item[props.dataGraph.valor.campovalor]) {
+              valor.push(parseFloat(item[props.dataGraph.valor.campovalor].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, ''))) // valor mostrado
+            }
           }
         } catch (error) {
           console.log(error);
         }
       }
     });
-    console.log(EjeY);
-
     //Arrow
     setArrowAndColor(
       (Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]))
     )
     //tittle
     setTitle(
-      props.dataGraph.title[0] + " " + name + " " + props.dataGraph.title[2]
+      props.dataGraph.title.antestitle + " " + name + " " + props.dataGraph.title.despuestitle
     );
     //subtitle
     setSubtitle(
-      props.dataGraph.subtitle[0] + " " + EjeX.slice(-1)
+      props.dataGraph.subtitle + " " + EjeX.slice(-1)
     );
     //valor
     setValueView(
-      props.dataGraph.valor[0] + " " + valor.slice(-1) + " " + props.dataGraph.valor[2]
+      props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor
     );
     //grafico
     setOptions(
       OptionsGraph(
         EjeX.slice(-10),
         EjeY.slice(-10),
-        props.dataGraph.graficoTexto[1]
+        props.dataGraph.graficoTexto,
+        props.dataGraph.nacion
       )
     );
     setLoading(false);
@@ -101,7 +101,7 @@ const DataCard = (props) => {
                 <div className="headerGraph3">
                   <img
                     className="headerGraphicon"
-                    src={logoChaco}
+                    src={props.dataGraph.nacion ? logoEscudo : logoChaco}
                     alt="Escudo"
                   ></img>
                 </div>
@@ -161,4 +161,4 @@ const DataCard = (props) => {
   );
 };
 
-export default DataCard;
+export default Card;

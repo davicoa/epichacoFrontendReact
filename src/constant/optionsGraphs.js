@@ -1,4 +1,4 @@
-export default function setOptions(EjeX, EjeY, name) {
+export default function setOptions(EjeX, EjeY, name, color = false) {
   return {
     series: [
       {
@@ -31,13 +31,13 @@ export default function setOptions(EjeX, EjeY, name) {
         show: true,
         curve: "smooth",
         lineCap: "butt",
-        colors: ["#b2ffa8", "#7eff6e"],
+        colors: color ? ['#a4defa', '#12c3ff'] : ['#b2ffa8', '#7eff6e'],
         width: 0.5,
         dashArray: 0,
       },
       fill: {
         type: ["solid", "gradient"],
-        colors: ["#b2ffa8", "#7eff6e"],
+        colors: color ? ['#a4defa', '#12c3ff'] : ['#b2ffa8', '#7eff6e'],
         gradient: {
           shadeIntensity: 1,
           inverseColors: false,

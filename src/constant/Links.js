@@ -1,22 +1,14 @@
 export default [
-  /* {
-    link: "https://epichaco.tk/api/ipcgrResis", ==> link de la api a cual se conectara
-    title: ["Text", "Variable", "Text"],        ==> titulo compuesto de (Texto al inicio) + variable + (texto al final)
-    subtitle: ["Text", "Variable", "Text"],     ==> subtitle compuesto de (Texto al inicio) + variable + (texto al final)
-    valor: ["Text", "Variable", "Text"],        ==> valor compuesto de (Texto al inicio) + variable + (texto al final)
-    variable: ["variable", "que buscar"],       ==> valor compuesto de (Texto al inicio) + variable + (texto al final)
-    grafico: ["VariableEjeX", "VariableEjeY"],  ==> datos a graficar en eje x e y
-    graficoTexto: ["Text", "Variable", "Text"], ==> texto interno al grafico compuesto de (Texto al inicio) + variable + (texto al final)
-  }, */
- /*  {
-    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
-    title: ["Dolar Oficial", "tipo", ""],
-    subtitle: ["variacion del"],
-    valor: ["$", "cotizacion", ""],
-    variable: ["tipo", "Venta"],
-    grafico: ["Fecha", "cotizacion"],
-    graficoTexto: ["", "cotizacion", ""],
-  }, */
+   /* { //test para dolar oficial de la nacion
+     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
+     title: { antestitle: 'Dolar Oficial', campotitle: "tipo", despuestitle: "" },
+     subtitle: "ariacion del",
+     valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
+     variable: { dondebuscar: "tipo", quebuscar: "Venta" },
+     grafico: { ejex: "Fecha", ejey: "cotizacion" },
+     graficoTexto: "cotizacion",
+     nacion: true,
+   }, */
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json", //dólar_minorista
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json", //dolar blu
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json",
@@ -24,12 +16,13 @@ export default [
   //=== IPC Chaco ===
   {
     link: "https://epichaco.tk/api/ipcgrResis",
-    title: ["IPC-CHACO", "", ""],
-    subtitle: ["variacion mensual al"],
-    valor: ["", "var_mens", "%"],
-    variable: ["sector", "Nivel General"],
-    grafico: ["fecha", "var_mens"],
-    graficoTexto: ["", "VAR_MENS", ""],
+    title: { antestitle: 'IPC-CHACO', campotitle: "", despuestitle: "" },
+    subtitle: "variacion mensual al",
+    valor: { antesvalor: "", campovalor: "var_mens", despuesvalor: "%" },
+    variable: { dondebuscar: "sector", quebuscar: "Nivel General" },
+    grafico: { ejex: "fecha", ejey: "var_mens" },
+    graficoTexto: "VAR_MENS",
+    nacion: false,
   },
   //=================
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC
@@ -44,27 +37,29 @@ export default [
   //Producción Forestal Muebles
   {
     link: "http://epichaco.tk/api/forestalPrimario",
-    title: ["", "producto", ""],
-    subtitle: ["variacion mensual al"],
-    valor: ["", "var_mens", "%"],
-    variable: ["producto", "Carbón en bolsa"],
-    grafico: ["fecha", "var_mens"],
-    graficoTexto: ["", "var_mens", ""],
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion mensual al",
+    valor: { antesvalor: "", campovalor: "var_mens", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Carbón en bolsa" },
+    grafico: { ejex: "fecha", ejey: "var_mens" },
+    graficoTexto: "var_mens",
+    nacion: false,
   },
-  "Aberturas", //Producción Forestal Aberturas
+  "Aberturas", //Producción Forestal Aberturas //produccion industrial
   //Producción Tanino
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json", //Despacho de cemento
-  /* { //Despacho de cemento test nuevo codigo
-    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json",
-    title: ["", "Tipo", ""],
-    subtitle: ["variacion mensual al"],
-    valor: ["", "Cantidad", ""],
-    variable: ["Tipo", "Despacho de cemento en toneladas"],
-    grafico: ["Fecha", "Cantidad"],
-    graficoTexto: ["", "Cantidad", ""],
-  }, */
-  "Cemento", //Cemento Total
+  //Cemento Total CHACO
+  {
+    link: "http://epichaco.tk/api/cemento",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia_s_e_chaco", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Cemento Total" },
+    grafico: { ejex: "fecha", ejey: "var_ia_s_e_chaco" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
   "Empleo Formal", //Empleo IERIC
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación ========> controlar
@@ -81,17 +76,77 @@ export default [
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json", //Balanza de pagos
-  "Carbon a granel", //Producción Carbón Granel
-  "Carbon en bolsa", //Producción Carbón Bolsa
-  "Rollos", //Producción Rollos
-  "Rollizos", //Producción Rollizos
+  //"Carbon a granel", //Producción Carbón Granel
+  {
+    link: "http://epichaco.tk/api/forestalPrimario",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Carbón a granel" },
+    grafico: { ejex: "fecha", ejey: "var_ia" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
+  //"Carbon en bolsa", //Producción Carbón Bolsa
+  {
+    link: "http://epichaco.tk/api/forestalPrimario",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Carbón en bolsa" },
+    grafico: { ejex: "fecha", ejey: "var_ia" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
+  //"Rollos", //Producción Rollos
+  {
+    link: "http://epichaco.tk/api/forestalPrimario",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Rollos" },
+    grafico: { ejex: "fecha", ejey: "var_ia" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
+  //"Rollizos", //Producción Rollizos
+  {
+    link: "http://epichaco.tk/api/forestalPrimario",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Rollizos" },
+    grafico: { ejex: "fecha", ejey: "var_ia" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json", //"Tipo": "Impuestos vinculados al empleo" "Total recaudado ($)": "101.248,30", seguridad social
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json", //Resultado financiero
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json", //Resultado fiscal primario
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json", //Recaudación tributaria
   //Combustible
+  {
+    link: "http://epichaco.tk/api/combustible",
+    title: { antestitle: '', campotitle: "producto", despuestitle: "" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "" },
+    grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //"Ventas (en millones)": "27.307,00"
-  "Supermercados", //Supermerk2 $ constantes
+  //"Supermercados", 
+  {
+    link: "http://epichaco.tk/api/supermercado",
+    title: { antestitle: 'Supermercados', campotitle: "", despuestitle: "CHACO" },
+    subtitle: "Variacion interanual al",
+    valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
+    variable: { dondebuscar: "producto", quebuscar: "Valores Constantes (Base=2017)" },
+    grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
+    graficoTexto: "var ai",
+    nacion: false,
+  },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // "Producción": "1.519,00",
   //Transferencias autos
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_autos.json", //"Categoria": "Patentamientos de vehiculos", "Cantidad": "21.015,00",
@@ -105,8 +160,38 @@ export default [
   //Faena Bovinos (Nacion y Pcia) - variaciones
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_carne_vacuna.json",
   //Precios Terneros (Nación y Provincia) - Domo G
+  {
+    link: "http://epichaco.tk/api/preciosGanaderos",
+    title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
+    subtitle: "Valor al",
+    valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
+    variable: { dondebuscar: "zona", quebuscar: "Domo Ganadero" },
+    grafico: { ejex: "fecha", ejey: "ternero" },
+    graficoTexto: "ternero",
+    nacion: false,
+  },
   //Precios Terneros (Nación y Provincia) - Domo A/G
+  {
+    link: "http://epichaco.tk/api/preciosGanaderos",
+    title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
+    subtitle: "Valor al",
+    valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
+    variable: { dondebuscar: "zona", quebuscar: "Agricola/Ganadera" },
+    grafico: { ejex: "fecha", ejey: "ternero" },
+    graficoTexto: "ternero",
+    nacion: false,
+  },
   //Precios Terneros (Nación y Provincia) - ZOna Norte
+  {
+    link: "http://epichaco.tk/api/preciosGanaderos",
+    title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
+    subtitle: "Valor al",
+    valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
+    variable: { dondebuscar: "zona", quebuscar: "Zona Norte" },
+    grafico: { ejex: "fecha", ejey: "ternero" },
+    graficoTexto: "ternero",
+    nacion: false,
+  },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_porcinos.json", //Producción de porcinos (%)
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/faena_de_porcinos.json", //
   //Faena Porcinos (Nacion y Pcia) - Variaciones
