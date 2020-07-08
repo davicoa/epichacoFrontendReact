@@ -14,7 +14,7 @@ const DataCard = (props) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
-  const [arrowAndColor, setArrowAndColor] = useState(""); 
+  const [arrowAndColor, setArrowAndColor] = useState("");
 
   useEffect(() => {
     dataFromApi();
@@ -36,31 +36,38 @@ const DataCard = (props) => {
         (props.dataGraph.variable[1] === "" &&
           item[props.dataGraph.variable[0]] !== "")
       ) {
-        EjeX.push(item[props.dataGraph.grafico[0]]); //fecha
-        EjeY.push(parseFloat(item[props.dataGraph.grafico[1]])); //dato
-        if (item[props.dataGraph.title[1]]) {
-          name = item[props.dataGraph.title[1]];
-        }
-        if (item[props.dataGraph.valor[1]]) {
-            valor.push(parseFloat(item[props.dataGraph.valor[1]])); // valor mostrado
+        try {
+          EjeX.push(item[props.dataGraph.grafico[0]]); //fecha
+          EjeY.push(parseFloat(item[props.dataGraph.grafico[1]].replace(/,/g, "."))); //dato
+
+          if (item[props.dataGraph.title[1]]) {
+            name = item[props.dataGraph.title[1]];
+          }
+          if (item[props.dataGraph.valor[1]]) {
+            valor.push(parseFloat(item[props.dataGraph.valor[1]].replace(/,/g, "."))); // valor mostrado
+          }
+        } catch (error) {
+          console.log(error);
         }
       }
     });
+    console.log(EjeY);
+
     //Arrow
     setArrowAndColor(
-      (EjeY.slice(-2)[0] - EjeY.slice(-1)[0])
+      (Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]))
     )
     //tittle
     setTitle(
-        props.dataGraph.title[0] + " " + name + " " + props.dataGraph.title[2]
+      props.dataGraph.title[0] + " " + name + " " + props.dataGraph.title[2]
     );
     //subtitle
     setSubtitle(
-        props.dataGraph.subtitle[0] + " " + EjeX.slice(-1)
+      props.dataGraph.subtitle[0] + " " + EjeX.slice(-1)
     );
     //valor
     setValueView(
-        props.dataGraph.valor[0] + " " + valor.slice(-1) +" "+ props.dataGraph.valor[2]
+      props.dataGraph.valor[0] + " " + valor.slice(-1) + " " + props.dataGraph.valor[2]
     );
     //grafico
     setOptions(
@@ -85,71 +92,71 @@ const DataCard = (props) => {
           />
         </div>
       ) : (
-        <div className="apexContainer">
-          <div className="headerGraphContainer">
-            <div className="headerGraph">
-              <div className="headerGraph2">
-                <span>{title}</span>
-              </div>
-              <div className="headerGraph3">
-                <img
-                  className="headerGraphicon"
-                  src={logoChaco}
-                  alt="Escudo"
-                ></img>
-              </div>
-              <br />
-            </div>
-            <div className="headerData">
-              <div className="spanDescripcion">
-                <span
-                  style={{
-                    fontSize: "x-small",
-                    float: "left",
-                    fontWeight: "bold",
-                    marginLeft: "5%",
-                  }}
-                >
-                  {subtitle}
-                </span>
+          <div className="apexContainer">
+            <div className="headerGraphContainer">
+              <div className="headerGraph">
+                <div className="headerGraph2">
+                  <span>{title}</span>
+                </div>
+                <div className="headerGraph3">
+                  <img
+                    className="headerGraphicon"
+                    src={logoChaco}
+                    alt="Escudo"
+                  ></img>
+                </div>
                 <br />
               </div>
-              <div
-                style={{
-                  textAlign: "left",
-                  fontWeight: "bold",
-                  marginLeft: "3%",
-                  fontSize: "large",
-                  color: "red",
-                }}
-              >
-                <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
-                <img src={arrowAndColor > 0 ? upArrow : arrowAndColor < 0 ? downArrow : ""} alt="" height="auto" width="7%"></img>
-                <span style={{color: arrowAndColor > 0 ? "green" : arrowAndColor < 0 ? "red" : "black"}}>
-                {valueView}
-                </span>
-                </span>
+              <div className="headerData">
+                <div className="spanDescripcion">
+                  <span
+                    style={{
+                      fontSize: "x-small",
+                      float: "left",
+                      fontWeight: "bold",
+                      marginLeft: "5%",
+                    }}
+                  >
+                    {subtitle}
+                  </span>
+                  <br />
+                </div>
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontWeight: "bold",
+                    marginLeft: "3%",
+                    fontSize: "large",
+                    color: "red",
+                  }}
+                >
+                  <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
+                    <img src={arrowAndColor < 0 ? upArrow : arrowAndColor > 0 ? downArrow : ""} alt="" height="auto" width="7%"></img>
+                    <span style={{ color: arrowAndColor < 0 ? "#3bb54c" : arrowAndColor > 0 ? "red" : "#5F5F5F" }}>
+                      {valueView}
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="apexGraph">
-            <ReactApexChart
-              options={options.options}
-              series={options.series}
-              type="area"
-            />
-          </div>
-          <span
-            className="style-kbazlqv8label"
-            style={{
-              marginBottom: "-10%",
-              display: "none" /* ocultar boton */,
-            }}
-          >
-            EXPANDIR
+            <div className="apexGraph">
+              <ReactApexChart
+                options={options.options}
+                series={options.series}
+                type="area"
+              />
+            </div>
+            <span
+              className="style-kbazlqv8label"
+              style={{
+                marginBottom: "-10%",
+                display: "none" /* ocultar boton */,
+              }}
+            >
+              EXPANDIR
           </span>
-        </div>
-      )}
+          </div>
+        )}
     </div>
   );
 };

@@ -8,6 +8,15 @@ export default [
     grafico: ["VariableEjeX", "VariableEjeY"],  ==> datos a graficar en eje x e y
     graficoTexto: ["Text", "Variable", "Text"], ==> texto interno al grafico compuesto de (Texto al inicio) + variable + (texto al final)
   }, */
+ /*  {
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
+    title: ["Dolar Oficial", "tipo", ""],
+    subtitle: ["variacion del"],
+    valor: ["$", "cotizacion", ""],
+    variable: ["tipo", "Venta"],
+    grafico: ["Fecha", "cotizacion"],
+    graficoTexto: ["", "cotizacion", ""],
+  }, */
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json", //dólar_minorista
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json", //dolar blu
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json",
@@ -46,6 +55,15 @@ export default [
   //Producción Tanino
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json", //Despacho de cemento
+  /* { //Despacho de cemento test nuevo codigo
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json",
+    title: ["", "Tipo", ""],
+    subtitle: ["variacion mensual al"],
+    valor: ["", "Cantidad", ""],
+    variable: ["Tipo", "Despacho de cemento en toneladas"],
+    grafico: ["Fecha", "Cantidad"],
+    graficoTexto: ["", "Cantidad", ""],
+  }, */
   "Cemento", //Cemento Total
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
   "Empleo Formal", //Empleo IERIC
