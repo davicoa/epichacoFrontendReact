@@ -16,16 +16,9 @@ const Admin = () => {
     <div className="screenPrimary">
       <NavbarAdmin screen={screenHandler} />
       {screen === "produccionprimaria" && <MainProduccionPrimaria />}
-      {screen === "produccionindustrial" && (
-        <div className="defaultScreen">
-          <span>BETA en construcción: Area para Carga de datos produccion industrial</span>
-        </div>
+      {screen === "produccionindustrial" && ( <MainProduccionIndustrial />
       )}
-      {screen === "imach" && (
-        <div className="defaultScreen">
-          <span>BETA en construcción: Area para Carga de datos imach</span>
-        </div>
-      )}
+      {screen === "imach" && ( <MainImach />)}
       {screen === "empleo" && (
         <div className="defaultScreen">
           <span>BETA en construcción: Area para Carga de datos empleo</span>
