@@ -19,10 +19,7 @@ const Admin = () => {
       {screen === "produccionindustrial" && ( <MainProduccionIndustrial />
       )}
       {screen === "imach" && ( <MainImach />)}
-      {screen === "empleo" && (
-        <div className="defaultScreen">
-          <span>BETA en construcción: Area para Carga de datos empleo</span>
-        </div>
+      {screen === "empleo" && (<MainEmpleo />
       )}
       {screen === "consumoServicios" && <MainConsumoServicios />}
       {screen === "" && (
