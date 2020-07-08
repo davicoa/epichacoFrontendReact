@@ -8,47 +8,8 @@ const Menu = props => {
                 <span className="menuProduccionprimaria"
                     onClick={() => props.screen('')}
                 >
-                    Forestal Primario
+                    IMACH
                 </span>
-            </ul>
-            <ul>
-                <span className="menuProduccionprimaria"
-                    onClick={() => props.screen('StockBovinoPorcino')}
-                >
-                    Stock BovinoPorcino
-                </span>
-            </ul>
-            
-            <ul>
-                <span className="menuProduccionprimaria"
-                    onClick={() => props.screen('PreciosAgrosDiarios')}
-                >
-                    Precios Agros Diarios
-                </span>
-            </ul>
-            
-            <ul>
-                <span className="menuProduccionprimaria"
-                    onClick={() => props.screen('PreciosAgrosMensuales')}
-                >
-                    Precios Agros Mensuales
-                </span>
-            </ul>
-            
-            <ul>
-                <span className="menuProduccionprimaria"
-                    onClick={() => props.screen('PreciosGanaderos')}
-                >
-                    Precios Ganaderos
-                        </span>
-            </ul>
-            
-            <ul>
-                <span className="menuProduccionprimaria"
-                    onClick={() => props.screen('Faena')}
-                >
-                    Faena
-                    </span>
             </ul>
         </nav>
     )
