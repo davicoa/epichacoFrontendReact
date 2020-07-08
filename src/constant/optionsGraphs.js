@@ -1,11 +1,3 @@
-/* {
-    title: ["Text", "Variable", "Text"],
-    subtitle: ["Text", "Variable", "Text"],
-    valor: ["Text", "variable", "Text"],
-    variable: ["variable", "que buscar"],  
-    grafico: ["EjeX", "EjeY"],
-    graficoTexto: ["Text", "Variable", "Text"],
-  }, */
 export default function setOptions(EjeX, EjeY, name) {
   return {
     series: [
