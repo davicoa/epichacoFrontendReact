@@ -31,12 +31,12 @@ const Card = (props) => {
     );
 
     rawData.data.forEach((item) => {
-      if (
-        item[props.dataGraph.variable.dondebuscar] === props.dataGraph.variable.quebuscar ||
-        (props.dataGraph.variable.quebuscar === "" &&
-          item[props.dataGraph.variable.dondebuscar] !== "")
-      ) {
-        try {
+      try {
+        if (
+          item[props.dataGraph.variable.dondebuscar].toLowerCase() === props.dataGraph.variable.quebuscar.toLowerCase() ||
+          (props.dataGraph.variable.quebuscar === "" &&
+            item[props.dataGraph.variable.dondebuscar] !== "")
+        ) {
           if ((item[props.dataGraph.grafico.ejey] !== null)) {
             EjeX.push(item[props.dataGraph.grafico.ejex]) //fecha
             EjeY.push(parseFloat(item[props.dataGraph.grafico.ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, ''))) //dato
@@ -47,9 +47,10 @@ const Card = (props) => {
               valor.push(parseFloat(item[props.dataGraph.valor.campovalor].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, ''))) // valor mostrado
             }
           }
-        } catch (error) {
-          console.log(error);
+
         }
+      } catch (error) {
+        console.log(error);
       }
     });
     //Arrow
