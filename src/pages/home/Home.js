@@ -31,7 +31,7 @@ const Home = () => {
                 <MainView />
               </Route>
              :
-              <Login />
+              <Admin />
             }
           </Switch>
         </div>
