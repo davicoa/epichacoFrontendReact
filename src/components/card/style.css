@@ -1,0 +1,61 @@
+/* cardGrid */
+.grid_items {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+  background-color:#EBEBEB;
+}
+.grid_items > div {
+  padding: 2px;
+}
+.grid_items > div:nth-child(3n + 2) {
+  background-color: transparent;
+}
+.grid_items > div:nth-child(3n) {
+  background-color: transparent;
+}
+
+@media (min-width: 400px) and (max-width: 719px) {
+  .grid_items {
+    grid-template-columns: auto auto ;
+    grid-column-gap: 1%;
+    grid-row-gap: 1px;
+  }
+  .grid_items > div {
+    padding: 1px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 969px) {
+  .grid_items {
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 0.1%;
+    grid-row-gap: 0.1px;
+  }
+  .grid_items > div {
+    padding: 0.1px;
+  }
+}
+
+@media (min-width: 970px) and (max-width: 1199px) {
+  .grid_items {
+    grid-template-columns: auto auto auto auto ;
+    grid-column-gap: 0.1%;
+    grid-row-gap: 0.1px;
+  }
+  .grid_items > div {
+    padding: 0.1px;
+  }
+}
+
+@media (min-width: 1200px){
+  .grid_items {
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 0.1%;
+    grid-row-gap: 0.1px;
+  }
+  .grid_items > div {
+    padding: 0.1px;
+  }
+}

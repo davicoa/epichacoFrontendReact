@@ -21,8 +21,8 @@
 }
 .logoutAdministrar{
   display: flex;
-  justify-content: right;
-  margin-top: -4.5vh;
+  justify-content: flex-end;
+  margin-top: -5vh;
   margin-bottom: 2vh;
   margin-right: 2vw;
 }

@@ -6,18 +6,20 @@
   flex-wrap: wrap;
 }
 
-.divExterno{
+.divExterno {
   display: flex;
   flex-direction: row;
 }
-.divInterno{
+.divInterno {
   display: flex;
   flex-direction: column;
   margin: 0.5vh;
 }
-.divContaninerCenter{
+.divContaninerCenter {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 input[type="text"] {
   height: 4vh;
@@ -62,12 +64,15 @@ button[type="button"] {
 
 .textinput {
   padding-right: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .mainContainer {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  padding-bottom: 5vh;
 }
 
 .mainMenu {
@@ -95,6 +100,7 @@ button[type="button"] {
 .screenPrimary {
   padding-left: 1vw;
   padding-right: 1vw;
+  padding-bottom: 2vh;
 }
 .menuProduccionprimaria {
   display: flex;
@@ -109,11 +115,11 @@ button[type="button"] {
   border: rgba(92, 187, 209, 1) 0.2vh solid;
 }
 
-.divMsgBottom{
+.divMsgBottom {
   padding-top: 3vh;
 }
 
-.tituloDatoACargar{
+.tituloDatoACargar {
   font-size: 6vh;
   padding-bottom: 2vh;
   color: gray;
