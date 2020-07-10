@@ -19,11 +19,12 @@ const IndicadoresLaborales = props => {
      const [var_porcent_trimestral_total, setVar_porcent_trimestral_total] = useState("")
      const [var_porcent_ia_total, setVar_porcent_ia_total] = useState("")
 
+     const setFechaHandler = Date => {
+          setFecha(Date);
+     }
+
      const setImputHandler = (e) => {
           switch (e.target.name) {
-               case "fecha":
-                    setFecha(e.target.value);
-                    break;
                case "n_trimestre":
                     setN_trimestre(e.target.value);
                     break;
@@ -102,9 +103,10 @@ const IndicadoresLaborales = props => {
                                              <p className="textinput">Fecha:</p>
                                              <DatePicker
                                                   className="divContaniner"
+                                                  dateFormat="dd/MM/yyyy"
                                                   selected={fecha}
                                                   name="fecha"
-                                                  onChange={setImputHandler}
+                                                  onChange={Date => setFechaHandler(Date)}
                                              />
                                         </div>
 
@@ -233,7 +235,7 @@ const IndicadoresLaborales = props => {
                                                   onChange={setImputHandler}
                                              />
                                         </div>
-                                        
+
                                    </div>
                               </div>
                               <div className="divContaninerCenter">

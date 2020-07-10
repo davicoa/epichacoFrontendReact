@@ -24,11 +24,12 @@ const EmpleoGeneral = (props) => {
     const [indice_empleo_nacion, setIndice_empleo_nacion] = useState("")
     const [var_porcen_mensual_empleo_naciòn, setVar_porcen_mensual_empleo_naciòn] = useState("")
 
+    const setFechaHandler = Date => {
+        setFecha(Date);
+    }
+
     const setImputHandler = (e) => {
         switch (e.target.name) {
-            case "fecha":
-                setFecha(e.target.value);
-                break;
             case "rama_de_actividad":
                 setRama_de_actividad(e.target.value);
                 break;
@@ -127,9 +128,10 @@ const EmpleoGeneral = (props) => {
                                     <p className="textinput">Fecha:</p>
                                     <DatePicker
                                         className="divContaniner"
+                                        dateFormat="dd/MM/yyyy"
                                         selected={fecha}
                                         name="fecha"
-                                        onChange={setImputHandler}
+                                        onChange={Date => setFechaHandler(Date)}
                                     />
                                 </div>
                                 <div className="divContaniner">

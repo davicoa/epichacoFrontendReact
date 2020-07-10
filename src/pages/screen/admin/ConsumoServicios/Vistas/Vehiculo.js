@@ -20,11 +20,12 @@ const Vehiculo = props => {
      const [var_mens_nacion_deses, setVar_mens_nacion_deses] = useState("")
      const [var_ia_nacion_deses, setVar_ia_nacion_deses] = useState("")
 
+     const setFechaHandler = Date => {
+          setFecha(Date);
+     }
+
      const setImputHandler = (e) => {
           switch (e.target.name) {
-               case "fecha":
-                    setFecha(e.target.value);
-                    break;
                case "categoria":
                     setCategoria(e.target.value);
                     break;
@@ -107,9 +108,10 @@ const Vehiculo = props => {
                                              <p className="textinput">Fecha:</p>
                                              <DatePicker
                                                   className="divContaniner"
+                                                  dateFormat="dd/MM/yyyy"
                                                   selected={fecha}
                                                   name="fecha"
-                                                  onChange={setImputHandler}
+                                                  onChange={Date => setFechaHandler(Date)}
                                              />
                                         </div>
                                         <div className="divContaniner">

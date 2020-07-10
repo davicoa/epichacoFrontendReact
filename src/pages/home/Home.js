@@ -14,18 +14,17 @@ const Home = () => {
     <div className="App">
       <Header />
       <Router>
-        <div>
           <Switch>
             {isLoginIn() ?
               user.roles.some(role => role === "ROLE_ADMIN" || role === "ROLE_MODERATOR")?
-              <div>
+              <React.Fragment>
                 <Route exact path="/">
                   <MainView />
                 </Route>
                 <Route path="/admin">
                   <Admin />
                 </Route>
-              </div>
+              </React.Fragment>
               :
               <Route exact path="/">
                 <MainView />
@@ -34,7 +33,6 @@ const Home = () => {
               <Login />
             }
           </Switch>
-        </div>
       </Router>
       <Footer />
     </div>

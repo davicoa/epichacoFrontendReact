@@ -12,11 +12,12 @@ const ForestoIndustria = (props) => {
   const [var_mens, setVar_mens] = useState("");
   const [var_ia, setVar_ia] = useState("");
 
+  const setFechaHandler = Date => {
+    setFecha(Date);
+  }
+
   const setImputHandler = (e) => {
     switch (e.target.name) {
-      case "fecha":
-        setFecha(e.target.value);
-        break;
       case "tipo_produccion":
         setTipo_produccion(e.target.value);
         break;
@@ -61,9 +62,10 @@ const ForestoIndustria = (props) => {
               <p className="textinput">Fecha:</p>
               <DatePicker
                 className="divContaniner"
+                dateFormat="dd/MM/yyyy"
                 selected={fecha}
                 name="fecha"
-                onChange={setImputHandler}
+                onChange={Date => setFechaHandler(Date)}
               />
             </div>
             <div className="divExterno">

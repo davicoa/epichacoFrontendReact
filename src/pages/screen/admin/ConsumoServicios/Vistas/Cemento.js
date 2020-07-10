@@ -20,11 +20,12 @@ const Cemento = props => {
      const [var_mens_c_e_nacion, setVar_mens_c_e_nacion] = useState("")
      const [var_ia_c_e_nacion, setVar_ia_c_e_nacion] = useState("")
 
+     const setFechaHandler = Date => {
+          setFecha(Date);
+     }
+
      const setImputHandler = (e) => {
           switch (e.target.name) {
-               case "fecha":
-                    setFecha(e.target.value);
-                    break;
                case "producto":
                     setProducto(e.target.value);
                     break;
@@ -107,9 +108,10 @@ const Cemento = props => {
                                              <p className="textinput">Fecha:</p>
                                              <DatePicker
                                                   className="divContaniner"
+                                                  dateFormat="dd/MM/yyyy"
                                                   selected={fecha}
                                                   name="fecha"
-                                                  onChange={setImputHandler}
+                                                  onChange={Date => setFechaHandler(Date)}
                                              />
                                         </div>
 
@@ -174,7 +176,7 @@ const Cemento = props => {
                                                   onChange={setImputHandler}
                                              />
                                         </div>
-                                        
+
                                    </div>
                                    <div className="divInterno">
                                         <div className="divContaniner">
