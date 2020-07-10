@@ -9,6 +9,8 @@ export default function authHeader() {
       if ( Math.round(resta/ (1000*60*60*24)) < 24) {
         return true;
       }
+      localStorage.removeItem("user");
+      localStorage.removeItem("userfecha");
     }
   }
   return false;
