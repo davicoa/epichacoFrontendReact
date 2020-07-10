@@ -10,6 +10,7 @@ import upArrow from "images/Up_green_arrow-2.png";
 import downArrow from "images/Down_red_arrow-2.png";
 
 const Card = (props) => {
+ 
   const [loading, setLoading] = useState(true);
   const [options, setOptions] = useState();
   const [title, setTitle] = useState("");
@@ -26,41 +27,35 @@ const Card = (props) => {
     let EjeY = [];
     let name = "";
     let valor = [];
+    let { ejey, ejex } = props.dataGraph.grafico;
+    let { campotitle } = props.dataGraph.title;
+    let { campovalor } = props.dataGraph.valor;
+    let { dondebuscar, quebuscar } = props.dataGraph.variable;
+    let { dondebuscarOpc, quebuscarOpc } = props.dataGraph.variableOpc;
+
     const rawData = await ApiGraphsDataService.getDataGraph(
       props.dataGraph.link
     );
-
     rawData.data.forEach((item) => {
-      try {
+      if (dondebuscarOpc === "" && dondebuscar !== "") {
         if (
-          ((item[props.dataGraph.variable.dondebuscar].toLowerCase() ===
-            props.dataGraph.variable.quebuscar.toLowerCase() ||
-            (item[props.dataGraph.variable.dondebuscar] !== "" &&
-              props.dataGraph.variable.quebuscar === "")) &&
-            props.dataGraph.variableOpc.dondebuscar === "") ||
-          (item[props.dataGraph.variable.dondebuscar].toLowerCase() ===
-            props.dataGraph.variable.quebuscar.toLowerCase() &&
-            item[props.dataGraph.variableOpc.dondebuscar].toLowerCase() ===
-              props.dataGraph.variableOpc.quebuscar.toLowerCase() &&
-            props.dataGraph.variableOpc.dondebuscar !== "" &&
-            props.dataGraph.variable.dondebuscar !== "")
+          quebuscar === "" ||
+          item[dondebuscar].toLowerCase() === quebuscar.toLowerCase()
         ) {
-          if (item[props.dataGraph.grafico.ejey] !== null) {
-            EjeX.push(item[props.dataGraph.grafico.ejex]); //fecha
+          if (item[ejey] !== null) {
+            EjeX.push(item[ejex]); //fecha
             EjeY.push(
               parseFloat(
-                item[props.dataGraph.grafico.ejey]
-                  .replace(/,/g, ".")
-                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+                item[ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
               )
             ); //dato
-            if (item[props.dataGraph.title.campotitle]) {
-              name = item[props.dataGraph.title.campotitle];
+            if (item[campotitle]) {
+              name = item[campotitle];
             }
-            if (item[props.dataGraph.valor.campovalor]) {
+            if (item[campovalor]) {
               valor.push(
                 parseFloat(
-                  item[props.dataGraph.valor.campovalor]
+                  item[campovalor]
                     .replace(/,/g, ".")
                     .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
                 )
@@ -68,10 +63,34 @@ const Card = (props) => {
             }
           }
         }
-      } catch (error) {
-        console.log(error);
+      } else if (
+        item[dondebuscar].toLowerCase() === quebuscar.toLowerCase() &&
+        item[dondebuscarOpc].toLowerCase() === quebuscarOpc.toLowerCase()
+      ) {
+        if (item[ejey] !== null) {
+          EjeX.push(item[ejex]); //fecha
+          EjeY.push(
+            parseFloat(
+              item[ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+            )
+          ); //dato
+          if (item[campotitle]) {
+            name = item[campotitle];
+          }
+          if (item[campovalor]) {
+            valor.push(
+              parseFloat(
+                item[campovalor]
+                  .replace(/,/g, ".")
+                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+              )
+            ); // valor mostrado
+          }
+        }
       }
     });
+
+    
     //Arrow
     setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
     //tittle
@@ -101,6 +120,7 @@ const Card = (props) => {
         props.dataGraph.nacion
       )
     );
+
     setLoading(false);
   };
 
