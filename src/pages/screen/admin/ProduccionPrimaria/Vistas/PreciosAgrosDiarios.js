@@ -14,11 +14,12 @@ const PreciosAgrosDiarios = (props) => {
     const [var_mensual_porcen, setVar_mensual_porcen] = useState("")
     const [var_ia_porcen, setVar_ia_porcen] = useState("")
 
+    const setFechaHandler = Date => {
+        setFecha(Date);
+    }
+
     const setImputHandler = (e) => {
         switch (e.target.name) {
-            case "fecha":
-                setFecha(e.target.value);
-                break;
             case "grano":
                 setGrano(e.target.value);
                 break;
@@ -45,15 +46,15 @@ const PreciosAgrosDiarios = (props) => {
     const savetobd = (e) => {
         e.preventDefault();
         props.saveToDb("preciosAgroDiarios", {
-          fecha,
-          grano,
-          valor_actual,
-          variacion_diaria,
-          var_diaria_porcen,
-          var_mensual_porcen,
-          var_ia_porcen,
+            fecha,
+            grano,
+            valor_actual,
+            variacion_diaria,
+            var_diaria_porcen,
+            var_mensual_porcen,
+            var_ia_porcen,
         });
-      };
+    };
 
     return (
         <div className="formContainer">
@@ -71,9 +72,10 @@ const PreciosAgrosDiarios = (props) => {
                             <p className="textinput">Fecha:</p>
                             <DatePicker
                                 className="divContaniner"
+                                dateFormat="dd/MM/yyyy"
                                 selected={fecha}
                                 name="fecha"
-                                onChange={setImputHandler}
+                                onChange={Date => setFechaHandler(Date)}
                             />
                         </div>
                         <div className="divExterno">

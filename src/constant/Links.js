@@ -454,7 +454,7 @@ export default [
   },
   { //$Trigo                           => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
-    title: { antestitle: '', campotitle: "Trigo", despuestitle: "" },
+    title: { antestitle: '', campotitle: "precio", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "valor_actual", despuesvalor: "" },
     variable: { dondebuscar: "precio", quebuscar: "Trigo de Pan" },

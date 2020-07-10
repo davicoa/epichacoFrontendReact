@@ -18,11 +18,12 @@ const PreciosGanaderos = (props) => {
     const [ternera, setTernera] = useState("")
     const [terneros_terneras, setTerneros_terneras] = useState("")
 
+    const setFechaHandler = Date => {
+        setFecha(Date);
+    }
+
     const setImputHandler = (e) => {
         switch (e.target.name) {
-            case "fecha":
-                setFecha(e.target.value);
-                break;
             case "zona":
                 setZona(e.target.value);
                 break;
@@ -97,9 +98,10 @@ const PreciosGanaderos = (props) => {
                                     <p className="textinput">Fecha:</p>
                                     <DatePicker
                                         className="divContaniner"
+                                        dateFormat="dd/MM/yyyy"
                                         selected={fecha}
                                         name="fecha"
-                                        onChange={setImputHandler}
+                                        onChange={Date => setFechaHandler(Date)}
                                     />
                                 </div>
                                 <div className="divContaniner">

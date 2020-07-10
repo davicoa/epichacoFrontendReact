@@ -13,11 +13,12 @@ const Cemento = props => {
     const [var_pp_semestral_gran_resistencia, setVar_pp_semestral_gran_resistencia] = useState("")
     const [var_pp_ia_gran_resistencia, setVar_pp_ia_gran_resistencia] = useState("")
 
+    const setFechaHandler = Date => {
+        setFecha(Date);
+    }
+
     const setImputHandler = (e) => {
         switch (e.target.name) {
-            case "fecha":
-                setFecha(e.target.value);
-                break;
             case "semestre":
                 setSemestre(e.target.value);
                 break;
@@ -72,9 +73,10 @@ const Cemento = props => {
                                     <p className="textinput">Fecha:</p>
                                     <DatePicker
                                         className="divContaniner"
+                                        dateFormat="dd/MM/yyyy"
                                         selected={fecha}
                                         name="fecha"
-                                        onChange={setImputHandler}
+                                        onChange={Date => setFechaHandler(Date)}
                                     />
                                 </div>
 
