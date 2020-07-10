@@ -12,11 +12,12 @@ const ForestalPrimario = (props) => {
   const [var_mens, setVar_mens] = useState("");
   const [var_ia, setVar_ia] = useState("");
 
+  const setFechaHandler = Date => {
+    setFecha(Date);
+  }
+
   const setImputHandler = (e) => {
     switch (e.target.name) {
-      case "fecha":
-        setFecha(e.target.value);
-        break;
       case "indice":
         setIndice(e.target.value);
         break;
@@ -58,14 +59,15 @@ const ForestalPrimario = (props) => {
       ) : (
           <form onSubmit={savetobd}>
             <div className="divContaninerCenter">
-            <p className="textinput">Fecha:</p>
-            <DatePicker
-              className="divContaniner"
-              selected={fecha}
-              name="fecha"
-              onChange={setImputHandler}
-            />
-          </div>
+              <p className="textinput">Fecha:</p>
+              <DatePicker
+                className="divContaniner"
+                dateFormat="dd/MM/yyyy"
+                selected={fecha}
+                name="fecha"
+                onChange={Date => setFechaHandler(Date)}
+              />
+            </div>
             <div className="divExterno">
               <div className="divInterno">
                 <div className="divContaniner">

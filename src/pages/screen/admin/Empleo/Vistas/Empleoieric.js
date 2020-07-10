@@ -15,11 +15,12 @@ const Empleoieric = (props) => {
     const [indice_empleo_chaco, setIndice_empleo_chaco] = useState("")
     const [indice_empleo_nacion, setIndice_empleo_nacion] = useState("")
 
+    const setFechaHandler = Date => {
+        setFecha(Date);
+    }
+
     const setImputHandler = (e) => {
         switch (e.target.name) {
-            case "fecha":
-                setFecha(e.target.value);
-                break;
             case "empleo_chaco":
                 setEmpleo_chaco(e.target.value);
                 break;
@@ -82,9 +83,10 @@ const Empleoieric = (props) => {
                                     <p className="textinput">Fecha:</p>
                                     <DatePicker
                                         className="divContaniner"
+                                        dateFormat="dd/MM/yyyy"
                                         selected={fecha}
                                         name="fecha"
-                                        onChange={setImputHandler}
+                                        onChange={Date => setFechaHandler(Date)}
                                     />
                                 </div>
                                 <div className="divContaniner">
@@ -169,7 +171,7 @@ const Empleoieric = (props) => {
                                         onChange={setImputHandler}
                                     />
                                 </div>
-                              
+
                             </div>
                         </div>
                         <div className="divContaninerCenter">

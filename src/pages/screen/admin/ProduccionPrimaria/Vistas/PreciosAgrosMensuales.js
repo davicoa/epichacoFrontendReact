@@ -11,11 +11,12 @@ const PreciosAgrosMensuales = (props) => {
   const [var_ia, setVar_ia] = useState("");
   const [producto, setProducto] = useState("");
 
+  const setFechaHandler = Date => {
+    setFecha(Date);
+  }
+
   const setImputHandler = (e) => {
     switch (e.target.name) {
-      case "fecha":
-        setFecha(e.target.value);
-        break;
       case "precio":
         setPrecio(e.target.value);
         break;
@@ -55,69 +56,70 @@ const PreciosAgrosMensuales = (props) => {
           loading={props.loading}
         />
       ) : (
-        <form onSubmit={savetobd}>
-          <div className="divContaninerCenter">
-            <p className="textinput">Fecha:</p>
-            <DatePicker
-              className="divContaniner"
-              selected={fecha}
-              name="fecha"
-              onChange={setImputHandler}
-            />
-          </div>
-          <div className="divExterno">
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">Precio</p>
-                <input
-                  placeholder="Precio"
-                  type="text"
-                  value={precio}
-                  name="precio"
-                  onChange={setImputHandler}
-                />
+          <form onSubmit={savetobd}>
+            <div className="divContaninerCenter">
+              <p className="textinput">Fecha:</p>
+              <DatePicker
+                className="divContaniner"
+                dateFormat="dd/MM/yyyy"
+                selected={fecha}
+                name="fecha"
+                onChange={Date => setFechaHandler(Date)}
+              />
+            </div>
+            <div className="divExterno">
+              <div className="divInterno">
+                <div className="divContaniner">
+                  <p className="textinput">Precio</p>
+                  <input
+                    placeholder="Precio"
+                    type="text"
+                    value={precio}
+                    name="precio"
+                    onChange={setImputHandler}
+                  />
+                </div>
+                <div className="divContaniner">
+                  <p className="textinput">Var mensual</p>
+                  <input
+                    placeholder="Var mensual"
+                    type="text"
+                    value={var_mensual}
+                    name="var_mensual"
+                    onChange={setImputHandler}
+                  />
+                </div>
               </div>
-              <div className="divContaniner">
-                <p className="textinput">Var mensual</p>
-                <input
-                  placeholder="Var mensual"
-                  type="text"
-                  value={var_mensual}
-                  name="var_mensual"
-                  onChange={setImputHandler}
-                />
+              <div className="divInterno">
+                <div className="divContaniner">
+                  <p className="textinput">Producto</p>
+                  <input
+                    placeholder="Producto"
+                    type="text"
+                    value={producto}
+                    name="producto"
+                    onChange={setImputHandler}
+                  />
+                </div>
+                <div className="divContaniner">
+                  <p className="textinput">Var i.a.</p>
+                  <input
+                    placeholder="Var i.a."
+                    type="text"
+                    value={var_ia}
+                    name="var_ia"
+                    onChange={setImputHandler}
+                  />
+                </div>
               </div>
             </div>
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">Producto</p>
-                <input
-                  placeholder="Producto"
-                  type="text"
-                  value={producto}
-                  name="producto"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">Var i.a.</p>
-                <input
-                  placeholder="Var i.a."
-                  type="text"
-                  value={var_ia}
-                  name="var_ia"
-                  onChange={setImputHandler}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="divContaninerCenter">
-            <button className="botton" type="submit">
-              Guardar
+            <div className="divContaninerCenter">
+              <button className="botton" type="submit">
+                Guardar
             </button>
-          </div>
-        </form>
-      )}
+            </div>
+          </form>
+        )}
       <div className="divMsgBottom">
         <span
           style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
