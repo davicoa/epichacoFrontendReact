@@ -1,18 +1,44 @@
 export default [
-  /* { //test para dolar oficial de la nacion
+   { //test para dolar oficial de la nacion
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
     title: { antestitle: 'Dolar Oficial', campotitle: "tipo", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION DEL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
     variable: { dondebuscar: "tipo", quebuscar: "Venta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "cotizacion",
     nacion: true,
-  }, */
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
+  }, 
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
+  
+  { //dolar blue
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",
+    title: { antestitle: 'Dolar Minorista', campotitle: "tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
+    variable: { dondebuscar: "tipo", quebuscar: "Venta" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "cotizacion" },
+    graficoTexto: "cotizacion",
+    nacion: true,
+  },
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
+  
+  { //EURO VENTA
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json",
+    title: { antestitle: 'Euro', campotitle: "Tipo euro", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Precio", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo euro", quebuscar: "Venta" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Precio" },
+    graficoTexto: "Precio",
+    nacion: true,
+  },
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
   {//=== IPC Chaco ===
     link: "https://epichaco.tk/api/ipcgrResis",
     title: { antestitle: 'IPC GR', campotitle: "", despuestitle: "" },
@@ -25,10 +51,65 @@ export default [
     nacion: false,
   },
   //=================
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
+  
+  { //IPC //Inflación (T)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json",
+    title: { antestitle: '', campotitle: "Tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Indice", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPC" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  },
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
+  
+  { //IPC //Inflación mayorista
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json",
+    title: { antestitle: 'Inflacion Mayorista', campotitle: "Tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPIM" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  },
+
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
+  
+  { //Inflación núcleo (IPC núcleo)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",
+    title: { antestitle: 'Inflación núcleo (IPC Núcleo)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPC NUCLEO" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  },
+
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
+  
+  { //PBI
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json",
+    title: { antestitle: 'Producto Bruto Interno (PBI)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "PBI" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  },
+ 
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
   { //IMACH
     link: "https://epichaco.tk/api/imach",
