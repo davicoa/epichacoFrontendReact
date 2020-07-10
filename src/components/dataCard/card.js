@@ -104,7 +104,13 @@ const Card = (props) => {
         }
       }
     });
-
+    
+    let fechita = ""
+    let d = new Date(EjeX.slice(-1))
+    if(d instanceof Date && !isNaN(d.valueOf())){
+      let df = new Intl.DateTimeFormat('pt')
+      fechita = df.format(d)
+    }
     //Arrow
     setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
     //tittle
@@ -112,18 +118,22 @@ const Card = (props) => {
     //subtitle
     setSubtitle(
       antessubtitle +
-        " " +
-        namesubtitle +
-        " " +
-        (fechaSubtitle?EjeX.slice(-1):'')
+      " " +
+      namesubtitle +
+      " " +
+      (fechaSubtitle ?
+        fechita
+        : '')
     );
+
+
     //valor
     setValueView(
       props.dataGraph.valor.antesvalor +
-        " " +
-        valor.slice(-1) +
-        " " +
-        props.dataGraph.valor.despuesvalor
+      " " +
+      valor.slice(-1) +
+      " " +
+      props.dataGraph.valor.despuesvalor
     );
     //grafico
     setOptions(
@@ -150,91 +160,91 @@ const Card = (props) => {
           />
         </div>
       ) : (
-        <div className="apexContainer">
-          <div className="headerGraphContainer">
-            <div className="headerGraph">
-              <div className="headerGraph2">
-                <span>{title}</span>
-              </div>
-              <div className="headerGraph3">
-                <img
-                  className="headerGraphicon"
-                  src={props.dataGraph.nacion ? logoEscudo : logoChaco}
-                  alt="Escudo"
-                ></img>
-              </div>
-              <br />
-            </div>
-            <div className="headerData">
-              <div className="spanDescripcion">
-                <span
-                  style={{
-                    fontSize: "x-small",
-                    float: "left",
-                    fontWeight: "bold",
-                    marginLeft: "5%",
-                  }}
-                >
-                  {subtitle}
-                </span>
+          <div className="apexContainer">
+            <div className="headerGraphContainer">
+              <div className="headerGraph">
+                <div className="headerGraph2">
+                  <span>{title}</span>
+                </div>
+                <div className="headerGraph3">
+                  <img
+                    className="headerGraphicon"
+                    src={props.dataGraph.nacion ? logoEscudo : logoChaco}
+                    alt="Escudo"
+                  ></img>
+                </div>
                 <br />
               </div>
-              <div
-                style={{
-                  textAlign: "left",
-                  fontWeight: "bold",
-                  marginLeft: "3%",
-                  fontSize: "large",
-                  color: "red",
-                }}
-              >
-                <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
-                  <img
-                    src={
-                      arrowAndColor < 0
-                        ? upArrow
-                        : arrowAndColor > 0
-                        ? downArrow
-                        : ""
-                    }
-                    alt=""
-                    height="auto"
-                    width="7%"
-                  ></img>
+              <div className="headerData">
+                <div className="spanDescripcion">
                   <span
                     style={{
-                      color:
-                        arrowAndColor < 0
-                          ? "#3bb54c"
-                          : arrowAndColor > 0
-                          ? "red"
-                          : "#5F5F5F",
+                      fontSize: "x-small",
+                      float: "left",
+                      fontWeight: "bold",
+                      marginLeft: "5%",
                     }}
                   >
-                    {valueView}
+                    {subtitle}
                   </span>
-                </span>
+                  <br />
+                </div>
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontWeight: "bold",
+                    marginLeft: "3%",
+                    fontSize: "large",
+                    color: "red",
+                  }}
+                >
+                  <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
+                    <img
+                      src={
+                        arrowAndColor < 0
+                          ? upArrow
+                          : arrowAndColor > 0
+                            ? downArrow
+                            : ""
+                      }
+                      alt=""
+                      height="auto"
+                      width="7%"
+                    ></img>
+                    <span
+                      style={{
+                        color:
+                          arrowAndColor < 0
+                            ? "#3bb54c"
+                            : arrowAndColor > 0
+                              ? "red"
+                              : "#5F5F5F",
+                      }}
+                    >
+                      {valueView}
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="apexGraph">
-            <ReactApexChart
-              options={options.options}
-              series={options.series}
-              type="area"
-            />
-          </div>
-          <span
-            className="style-kbazlqv8label"
-            style={{
-              marginBottom: "-10%",
-              display: "none" /* ocultar boton */,
-            }}
-          >
-            EXPANDIR
+            <div className="apexGraph">
+              <ReactApexChart
+                options={options.options}
+                series={options.series}
+                type="area"
+              />
+            </div>
+            <span
+              className="style-kbazlqv8label"
+              style={{
+                marginBottom: "-10%",
+                display: "none" /* ocultar boton */,
+              }}
+            >
+              EXPANDIR
           </span>
-        </div>
-      )}
+          </div>
+        )}
     </div>
   );
 };
