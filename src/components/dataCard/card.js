@@ -10,7 +10,6 @@ import upArrow from "images/Up_green_arrow-2.png";
 import downArrow from "images/Down_red_arrow-2.png";
 
 const Card = (props) => {
- 
   const [loading, setLoading] = useState(true);
   const [options, setOptions] = useState();
   const [title, setTitle] = useState("");
@@ -25,10 +24,16 @@ const Card = (props) => {
   const dataFromApi = async () => {
     let EjeX = [];
     let EjeY = [];
-    let name = "";
+    let nametitle = "";
+    let namesubtitle = "";
     let valor = [];
     let { ejey, ejex } = props.dataGraph.grafico;
-    let { campotitle } = props.dataGraph.title;
+    let { campotitle, antestitle, despuestitle } = props.dataGraph.title;
+    let {
+      antessubtitle,
+      camposubtitle,
+      fechaSubtitle,
+    } = props.dataGraph.subtitle;
     let { campovalor } = props.dataGraph.valor;
     let { dondebuscar, quebuscar } = props.dataGraph.variable;
     let { dondebuscarOpc, quebuscarOpc } = props.dataGraph.variableOpc;
@@ -46,11 +51,16 @@ const Card = (props) => {
             EjeX.push(item[ejex]); //fecha
             EjeY.push(
               parseFloat(
-                item[ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+                item[ejey]
+                  .replace(/,/g, ".")
+                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
               )
             ); //dato
             if (item[campotitle]) {
-              name = item[campotitle];
+              nametitle = item[campotitle];
+            }
+            if (item[camposubtitle]) {
+              namesubtitle = item[camposubtitle];
             }
             if (item[campovalor]) {
               valor.push(
@@ -71,11 +81,16 @@ const Card = (props) => {
           EjeX.push(item[ejex]); //fecha
           EjeY.push(
             parseFloat(
-              item[ejey].replace(/,/g, ".").replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+              item[ejey]
+                .replace(/,/g, ".")
+                .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
             )
           ); //dato
           if (item[campotitle]) {
-            name = item[campotitle];
+            nametitle = item[campotitle];
+          }
+          if (item[camposubtitle]) {
+            namesubtitle = item[camposubtitle];
           }
           if (item[campovalor]) {
             valor.push(
@@ -90,19 +105,18 @@ const Card = (props) => {
       }
     });
 
-    
     //Arrow
     setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
     //tittle
-    setTitle(
-      props.dataGraph.title.antestitle +
-        " " +
-        name +
-        " " +
-        props.dataGraph.title.despuestitle
-    );
+    setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
-    setSubtitle(props.dataGraph.subtitle + " " + EjeX.slice(-1));
+    setSubtitle(
+      antessubtitle +
+        " " +
+        namesubtitle +
+        " " +
+        (fechaSubtitle?EjeX.slice(-1):'')
+    );
     //valor
     setValueView(
       props.dataGraph.valor.antesvalor +
