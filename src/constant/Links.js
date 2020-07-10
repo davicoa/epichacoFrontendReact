@@ -1,22 +1,22 @@
 export default [
-  { //test para dolar oficial de la nacion
+  /* { //test para dolar oficial de la nacion
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
     title: { antestitle: 'Dolar Oficial', campotitle: "tipo", despuestitle: "" },
-    subtitle: "VARIACION DEL",
+    subtitle: { antessubtitle: 'VARIACION DEL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
     variable: { dondebuscar: "tipo", quebuscar: "Venta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "cotizacion",
     nacion: true,
-  },
+  }, */
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
   {//=== IPC Chaco ===
     link: "https://epichaco.tk/api/ipcgrResis",
     title: { antestitle: 'IPC GR', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION MENSUAL AL",
+    subtitle: { antessubtitle: 'VARIACION MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_mens", despuesvalor: "%" },
     variable: { dondebuscar: "sector", quebuscar: "Nivel General" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -33,7 +33,7 @@ export default [
   { //IMACH
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'IMACH', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "indice", quebuscar: "IMACH" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -45,7 +45,7 @@ export default [
   { //Consumo Eléctrico Industrial
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'Consumo', campotitle: "indice", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "indice", quebuscar: "Energía Industrial" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -57,7 +57,7 @@ export default [
   { //Producción Forestal Muebles
     link: "https://epichaco.tk/api/forestoIndustria",
     title: { antestitle: 'Producción Forestal Muebles', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "tipo_produccion", quebuscar: "Muebles" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -68,7 +68,7 @@ export default [
   {//Producción Forestal Aberturas //produccion industrial
     link: "https://epichaco.tk/api/forestoIndustria",
     title: { antestitle: 'Producción Forestal Aberturas', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "tipo_produccion", quebuscar: "Aberturas" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -82,7 +82,7 @@ export default [
   {//Cemento Total CHACO
     link: "http://epichaco.tk/api/cemento",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_s_e_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Cemento Total" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -94,7 +94,7 @@ export default [
   {//Empleo IERIC
     link: "https://epichaco.tk/api/empleoIERIC",
     title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_porcen_ia_empleo_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "empleo_chaco", quebuscar: "" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -106,7 +106,7 @@ export default [
   {//Tasas de Desocupación (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "gran_resistencia", quebuscar: "" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -118,7 +118,7 @@ export default [
   {//Empleo general
     link: "https://epichaco.tk/api/empleoGeneral",
     title: { antestitle: 'Empleo general', campotitle: "", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "variacion_ia_provincia", despuesvalor: "%" },
     variable: { dondebuscar: "empleo_provincia", quebuscar: "" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -130,7 +130,7 @@ export default [
   { //Tasas de actividad (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Tasa de Actividad" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -142,7 +142,7 @@ export default [
   { //Tasas de Empleo (nación y Pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Tasa de Empleo" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -159,7 +159,7 @@ export default [
   {//Producción Carbón Granel
     link: "http://epichaco.tk/api/forestalPrimario",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Carbón a granel" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -170,7 +170,7 @@ export default [
   {//Carbón en bolsa
     link: "http://epichaco.tk/api/forestalPrimario",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_mens", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Carbón en bolsa" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -181,7 +181,7 @@ export default [
   {//"Rollos", //Producción Rollos
     link: "http://epichaco.tk/api/forestalPrimario",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Rollos" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -196,7 +196,7 @@ export default [
   {//Combustible
     link: "http://epichaco.tk/api/combustible",
     title: { antestitle: 'Combustible', campotitle: "producto", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Nafta+Gasoil" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -208,7 +208,7 @@ export default [
   {//"Supermercados", 
     link: "http://epichaco.tk/api/supermercado",
     title: { antestitle: 'Supermercados', campotitle: "", despuestitle: "CHACO" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Valores Constantes (Base=2017)" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -220,7 +220,7 @@ export default [
   {//Transferencias autos
     link: "http://epichaco.tk/api/vehiculo",
     title: { antestitle: '', campotitle: "categoria", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco_original", despuesvalor: "%" },
     variable: { dondebuscar: "categoria", quebuscar: "Transferencia de autos" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -232,7 +232,7 @@ export default [
    {//Patentamiento autos chaco
     link: "http://epichaco.tk/api/vehiculo",
     title: { antestitle: '', campotitle: "categoria", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco_original", despuesvalor: "%" },
     variable: { dondebuscar: "categoria", quebuscar: "Patentamiento de autos" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -245,7 +245,7 @@ export default [
    {//Patentamiento motos chaco
     link: "http://epichaco.tk/api/vehiculo",
     title: { antestitle: '', campotitle: "categoria", despuestitle: "" },
-    subtitle: "VARIACION INTERANUAL AL",
+    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco_original", despuesvalor: "%" },
     variable: { dondebuscar: "categoria", quebuscar: "Patentamiento de motos" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -257,7 +257,7 @@ export default [
    {//Stock Bovinos
     link: "http://epichaco.tk/api/stockBovinoPorcino",
     title: { antestitle: 'Stock', campotitle: "actividad_producto_nombre", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "total_cabezas", despuesvalor: "Millones" },
     variable: { dondebuscar: "actividad_producto_nombre", quebuscar: "Bovino" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -270,7 +270,7 @@ export default [
   {//Faena Bovinos (Nacion y Pcia) - variaciones
     link: "http://epichaco.tk/api/faena",
     title: { antestitle: 'Faena', campotitle: "categoria", despuestitle: "" },
-    subtitle: "VARIACION MENSUAL AL",
+    subtitle: { antessubtitle: 'VARIACION MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "categoria", quebuscar: "Bovina" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -282,7 +282,7 @@ export default [
   {//Precios Terneros (Nación y Provincia) - Domo G
     link: "http://epichaco.tk/api/preciosGanaderos",
     title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
     variable: { dondebuscar: "zona", quebuscar: "Domo Ganadero" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -293,7 +293,7 @@ export default [
   {//Precios Terneros (Nación y Provincia) - Domo A/G
     link: "http://epichaco.tk/api/preciosGanaderos",
     title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
     variable: { dondebuscar: "zona", quebuscar: "Agricola/Ganadera" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -304,7 +304,7 @@ export default [
   {//Precios Terneros (Nación y Provincia) - ZOna Norte
     link: "http://epichaco.tk/api/preciosGanaderos",
     title: { antestitle: 'Precios ternero', campotitle: "zona", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "ternero", despuesvalor: "" },
     variable: { dondebuscar: "zona", quebuscar: "Zona Norte" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -317,7 +317,7 @@ export default [
   {//Faena Porcinos (Nacion y Pcia) - Variaciones
     link: "http://epichaco.tk/api/faena",
     title: { antestitle: 'Faena', campotitle: "categoria", despuestitle: "" },
-    subtitle: "VARIACION MENSUAL AL",
+    subtitle: { antessubtitle: 'VARIACION MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "categoria", quebuscar: "Porcina" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -329,7 +329,7 @@ export default [
    { //Stock Porcinos
     link: "http://epichaco.tk/api/stockBovinoPorcino",
     title: { antestitle: 'Stock', campotitle: "actividad_producto_nombre", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "total_cabezas", despuesvalor: "" },
     variable: { dondebuscar: "actividad_producto_nombre", quebuscar: "Porcino" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -341,7 +341,7 @@ export default [
   { //$Girasol   
     link: "http://epichaco.tk/api/preciosAgroDiarios",
     title: { antestitle: '', campotitle: "precio", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "valor_actual", despuesvalor: "" },
     variable: { dondebuscar: "precio", quebuscar: "Girasol" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -352,7 +352,7 @@ export default [
   { //$Maíz                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
     title: { antestitle: '', campotitle: "precio", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "valor_actual", despuesvalor: "" },
     variable: { dondebuscar: "precio", quebuscar: "Maíz" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -363,7 +363,7 @@ export default [
   { //$Soja                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
     title: { antestitle: '', campotitle: "precio", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "valor_actual", despuesvalor: "" },
     variable: { dondebuscar: "precio", quebuscar: "Soja" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -374,7 +374,7 @@ export default [
   { //$Trigo                           => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
     title: { antestitle: '', campotitle: "Trigo", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "valor_actual", despuesvalor: "" },
     variable: { dondebuscar: "precio", quebuscar: "Trigo de Pan" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -385,7 +385,7 @@ export default [
   { //Precio Fibra Algodón - Merc Int => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "precio", despuesvalor: "" },
     variable: { dondebuscar: "producto", quebuscar: "Fibra de Algodón-Mercado Interno U$S| KG" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -396,7 +396,7 @@ export default [
   { //Precio Sorgo                    => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "precio", despuesvalor: "" },
     variable: { dondebuscar: "producto", quebuscar: "Sorgo U$S| Tonelada" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -407,7 +407,7 @@ export default [
   { //Precio arroz cascara            => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
-    subtitle: "VALOR AL",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "precio", despuesvalor: "" },
     variable: { dondebuscar: "producto", quebuscar: "Arroz U$S| Tonelada" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -429,7 +429,7 @@ export default [
   { //Pobreza
     link: "http://epichaco.tk/api/pobrezaIndigencia",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
-    subtitle: "VALOR AL 1S",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "semestre", fechaSubtitle: false },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Pobreza" },
     variableOpc: { dondebuscarOpc: "alcance", quebuscarOpc: "Gran Resistencia" },
@@ -441,7 +441,7 @@ export default [
   { //Indigencia chaco PONER DOBLE FILTRO
     link: "http://epichaco.tk/api/pobrezaIndigencia",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
-    subtitle: "VALOR AL 1S",
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "semestre", fechaSubtitle: false },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Indigencia" },
     variableOpc: { dondebuscarOpc: "alcance", quebuscarOpc: "Gran Resistencia" },
