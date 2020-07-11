@@ -5,6 +5,7 @@
   background-color: rgba(245, 245, 245, 0.938);
   align-items: center;
 }
+
 nav {
   cursor: pointer;
   font-family: Arial;
@@ -16,4 +17,20 @@ nav {
 ul {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+
+.navbarContainer  >  ul {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.navbarContainer  >  ul:hover {
+  background-color: rgba(57, 128, 221, 0.507);
+}
+
+.activeNavTab{
+  background-color: rgba(57, 128, 221, 0.507);
 }
