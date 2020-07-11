@@ -136,13 +136,28 @@ const EmpleoGeneral = (props) => {
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">rama_de_actividad</p>
-                                    <input
-                                        placeholder="rama_de_actividad"
-                                        type="text"
+                                    <select
                                         value={rama_de_actividad}
                                         name="rama_de_actividad"
                                         onChange={setImputHandler}
-                                    />
+                                        required
+                                    >
+                                        <option value="" disabled>Seleccione una opcion</option>
+                                        <option value="Total">Total</option>
+                                        <option value="Agricultura, ganadería, caza y silvicultura">Agricultura, ganadería, caza y silvicultura</option>
+                                        <option value="Explotación de minas y canteras">Explotación de minas y canteras</option>
+                                        <option value="Industria manufacturera">Industria manufacturera</option>
+                                        <option value="Electricidad, gas y agua">Electricidad, gas y agua</option>
+                                        <option value="Construcción">Construcción</option>
+                                        <option value="Comercio al por mayor y al por menor">Comercio al por mayor y al por menor</option>
+                                        <option value="Hotelería y restaurantes">Hotelería y restaurantes</option>
+                                        <option value="Servicios de transporte, de almacenamiento y de comunicaciones">Servicios de transporte, de almacenamiento y de comunicaciones</option>
+                                        <option value="Intermediación financiera y otros servicios financieros">Intermediación financiera y otros servicios financieros</option>
+                                        <option value="Servicios inmobiliarios, empresariales y de alquiler">Servicios inmobiliarios, empresariales y de alquiler</option>
+                                        <option value="Enseñanza">Enseñanza</option>
+                                        <option value="Servicios sociales y de salud">Servicios sociales y de salud</option>
+                                        <option value="Servicios comunitarios, sociales y personales N.C.P.">Servicios comunitarios, sociales y personales N.C.P.</option>
+                                    </select>
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">empleo_provincia</p>

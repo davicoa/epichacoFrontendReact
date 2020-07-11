@@ -180,13 +180,16 @@ const Supermercado = props => {
                                    <div className="divInterno">
                                         <div className="divContaniner">
                                              <p className="textinput">producto</p>
-                                             <input
-                                                  placeholder="producto"
-                                                  type="text"
+                                             <select
                                                   value={producto}
                                                   name="producto"
                                                   onChange={setImputHandler}
-                                             />
+                                                  required
+                                             >
+                                                  <option value="" disabled>Seleccione una opcion</option>
+                                                  <option value="Valores Corrientes">Valores Corrientes</option>
+                                                  <option value="Valores Constantes (Base=2017)">Valores Constantes (Base=2017)</option>
+                                             </select>
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">valor_sin_est_nacion</p>

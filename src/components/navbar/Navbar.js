@@ -4,8 +4,8 @@ import "./style.css"
 const Navbar = () => {
     return (
         <nav className="navbarContainer">
-            <ul>
-                <span style={{ backgroundColor: "rgba(92, 187, 209, 1)", color: "white", width: "140px", display: "inline-block" }}>Monitor</span>
+            <ul className="activeNavTab">
+                <span>Monitor</span>
             </ul>
             <span>|</span>
             <ul>

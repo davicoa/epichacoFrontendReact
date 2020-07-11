@@ -158,13 +158,17 @@ const PreciosGanaderos = (props) => {
                             <div className="divInterno">
                                 <div className="divContaniner">
                                     <p className="textinput">Zona</p>
-                                    <input
-                                        placeholder="Zona"
-                                        type="text"
+                                    <select 
                                         value={zona}
                                         name="zona"
                                         onChange={setImputHandler}
-                                    />
+                                        required
+                                        >
+                                            <option value="" disabled>Seleccione una opcion</option>
+                                            <option value="Agricola/Ganadera">Agricola/Ganadera</option> 
+                                            <option value="Zona Norte" >Zona Norte</option>
+                                            <option value="Domo Ganadero" >Domo Ganadero</option>
+                                    </select>
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">Vaquilla</p>

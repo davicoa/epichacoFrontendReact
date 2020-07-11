@@ -132,13 +132,18 @@ const IndicadoresLaborales = props => {
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">tasa</p>
-                                             <input
-                                                  placeholder="tasa"
-                                                  type="text"
+                                             <select
                                                   value={tasa}
                                                   name="tasa"
                                                   onChange={setImputHandler}
-                                             />
+                                                  required
+                                                  >
+                                                  <option value="" disabled>Seleccione una opcion</option>
+                                                  <option value="Tasa de Actividad">Tasa de Actividad</option>
+                                                  <option value="Tasa de Empleo">Tasa de Empleo</option>
+                                                  <option value="Tasa de Desocupación">Tasa de Desocupación</option>
+                                                  <option value="Tasa de Subocupación">Tasa de Subocupación</option>
+                                             </select>
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">gran_resistencia</p>
