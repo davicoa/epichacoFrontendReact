@@ -116,7 +116,7 @@ button[type="button"] {
 }
 .activeNavTabPanel{
   background-color: rgba(92, 188, 209, 0.644);
-  border: rgb(0, 0, 0) 0.2vh solid;
+  border: rgb(255, 255, 255) 0.2vh solid;
 }
 
 .divMsgBottom {
