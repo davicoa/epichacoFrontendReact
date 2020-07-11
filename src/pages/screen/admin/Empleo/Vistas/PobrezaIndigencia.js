@@ -92,23 +92,30 @@ const Cemento = props => {
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">alcance</p>
-                                    <input
-                                        placeholder="alcance"
-                                        type="text"
+                                    <select
                                         value={alcance}
                                         name="alcance"
                                         onChange={setImputHandler}
-                                    />
+                                        required
+                                        >
+                                            <option value="" disabled>Seleccione una opcion</option>
+                                            <option value="Gran Resistencia">Gran Resistencia</option>
+                                            <option value="NEA">NEA</option>
+                                            <option value="Total 31 Aglomerados">Total 31 Aglomerados</option>
+                                    </select>
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">tasa</p>
-                                    <input
-                                        placeholder="tasa"
-                                        type="text"
+                                    <select
                                         value={tasa}
                                         name="tasa"
                                         onChange={setImputHandler}
-                                    />
+                                        required
+                                        >
+                                            <option value="" disabled>Seleccione una opcion</option>
+                                            <option value="Pobreza">Pobreza</option>
+                                            <option value="Indigencia">Indigencia</option>
+                                    </select>
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">gran_resistencia</p>

@@ -72,13 +72,22 @@ const ForestalPrimario = (props) => {
               <div className="divInterno">
                 <div className="divContaniner">
                   <p className="textinput">Indice</p>
-                  <input
-                    placeholder="Indice"
-                    type="text"
-                    value={indice}
-                    name="indice"
-                    onChange={setImputHandler}
-                  />
+                  <select
+                      value={indice}
+                      name="indice"
+                      onChange={setImputHandler}
+                      required
+                    >
+                        <option value="" disabled>Seleccione una opcion</option>
+                        <option value="IMACH">IMACH</option>
+                        <option value="Gas Oil">Gas Oil</option>
+                        <option value="Coparticipación">Coparticipación</option>
+                        <option value="Cemento">Cemento</option>
+                        <option value="Patentamientos">Patentamientos</option>
+                        <option value="Energía Industrial">Energía Industrial</option>
+                        <option value="Supermercados">Supermercados</option>
+                        <option value="Empleo Formal">Empleo Formal</option>
+                  </select>
                 </div>
                 <div className="divContaniner">
                   <p className="textinput">Valor</p>

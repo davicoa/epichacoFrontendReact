@@ -116,13 +116,17 @@ const Vehiculo = props => {
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">categoria</p>
-                                             <input
-                                                  placeholder="categoria"
-                                                  type="text"
+                                             <select
                                                   value={categoria}
                                                   name="categoria"
                                                   onChange={setImputHandler}
-                                             />
+                                                  required
+                                             >
+                                                  <option value="" disabled>Seleccione una opcion</option>
+                                                  <option value="Patentamiento de autos">Patentamiento de autos</option>
+                                                  <option value="Patentamiento de motos">Patentamiento de motos</option>
+                                                  <option value="Transferencia de autos">Transferencia de autos</option>
+                                             </select>
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">chaco_original</p>
