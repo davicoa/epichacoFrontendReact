@@ -69,13 +69,18 @@ const ForestalPrimario = (props) => {
           </div>
           <div className="divContaniner">
             <p className="textinput">producto:</p>
-            <input
-              placeholder="producto"
-              name="producto"
-              value={producto}
-              onChange={setImputHandler}
-              type="text"
-            />
+            <select 
+                  value={producto}
+                  name="producto"
+                  onChange={setImputHandler}
+                  required
+                >
+                <option value="" disabled>Seleccione una opcion</option>
+                <option value="Carbón a granel">Carbón a granel</option> 
+                <option value="Carbón en bolsa" >Carbón en bolsa</option>
+                <option value="Rollos" >Rollos</option>
+                <option value="Rollizos" >Rollizos</option>
+              </select>
           </div>
           <div className="divContaniner">
             <p className="textinput">Toneladas:</p>

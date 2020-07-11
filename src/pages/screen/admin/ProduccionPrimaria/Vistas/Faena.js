@@ -150,13 +150,16 @@ const Faena = (props) => {
             </div>
             <div className="divContaninerCenter">
               <p className="textinput">Categorías</p>
-              <input
-                placeholder="Categorías"
-                type="text"
-                value={categoria}
-                name="categoria"
-                onChange={setImputHandler}
-              />
+              <select 
+                  value={categoria}
+                  name="categoria"
+                  onChange={setImputHandler}
+                  required
+                >
+                <option value="" disabled>Seleccione una opcion</option>
+                <option value="Bovino">Bovino</option> 
+                <option value="Porcino" >Porcino</option>
+              </select>
             </div>
             <div className="divContaninerCenter">
               <button className="botton" type="submit">
