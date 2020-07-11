@@ -110,6 +110,8 @@ const Card = (props) => {
     if(d instanceof Date && !isNaN(d.valueOf())){
       let df = new Intl.DateTimeFormat('pt')
       fechita = df.format(d)
+    }else{
+      fechita = EjeX.slice(-1)
     }
     //Arrow
     setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
