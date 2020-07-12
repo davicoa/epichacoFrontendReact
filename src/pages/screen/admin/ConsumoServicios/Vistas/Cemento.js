@@ -181,13 +181,17 @@ const Cemento = props => {
                                    <div className="divInterno">
                                         <div className="divContaniner">
                                              <p className="textinput">producto</p>
-                                             <input
-                                                  placeholder="producto"
-                                                  type="text"
+                                             <select
                                                   value={producto}
                                                   name="producto"
                                                   onChange={setImputHandler}
-                                             />
+                                                  required
+                                             >
+                                                  <option value="" disabled>Seleccione una opcion</option>
+                                                  <option value="Bolsa">Bolsa</option>
+                                                  <option value="Granel">Granel</option>
+                                                  <option value="Cemento Total">Cemento Total</option>
+                                             </select>
                                         </div>
                                         <div className="divContaniner">
                                              <p className="textinput">valor_sin_est_nacion</p>

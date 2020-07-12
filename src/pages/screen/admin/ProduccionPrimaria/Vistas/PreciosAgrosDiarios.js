@@ -82,13 +82,21 @@ const PreciosAgrosDiarios = (props) => {
                             <div className="divInterno">
                                 <div className="divContaniner">
                                     <p className="textinput">Grano</p>
-                                    <input
-                                        placeholder="Grano"
-                                        type="text"
+                                    <select 
                                         value={grano}
                                         name="grano"
                                         onChange={setImputHandler}
-                                    />
+                                        required
+                                        >
+                                        <option value="" disabled>Seleccione una opcion</option>
+                                        <option value="Trigo de Pan">Trigo de Pan</option> 
+                                        <option value="Maíz" >Maíz</option>
+                                        <option value="Girasol" >Girasol</option>
+                                        <option value="Soja" >Soja</option>
+                                        <option value="Algodón" >Algodón</option>
+                                        <option value="Aceite de Girasol Crudo" >Aceite de Girasol Crudo</option>
+                                        <option value="Aceite de Soja Crudo" >Aceite de Soja Crudo</option>
+                                    </select>
                                 </div>
                                 <div className="divContaniner">
                                     <p className="textinput">Valor Actual</p>

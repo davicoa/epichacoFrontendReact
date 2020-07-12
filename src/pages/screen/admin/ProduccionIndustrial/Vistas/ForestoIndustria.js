@@ -72,13 +72,17 @@ const ForestoIndustria = (props) => {
               <div className="divInterno">
                 <div className="divContaniner">
                   <p className="textinput">Tipo Produccion</p>
-                  <input
-                    placeholder="tipo_produccion"
-                    type="text"
+                  <select
                     value={tipo_produccion}
                     name="tipo_produccion"
                     onChange={setImputHandler}
-                  />
+                    required
+                  >
+                    <option value="" disabled>Seleccione una opcion</option>
+                    <option value="Aberturas">Aberturas</option>
+                    <option value="Muebles">Muebles</option>
+                    <option value="Tanino">Tanino</option>
+                </select>
                 </div>
                 <div className="divContaniner">
                   <p className="textinput">Toneladas</p>
