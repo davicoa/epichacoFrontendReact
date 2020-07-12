@@ -9,6 +9,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "cotizacion",
     nacion: true,
+    dirOpuesta: false,
   }, 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
   
@@ -22,6 +23,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "cotizacion",
     nacion: true,
+    dirOpuesta: false,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
@@ -36,6 +38,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Precio" },
     graficoTexto: "Precio",
     nacion: true,
+    dirOpuesta: false,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
@@ -49,6 +52,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "VAR_MENS",
     nacion: false,
+    dirOpuesta: false,
   },
   //=================
   
@@ -62,6 +66,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
@@ -76,6 +81,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
+    dirOpuesta: false,
   },
 
   
@@ -91,6 +97,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   },
 
   
@@ -106,6 +113,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   }, 
     
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
@@ -120,6 +128,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   }, 
     
 
@@ -134,6 +143,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
+    dirOpuesta: false,
   },
 
   { //IPI Índice de producción industrial (IPI)
@@ -146,6 +156,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   }, 
     
 
@@ -160,6 +171,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
+    dirOpuesta: false,
   },
 
   { //Capacidad instalada de la industria
@@ -172,6 +184,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
+    dirOpuesta: false,
   }, 
     
 
@@ -186,6 +199,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
+    dirOpuesta: false,
   },
   {//Producción Forestal Aberturas //produccion industrial
     link: "https://epichaco.tk/api/forestoIndustria",
@@ -197,6 +211,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
+    dirOpuesta: false,
   },
   //Producción Tanino
 
@@ -210,6 +225,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   }, 
     //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
   
@@ -224,6 +240,7 @@ export default [
       grafico: { ejex: "Fecha", ejey: "Cantidad" },
       graficoTexto: "Cantidad",
       nacion: true,
+      dirOpuesta: false,
     }, 
       
 
@@ -238,6 +255,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_s_e_chaco" },
     graficoTexto: "var ai",
     nacion: false,
+    dirOpuesta: false,
   },
 
   
@@ -251,6 +269,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
+    dirOpuesta: false,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
@@ -264,6 +283,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_porcen_ia_empleo_chaco" },
     graficoTexto: "var_ia",
     nacion: false,
+    dirOpuesta: false,
   },
 
   { ////Tasa de desocupación
@@ -276,6 +296,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
+    dirOpuesta: false,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
@@ -289,6 +310,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
+    dirOpuesta: false,
   },
 
   { ////Trabajadores Registrados
@@ -301,6 +323,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
+    dirOpuesta: false,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
@@ -314,6 +337,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "variacion_ia_provincia" },
     graficoTexto: "variacion_ia_provincia",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
   { //Tasas de actividad (nación y pcia)
@@ -326,6 +350,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
   { //Tasas de Empleo (nación y Pcia)
@@ -338,6 +363,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/salario_m%C3%ADnimo%2C_vital_y_m%C3%B3vil.json", //"Tipo": "Salario mínimo, vital y móvil", "Salario": "16.875,00",
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
@@ -355,6 +381,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var ai",
     nacion: false,
+    dirOpuesta: false,
   },
   {//Carbón en bolsa
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -366,6 +393,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "var_mens",
     nacion: false,
+    dirOpuesta: false,
   },
   {//"Rollos", //Producción Rollos
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -377,6 +405,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var ai",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json", //Recaudación de seguridad social
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json", //Resultado financiero
@@ -392,6 +421,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var ai",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //Ventas en supermercados a precios constantes
   {//"Supermercados", 
@@ -404,6 +434,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var ai",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // Producción de autos (%)
   {//Transferencias autos
@@ -416,6 +447,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_autos.json", //Patentamiento de autos (%)
    {//Patentamiento autos chaco
@@ -428,6 +460,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_veh%C3%ADculos.json", //Exportación de vehículos (%)
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_motos.json",//Patentamiento de motos (%)
@@ -441,6 +474,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_bovinos.json", //Producción de bovinos (%)
    {//Stock Bovinos
@@ -453,6 +487,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "total_cabezas" },
     graficoTexto: "total_cabezas",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/faena_de_bovinos.json", //Faena de bovinos (%)
   
@@ -466,6 +501,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var_ia_chaco",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_carne_vacuna.json", //Exportación de carne vacuna (%)
   {//Precios Terneros (Nación y Provincia) - Domo G
@@ -478,6 +514,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
+    dirOpuesta: false,
   },
   {//Precios Terneros (Nación y Provincia) - Domo A/G
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -489,6 +526,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
+    dirOpuesta: false,
   },
   {//Precios Terneros (Nación y Provincia) - ZOna Norte
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -500,6 +538,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_porcinos.json", //Producción de porcinos (%)
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/faena_de_porcinos.json", //Faena de porcinos (%)
@@ -513,6 +552,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var_ia_chaco",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_porcinos.json", //Exportación de porcinos (%)
    { //Stock Porcinos
@@ -525,6 +565,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "total_cabezas" },
     graficoTexto: "total_cabezas",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_leche.json", //Producción de leche (%)
   { //$Girasol   
@@ -537,6 +578,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Girasol",
     nacion: false,
+    dirOpuesta: false,
   },
   { //$Maíz                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -548,6 +590,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Maíz",
     nacion: false,
+    dirOpuesta: false,
   },
   { //$Soja                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -559,6 +602,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Soja",
     nacion: false,
+    dirOpuesta: false,
   },
   { //$Trigo                           => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -570,6 +614,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Trigo",
     nacion: false,
+    dirOpuesta: false,
   },
   { //Precio Fibra Algodón - Merc Int => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -581,6 +626,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "C-1/2",
     nacion: false,
+    dirOpuesta: false,
   },
   { //Precio Sorgo                    => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -592,6 +638,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "precio",
     nacion: false,
+    dirOpuesta: false,
   },
   { //Precio arroz cascara            => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -603,6 +650,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "precio",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_granos_oleaginosos.json", //Molienda de soja - Granos oleaginosos (%)
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_aceite.json", //Molienda de soja - Aceite (%)
@@ -625,6 +673,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indigencia.json", //Indigencia
   { //Indigencia chaco PONER DOBLE FILTRO
@@ -637,6 +686,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
+    dirOpuesta: false,
   },
   "https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_confianza_del_consumidor_%28icc%29.json", //Índice de confianza del consumidor (ICC)
 ];
