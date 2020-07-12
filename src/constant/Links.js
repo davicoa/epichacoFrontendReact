@@ -1,18 +1,44 @@
 export default [
-  /* { //test para dolar oficial de la nacion
+   { //test para dolar oficial de la nacion
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
     title: { antestitle: 'Dolar Oficial', campotitle: "tipo", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION DEL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
     variable: { dondebuscar: "tipo", quebuscar: "Venta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "cotizacion",
     nacion: true,
-  }, */
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
+  }, 
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
+  
+  { //dolar blue
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",
+    title: { antestitle: 'Dolar Minorista', campotitle: "tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
+    variable: { dondebuscar: "tipo", quebuscar: "Venta" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "cotizacion" },
+    graficoTexto: "cotizacion",
+    nacion: true,
+  },
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
+  
+  { //EURO VENTA
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json",
+    title: { antestitle: 'Euro', campotitle: "Tipo euro", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Precio", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo euro", quebuscar: "Venta" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Precio" },
+    graficoTexto: "Precio",
+    nacion: true,
+  },
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
   {//=== IPC Chaco ===
     link: "https://epichaco.tk/api/ipcgrResis",
     title: { antestitle: 'IPC GR', campotitle: "", despuestitle: "" },
@@ -25,11 +51,79 @@ export default [
     nacion: false,
   },
   //=================
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
+  
+  { //IPC //Inflación (T)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json",
+    title: { antestitle: '', campotitle: "Tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Indice", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPC" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  },
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
+  
+  { //IPC //Inflación mayorista
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json",
+    title: { antestitle: 'Inflacion Mayorista', campotitle: "Tipo", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPIM" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  },
+
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
+  
+  { //Inflación núcleo (IPC núcleo)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",
+    title: { antestitle: 'Inflación núcleo (IPC Núcleo)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "IPC NUCLEO" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  },
+
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
+  
+  { //PBI
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json",
+    title: { antestitle: 'Producto Bruto Interno', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "PBI" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+    
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
+  
+  { //EMAE
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json",
+    title: { antestitle: 'Estimador mensual de la actividad económica (EMAE)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "EMAE Interanual" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+    
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
   { //IMACH
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'IMACH', campotitle: "", despuestitle: "" },
@@ -41,7 +135,21 @@ export default [
     graficoTexto: "var_ia",
     nacion: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_producci%C3%B3n_industrial_%28ipi%29.json", //IPI Índice de producción industrial (IPI)
+
+  { //IPI Índice de producción industrial (IPI)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_producci%C3%B3n_industrial_%28ipi%29.json",
+    title: { antestitle: 'IPI Índice de producción industrial (IPI)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Índice de producción industrial" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+    
+
+//"https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_producci%C3%B3n_industrial_%28ipi%29.json", //IPI Índice de producción industrial (IPI)
   { //Consumo Eléctrico Industrial
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'Consumo', campotitle: "indice", despuestitle: "" },
@@ -53,7 +161,21 @@ export default [
     graficoTexto: "var_ia",
     nacion: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/capacidad_instalada_de_la_industria.json", //Capacidad instalada de la industria
+
+  { //Capacidad instalada de la industria
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/capacidad_instalada_de_la_industria.json",
+    title: { antestitle: 'Capacidad instalada de la industria', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "UCII" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+    
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/capacidad_instalada_de_la_industria.json", //Capacidad instalada de la industria
   { //Producción Forestal Muebles
     link: "https://epichaco.tk/api/forestoIndustria",
     title: { antestitle: 'Producción Forestal Muebles', campotitle: "", despuestitle: "" },
@@ -77,8 +199,35 @@ export default [
     nacion: false,
   },
   //Producción Tanino
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json", //Despacho de cemento (%)
+
+  { ////ISAC//Indicador sintético de la construcción (ISAC)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json",
+    title: { antestitle: 'Indicador sintético de la construcción (ISAC)', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "ISAC" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+    //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
+  
+  
+    { ////Despacho de cemento 
+      link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json",
+      title: { antestitle: 'Despacho de cemento en toneladas', campotitle: "", despuestitle: "" },
+      subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+      valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
+      variable: { dondebuscar: "Tipo", quebuscar: "Despacho de cemento en toneladas" },
+      variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+      grafico: { ejex: "Fecha", ejey: "Cantidad" },
+      graficoTexto: "Cantidad",
+      nacion: true,
+    }, 
+      
+
+    //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json", //Despacho de cemento (%)
   {//Cemento Total CHACO
     link: "http://epichaco.tk/api/cemento",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
@@ -90,7 +239,21 @@ export default [
     graficoTexto: "var ai",
     nacion: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
+
+  
+  { ////valor UVA
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json",
+    title: { antestitle: 'Valor UVA', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "UVA" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
   {//Empleo IERIC
     link: "https://epichaco.tk/api/empleoIERIC",
     title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
@@ -102,7 +265,20 @@ export default [
     graficoTexto: "var_ia",
     nacion: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
+
+  { ////Tasa de desocupación
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json",
+    title: { antestitle: 'Tasa de desocupación', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Desocupación abierta" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
   {//Tasas de Desocupación (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
@@ -114,7 +290,20 @@ export default [
     graficoTexto: "gran_resistencia",
     nacion: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
+
+  { ////Trabajadores Registrados
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json",
+    title: { antestitle: 'Trabajadores Registrados', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Variación interanual", quebuscar: "En miles de trabajadores" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
   {//Empleo general
     link: "https://epichaco.tk/api/empleoGeneral",
     title: { antestitle: 'Empleo general', campotitle: "", despuestitle: "" },
