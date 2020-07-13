@@ -543,8 +543,36 @@ export default [
   
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json", //Resultado financiero
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json", //Resultado fiscal primario
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json", //Recaudación tributaria
+  
+  { ////Resultado fiscal primario
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json",
+    title: { antestitle: 'Resultado fiscal primario', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Resultado primario" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+  
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json", //Resultado fiscal primario
+  
+  { ////Recaudación tributaria
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json",
+    title: { antestitle: 'Recaudación Tributaria', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Recaudación Tributaria" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+  
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json", //Recaudación tributaria
   {//Combustible
     link: "http://epichaco.tk/api/combustible",
     title: { antestitle: 'Combustible', campotitle: "producto", despuestitle: "" },
@@ -557,7 +585,22 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //Ventas en supermercados a precios constantes
+
+  
+  { ////Ventas en supermercados a precios constantes
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json",
+    title: { antestitle: 'Ventas en supermercados a precios constantes', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Ventas en supermercados a precios constantes" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //Ventas en supermercados a precios constantes
   {//"Supermercados", 
     link: "http://epichaco.tk/api/supermercado",
     title: { antestitle: 'Supermercados', campotitle: "", despuestitle: "CHACO" },
@@ -570,7 +613,22 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // Producción de autos (%)
+
+  { //// Producción de autos (%)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json",
+    title: { antestitle: 'Producción de autos', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Automóviles" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // Producción de autos (%)
   {//Transferencias autos
     link: "http://epichaco.tk/api/vehiculo",
     title: { antestitle: '', campotitle: "categoria", despuestitle: "" },
