@@ -32,6 +32,7 @@
   color: white;
   background-color: rgba(92, 187, 209, 1);
   padding: 0.5vh;
+  border-radius: 5%;
 }
 .logoutAdministrar2:hover{
   background-color: rgba(92, 188, 209, 0.644);
