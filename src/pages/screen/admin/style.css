@@ -48,6 +48,7 @@ button[type="button"] {
   font-size: 16px;
   cursor: pointer;
   margin-top: 0.5em;
+  border-radius: 5%;
 }
 
 .botton:hover {
@@ -109,6 +110,7 @@ button[type="button"] {
   color: white;
   border: white 0.2vh solid;
   padding: 1vh;
+  border-radius: 5%;
 }
 .menuProduccionprimaria:hover {
   background-color: rgba(92, 188, 209, 0.644);
