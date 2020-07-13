@@ -77,6 +77,7 @@ const IPCGResis = (props) => {
                   onChange={setImputHandler}
                   required
                 >
+                  <option value="Nivel General">Nivel General</option>
                   <option value="" disabled>Seleccione una opcion</option>
                   <option value="Alimentos y Bebidas">Alimentos y Bebidas</option>
                   <option value="Productos de panificación, cerreales y pastas">Productos de panificación, cerreales y pastas</option>
