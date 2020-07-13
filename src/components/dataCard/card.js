@@ -16,6 +16,7 @@ const Card = (props) => {
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
   const [arrowAndColor, setArrowAndColor] = useState("");
+  const dirOpuesta = props.dataGraph.dirOpuesta;
 
   useEffect(() => {
     dataFromApi();
@@ -216,7 +217,7 @@ const Card = (props) => {
                     <span
                       style={{
                         color:
-                          arrowAndColor < 0
+                          arrowAndColor < 0 || dirOpuesta
                             ? "#3bb54c"
                             : arrowAndColor > 0
                               ? "red"
