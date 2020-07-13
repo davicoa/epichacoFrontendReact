@@ -6,8 +6,13 @@ import logoChaco from "images/ISO_Mesadetrabajo_1.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
+
 import upArrow from "images/Up_green_arrow-2.png";
+import upGreenArrow from "images/arrowUpGreen.png";
+import upRedArrow from "images/arrowUpRed.png";
 import downArrow from "images/Down_red_arrow-2.png";
+import downGreenArrow from "images/arrowDownGreen.png";
+import downRedArrow from "images/arrowDownRed.png";
 
 const Card = (props) => {
   const [loading, setLoading] = useState(true);
@@ -205,9 +210,9 @@ const Card = (props) => {
                     <img
                       src={
                         arrowAndColor < 0
-                          ? upArrow
+                          ? (dirOpuesta)?upRedArrow:upGreenArrow
                           : arrowAndColor > 0
-                            ? downArrow
+                            ? (dirOpuesta)?downGreenArrow:downRedArrow
                             : ""
                       }
                       alt=""
@@ -217,10 +222,10 @@ const Card = (props) => {
                     <span
                       style={{
                         color:
-                          arrowAndColor < 0 || dirOpuesta
-                            ? "#3bb54c"
+                          arrowAndColor < 0
+                            ? dirOpuesta?"red":"#3bb54c"
                             : arrowAndColor > 0
-                              ? "red"
+                              ? dirOpuesta?"#3bb54c":"red"
                               : "#5F5F5F",
                       }}
                     >
