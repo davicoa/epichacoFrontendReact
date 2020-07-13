@@ -97,7 +97,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
 
   
