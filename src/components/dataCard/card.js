@@ -7,10 +7,8 @@ import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
 
-import upArrow from "images/Up_green_arrow-2.png";
 import upGreenArrow from "images/arrowUpGreen.png";
 import upRedArrow from "images/arrowUpRed.png";
-import downArrow from "images/Down_red_arrow-2.png";
 import downGreenArrow from "images/arrowDownGreen.png";
 import downRedArrow from "images/arrowDownRed.png";
 
