@@ -290,7 +290,7 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json",
     title: { antestitle: 'Tasa de desocupación', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "" },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
     variable: { dondebuscar: "Tipo", quebuscar: "Desocupación abierta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Indice" },
@@ -317,11 +317,11 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json",
     title: { antestitle: 'Trabajadores Registrados', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
-    variable: { dondebuscar: "Variación interanual", quebuscar: "En miles de trabajadores" },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Dat", quebuscar: "En miles de trabajadores" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
-    grafico: { ejex: "Fecha", ejey: "Cantidad" },
-    graficoTexto: "Cantidad",
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: false,
   }, 
@@ -339,7 +339,21 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
+
+  
+  { ////Tasa de actividad laboral
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json",
+    title: { antestitle: 'Tasa de actividad laboral', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Actividad" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
   { //Tasas de actividad (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
@@ -352,7 +366,20 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
+
+  { ////Tasa de empleo
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json",
+    title: { antestitle: 'Tasa de empleo', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Empleo" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
   { //Tasas de Empleo (nación y Pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
@@ -365,12 +392,91 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/salario_m%C3%ADnimo%2C_vital_y_m%C3%B3vil.json", //"Tipo": "Salario mínimo, vital y móvil", "Salario": "16.875,00",
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/saldo_comercial.json", //Saldo comercial
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json", //Balanza de pagos
+
+  { ////Salario mínima, vital y móvil
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/salario_m%C3%ADnimo%2C_vital_y_m%C3%B3vil.json",
+    title: { antestitle: 'Salario mínima, vital y móvil', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Salario", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Salario mínimo, vital y móvil" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Salario" },
+    graficoTexto: "Salario",
+    nacion: true,
+  }, 
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/salario_m%C3%ADnimo%2C_vital_y_m%C3%B3vil.json", //"Tipo": "Salario mínimo, vital y móvil", "Salario": "16.875,00",
+  
+    
+  { ////Deuda externa
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json",
+    title: { antestitle: 'Deuda externa', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "US$", campovalor: "Indice", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Deuda externa" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Indice" },
+    graficoTexto: "Indice",
+    nacion: true,
+  }, 
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
+  
+  { ////Saldo comercial
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/saldo_comercial.json",
+    title: { antestitle: 'Saldo comercial', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "US$", campovalor: "Millones de dólares", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Saldo comercial" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Millones de dólares" },
+    graficoTexto: "Millones de dólares",
+    nacion: true,
+  }, 
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/saldo_comercial.json", //Saldo comercial
+  
+  { ////Importaciones
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json",
+    title: { antestitle: 'Importaciones', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Importaciones" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
+  
+  { ////Exportaciones
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json",
+    title: { antestitle: 'Exportaciones', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Exportaciones" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
+  
+  { ////Balanza de pagos
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json",
+    title: { antestitle: 'Balanza de pagos', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "US$", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "cuenta corriente por trimestre" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json", //Balanza de pagos
   {//Producción Carbón Granel
     link: "http://epichaco.tk/api/forestalPrimario",
     title: { antestitle: '', campotitle: "producto", despuestitle: "" },
@@ -407,10 +513,66 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json", //Recaudación de seguridad social
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json", //Resultado financiero
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json", //Resultado fiscal primario
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json", //Recaudación tributaria
+
+  { ////Recaudación de seguridad social
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json",
+    title: { antestitle: 'Recaudación de seguridad social', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Var inteanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Impuestos vinculados al empleo" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Var inteanual" },
+    graficoTexto: "Var inteanual",
+    nacion: true,
+  }, 
+  
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json", //Recaudación de seguridad social
+  
+  { ////Resultado financiero
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json",
+    title: { antestitle: 'Resultado financiero', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Resultado financiero" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+  
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json", //Resultado financiero
+  
+  { ////Resultado fiscal primario
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json",
+    title: { antestitle: 'Resultado fiscal primario', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "$", campovalor: "Cantidad", despuesvalor: "" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Resultado primario" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Cantidad" },
+    graficoTexto: "Cantidad",
+    nacion: true,
+  }, 
+  
+  
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_fiscal_primario.json", //Resultado fiscal primario
+  
+  { ////Recaudación tributaria
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json",
+    title: { antestitle: 'Recaudación Tributaria', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Recaudación Tributaria" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+  
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_tributaria.json", //Recaudación tributaria
   {//Combustible
     link: "http://epichaco.tk/api/combustible",
     title: { antestitle: 'Combustible', campotitle: "producto", despuestitle: "" },
@@ -423,7 +585,22 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //Ventas en supermercados a precios constantes
+
+  
+  { ////Ventas en supermercados a precios constantes
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json",
+    title: { antestitle: 'Ventas en supermercados a precios constantes', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Ventas en supermercados a precios constantes" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/ventas_en_supermercados_a_precios_constantes.json", //Ventas en supermercados a precios constantes
   {//"Supermercados", 
     link: "http://epichaco.tk/api/supermercado",
     title: { antestitle: 'Supermercados', campotitle: "", despuestitle: "CHACO" },
@@ -436,7 +613,22 @@ export default [
     nacion: false,
     dirOpuesta: false,
   },
-  "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // Producción de autos (%)
+
+  { //// Producción de autos (%)
+    link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json",
+    title: { antestitle: 'Producción de autos', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
+    variable: { dondebuscar: "Tipo", quebuscar: "Automóviles" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "Fecha", ejey: "Variación interanual" },
+    graficoTexto: "Variación interanual",
+    nacion: true,
+  }, 
+
+
+
+  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_autos.json", // Producción de autos (%)
   {//Transferencias autos
     link: "http://epichaco.tk/api/vehiculo",
     title: { antestitle: '', campotitle: "categoria", despuestitle: "" },
