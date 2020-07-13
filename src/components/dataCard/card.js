@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
-import logoChaco from "images/ISO_Mesadetrabajo_1.png";
+import logoChaco from "images/logoChaco.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
@@ -16,6 +16,7 @@ const Card = (props) => {
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
   const [arrowAndColor, setArrowAndColor] = useState("");
+  const dirOpuesta = props.dataGraph.dirOpuesta;
 
   useEffect(() => {
     dataFromApi();
@@ -216,7 +217,7 @@ const Card = (props) => {
                     <span
                       style={{
                         color:
-                          arrowAndColor < 0
+                          arrowAndColor < 0 || dirOpuesta
                             ? "#3bb54c"
                             : arrowAndColor > 0
                               ? "red"
