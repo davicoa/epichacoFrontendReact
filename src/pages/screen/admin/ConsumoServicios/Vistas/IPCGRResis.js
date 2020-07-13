@@ -142,6 +142,7 @@ const IPCGResis = (props) => {
                   <option value="Artículos de tocador y belleza">Artículos de tocador y belleza</option>
                   <option value="Servicios para el cuidado persona">Servicios para el cuidado persona</option>
                   <option value="Servicios diversos">Servicios diversos</option>
+                  <option value="Nivel General">Nivel General</option>
                 </select>
               </div>
               <div className="divContaniner">
