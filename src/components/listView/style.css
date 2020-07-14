@@ -1,18 +1,15 @@
-.listContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1vh;
-    margin-left: 1vw;
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-left: 1vw;
 }
-.listData > span{
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    border: double;
-}
-
-.elementFecha{
-    margin: 1vh;
+.dataList {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }

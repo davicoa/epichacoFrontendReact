@@ -84,7 +84,6 @@ button[type="button"] {
   flex: 3;
   margin: 1vh;
   margin-top: 5vh;
-  border: double;
 }
 
 .menuContainer {
@@ -139,12 +138,18 @@ button[type="button"] {
   justify-content: flex-end;
 }
 .tabButtons{
+  display: flex;
   margin-right: 0.2vw;
   cursor: pointer;
   color: white;
   background-color: rgba(92, 187, 209, 1);
   padding: 0.5vw;
   border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.tabButtons:hover{
+  background-color: rgba(92, 188, 209, 0.644);
 }
 @media (max-width: 600px) {
   .textinput {
