@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ListView = (props) => {
-  return (
-      <div>hola</div>
-  );
+  const [cards, setCards] = useState();
+  
+
+  return <div>hola</div>;
 };
 export default ListView;

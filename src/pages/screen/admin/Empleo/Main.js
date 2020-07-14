@@ -69,7 +69,7 @@ const Main = () => {
           <div>
             {lista ? (
               <ListView 
-              dataRaw ={datalist}/>
+                dataRaw ={datalist}/>
             ) : (
               <div>
                 {screen === "indicadoresLaborales" && (
