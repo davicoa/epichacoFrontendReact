@@ -1,10 +1,18 @@
-.listContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1vh;
-    margin-left: 1vw;
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-left: 1vw;
 }
-.elementFecha{
-    margin: 1vh;
+.elementFecha {
+  margin: 1vh;
+}
+.dataList {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }

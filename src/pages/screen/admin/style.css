@@ -146,6 +146,9 @@ button[type="button"] {
   padding: 0.5vw;
   border-radius: 5%;
 }
+.tabButtons:hover{
+  background-color: rgba(92, 188, 209, 0.644);
+}
 @media (max-width: 600px) {
   .textinput {
     display: none;
