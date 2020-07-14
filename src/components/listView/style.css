@@ -5,6 +5,14 @@
     margin-top: 1vh;
     margin-left: 1vw;
 }
+.listData > span{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: double;
+}
+
 .elementFecha{
     margin: 1vh;
 }

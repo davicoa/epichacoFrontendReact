@@ -9,9 +9,21 @@ const ListView = (props) => {
     setCards(
       props.rawData.slice(-5).map((element, i) =>
         <div className="listContainer" key={i}>
-          <div>
+          <div className="listData">
             <span className="elementFecha">
               {i}
+            </span>
+            <span className="elementFecha">
+              {element.fecha}
+            </span>
+            <span className="elementFecha">
+              {element.fecha}
+            </span>
+            <span className="elementFecha">
+              {element.fecha}
+            </span>
+            <span className="elementFecha">
+              {element.fecha}
             </span>
             <span className="elementFecha">
               {element.fecha}
