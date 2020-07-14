@@ -15,5 +15,9 @@ class AdminService {
         return "Fallo en la carga";
       });
   }
+
+  adminGet(route){
+    return axios.get(API_URL + route, { headers: authHeader() })
+  }
 }
 export default new AdminService();
