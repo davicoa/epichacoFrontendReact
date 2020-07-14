@@ -1,0 +1,10 @@
+.listContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.elementFecha{
+    margin: 1vh;
+}

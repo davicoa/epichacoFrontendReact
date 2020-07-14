@@ -52,7 +52,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "VAR_MENS",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   //=================
   
@@ -81,7 +81,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
 
   
@@ -332,7 +332,7 @@ export default [
     title: { antestitle: 'Empleo general', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "variacion_ia_provincia", despuesvalor: "%" },
-    variable: { dondebuscar: "empleo_provincia", quebuscar: "" },
+    variable: { dondebuscar: "rama_de_actividad", quebuscar: "Total" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "variacion_ia_provincia" },
     graficoTexto: "variacion_ia_provincia",

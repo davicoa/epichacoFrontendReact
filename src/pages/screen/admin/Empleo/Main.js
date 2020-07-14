@@ -66,28 +66,28 @@ const Main = () => {
             loading={loading}
           />
         ) : (
-          <div>
-            {lista ? (
-              <ListView 
-                dataRaw ={datalist}/>
-            ) : (
-              <div>
-                {screen === "indicadoresLaborales" && (
-                  <IndicadoresLaborales saveToDb={saveToDb} msg={msg} />
+            <div>
+              {lista ? (
+                <ListView
+                  rawData={datalist} />
+              ) : (
+                  <div>
+                    {screen === "indicadoresLaborales" && (
+                      <IndicadoresLaborales saveToDb={saveToDb} msg={msg} />
+                    )}
+                    {screen === "empleoGeneral" && (
+                      <EmpleoGeneral saveToDb={saveToDb} msg={msg} />
+                    )}
+                    {screen === "empleoIERIC" && (
+                      <Empleoieric saveToDb={saveToDb} msg={msg} />
+                    )}
+                    {screen === "pobrezaIndigencia" && (
+                      <PobrezaIndigencia saveToDb={saveToDb} msg={msg} />
+                    )}
+                  </div>
                 )}
-                {screen === "empleoGeneral" && (
-                  <EmpleoGeneral saveToDb={saveToDb} msg={msg} />
-                )}
-                {screen === "empleoIERIC" && (
-                  <Empleoieric saveToDb={saveToDb} msg={msg} />
-                )}
-                {screen === "pobrezaIndigencia" && (
-                  <PobrezaIndigencia saveToDb={saveToDb} msg={msg} />
-                )}
-              </div>
-            )}
-          </div>
-        )}
+            </div>
+          )}
       </div>
     </div>
   );
