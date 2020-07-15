@@ -4,9 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const IndicadoresLaborales = (props) => {
   const obj = props.obj
-  console.log(typeof obj !== 'undefined'?obj._id:'');
   const [fecha, setFecha] = useState(new Date());
-  const [_id, set_id] = useState(typeof obj !== 'undefined'?obj._id:'');
   const [n_trimestre, setN_trimestre] = useState(typeof obj !== 'undefined'?obj.n_trimestre:'');
   const [trimestre, setTrimestre] = useState(typeof obj !== 'undefined'?obj.trimestre:'');
   const [tasa, setTasa] = useState(typeof obj !== 'undefined'?obj.tasa:'');
@@ -83,7 +81,7 @@ const IndicadoresLaborales = (props) => {
       total_31_aglomerados,
       var_porcent_trimestral_total,
       var_porcent_ia_total,
-    }, _id);
+    });
   };
 
   return (

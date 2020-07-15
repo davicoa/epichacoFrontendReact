@@ -10,7 +10,7 @@ const ListView = (props) => {
   const [cards, setCards] = useState("");
   const [cardsHeader, setCardsHeader] = useState("");
   const [edit, setEdit] = useState(false);
-  const [obj, setObj] = useState("");
+  const [obj, setObj] = useState([]);
   
   useEffect(() => {
     setCards(
@@ -80,8 +80,8 @@ const ListView = (props) => {
     }
   };
 
-  const editeToDb = async (route, body , id) => {
-    const res = await AdminService.adminUpdate(route, id, body);
+  const editeToDb = async (route, body) => {
+    const res = await AdminService.adminUpdate(route, obj._id, body);
     if (res.status === 200) {
       props.reload();
       alert.success(res.data.msg);

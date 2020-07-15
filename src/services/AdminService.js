@@ -22,7 +22,6 @@ class AdminService {
   }
 
   adminUpdate(route, id,  body) {
-    console.log('adm', id);
     return axios
       .put(API_URL + route+'/'+id, body, {
         headers: authHeader(),
@@ -36,7 +35,6 @@ class AdminService {
   }
 
   adminDelete(route, id){
-    console.log('admDelete', id);
     return axios.delete(API_URL + route+'/'+id, { headers: authHeader() })
   }
 }
