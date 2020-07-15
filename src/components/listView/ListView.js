@@ -29,14 +29,14 @@ const ListView = (props) => {
                   <span>{Object.keys(element)[4]}</span>
                 </div>
               <div className="tabButtonsConstent">
-                <span className="tabButtons">
+                <span className="tabButtonsList">
                   <img src={lapiz} alt="" height="auto" width="25%"></img>
                 </span>
-                <span className="tabButtons">
+                <span className="tabButtonsList">
                   <img src={basura} alt="" height="auto" width="25%"></img>
                 </span>
               </div>
-            </div>
+            </div> 
               )
             }
             <span>{i + 1}</span>
