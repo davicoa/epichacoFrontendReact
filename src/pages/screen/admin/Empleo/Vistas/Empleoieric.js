@@ -4,26 +4,27 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const Empleoieric = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [empleo_chaco, setEmpleo_chaco] = useState("");
+  const [empleo_chaco, setEmpleo_chaco] = useState(typeof obj !== "undefined" ? obj.empleo_chaco : "");
   const [
     var_porcen_mensual_empleo_chaco,
     setVar_porcen_mensual_empleo_chaco,
-  ] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_porcen_mensual_empleo_chaco : "");
   const [var_porcen_ia_empleo_chaco, setVar_porcen_ia_empleo_chaco] = useState(
-    ""
+    typeof obj !== "undefined" ? obj.var_porcen_ia_empleo_chaco : ""
   );
-  const [empleo_nacion, setEmpleo_nacion] = useState("");
+  const [empleo_nacion, setEmpleo_nacion] = useState(typeof obj !== "undefined" ? obj.empleo_nacion : "");
   const [
     var_porcen_mensual_empleo_nacion,
     setVar_porcen_mensual_empleo_nacion,
-  ] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_porcen_mensual_empleo_nacion : "");
   const [
     var_porcen_ia_empleo_nacion,
     setVar_porcen_ia_empleo_nacion,
-  ] = useState("");
-  const [indice_empleo_chaco, setIndice_empleo_chaco] = useState("");
-  const [indice_empleo_nacion, setIndice_empleo_nacion] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_porcen_ia_empleo_nacion : "");
+  const [indice_empleo_chaco, setIndice_empleo_chaco] = useState(typeof obj !== "undefined" ? obj.indice_empleo_chaco : "");
+  const [indice_empleo_nacion, setIndice_empleo_nacion] = useState(typeof obj !== "undefined" ? obj.indice_empleo_nacion : "");
 
   const setFechaHandler = (Date) => {
     setFecha(Date);

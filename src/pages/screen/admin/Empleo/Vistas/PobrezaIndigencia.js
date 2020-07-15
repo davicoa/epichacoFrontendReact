@@ -3,17 +3,18 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Cemento = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [semestre, setSemestre] = useState("");
-  const [tasa, setTasa] = useState("");
-  const [alcance, setAlcance] = useState("");
-  const [gran_resistencia, setGran_resistencia] = useState("");
+  const [semestre, setSemestre] = useState(typeof obj !== "undefined" ? obj.semestre : "");
+  const [tasa, setTasa] = useState(typeof obj !== "undefined" ? obj.tasa : "");
+  const [alcance, setAlcance] = useState(typeof obj !== "undefined" ? obj.alcance : "");
+  const [gran_resistencia, setGran_resistencia] = useState(typeof obj !== "undefined" ? obj.gran_resistencia : "");
   const [
     var_pp_semestral_gran_resistencia,
     setVar_pp_semestral_gran_resistencia,
-  ] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_pp_semestral_gran_resistencia : "");
   const [var_pp_ia_gran_resistencia, setVar_pp_ia_gran_resistencia] = useState(
-    ""
+    typeof obj !== "undefined" ? obj.var_pp_ia_gran_resistencia : ""
   );
 
   const setFechaHandler = (Date) => {

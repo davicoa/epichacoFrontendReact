@@ -19,12 +19,11 @@ import { useAlert } from "react-alert";
 let formActual = IndicadoresLaborales
 
 const Main = () => {
-  const alert = useAlert();
   const [screen, setScreen] = useState("indicadoresLaborales");
-  const [lista, setLista] = useState(false);
   const [loading, setLoading] = useState(false);
-  //const [msg, setMsd] = useState("");
+  const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
+  const alert = useAlert();
   
   
   const saveToDb = async (route, body) => {

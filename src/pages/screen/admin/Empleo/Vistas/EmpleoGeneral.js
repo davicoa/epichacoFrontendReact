@@ -4,30 +4,31 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const EmpleoGeneral = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [rama_de_actividad, setRama_de_actividad] = useState("");
-  const [empleo_provincia, setEmpleo_provincia] = useState("");
-  const [variacion_ia_provincia, setVariacion_ia_provincia] = useState("");
-  const [salario_nominal, setSalario_nominal] = useState("");
-  const [var_ia_salario_nominal, setVar_ia_salario_nominal] = useState("");
-  const [salario_real_base_dic_19, setSalario_real_base_dic_19] = useState("");
-  const [var_ia_salario_real, setVar_ia_salario_real] = useState("");
-  const [empresas, setEmpresas] = useState("");
-  const [var_ia_empresas, setVar_i_a_empresas] = useState("");
-  const [empleo_nacion, setEmpleo_nacion] = useState("");
-  const [var_ia_empleo_nacion, setVar_ia_empleo_nacion] = useState("");
-  const [empleado_promedio, setEmpleado_promedio] = useState("");
-  const [var_ia_empleado_promedio, setVar_ia_empleado_promedio] = useState("");
-  const [indice_empleo_provincia, setIndice_empleo_provincia] = useState("");
+  const [rama_de_actividad, setRama_de_actividad] = useState(typeof obj !== "undefined" ? obj.rama_de_actividad : "");
+  const [empleo_provincia, setEmpleo_provincia] = useState(typeof obj !== "undefined" ? obj.empleo_provincia : "");
+  const [variacion_ia_provincia, setVariacion_ia_provincia] = useState(typeof obj !== "undefined" ? obj.variacion_ia_provincia : "");
+  const [salario_nominal, setSalario_nominal] = useState(typeof obj !== "undefined" ? obj.salario_nominal : "");
+  const [var_ia_salario_nominal, setVar_ia_salario_nominal] = useState(typeof obj !== "undefined" ? obj.var_ia_salario_nominal : "");
+  const [salario_real_base_dic_19, setSalario_real_base_dic_19] = useState(typeof obj !== "undefined" ? obj.salario_real_base_dic_19 : "");
+  const [var_ia_salario_real, setVar_ia_salario_real] = useState(typeof obj !== "undefined" ? obj.var_ia_salario_real : "");
+  const [empresas, setEmpresas] = useState(typeof obj !== "undefined" ? obj.empresas : "");
+  const [var_ia_empresas, setVar_i_a_empresas] = useState(typeof obj !== "undefined" ? obj.var_ia_empresas : "");
+  const [empleo_nacion, setEmpleo_nacion] = useState(typeof obj !== "undefined" ? obj.empleo_nacion : "");
+  const [var_ia_empleo_nacion, setVar_ia_empleo_nacion] = useState(typeof obj !== "undefined" ? obj.var_ia_empleo_nacion : "");
+  const [empleado_promedio, setEmpleado_promedio] = useState(typeof obj !== "undefined" ? obj.empleado_promedio : "");
+  const [var_ia_empleado_promedio, setVar_ia_empleado_promedio] = useState(typeof obj !== "undefined" ? obj.var_ia_empleado_promedio : "");
+  const [indice_empleo_provincia, setIndice_empleo_provincia] = useState(typeof obj !== "undefined" ? obj.indice_empleo_provincia : "");
   const [
     var_porcen_mensual_empleo_provincia,
     setVar_porcen_mensual_empleo_provincia,
-  ] = useState("");
-  const [indice_empleo_nacion, setIndice_empleo_nacion] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_porcen_mensual_empleo_provincia : "");
+  const [indice_empleo_nacion, setIndice_empleo_nacion] = useState(typeof obj !== "undefined" ? obj.indice_empleo_nacion : "");
   const [
     var_porcen_mensual_empleo_naciòn,
     setVar_porcen_mensual_empleo_naciòn,
-  ] = useState("");
+  ] = useState(typeof obj !== "undefined" ? obj.var_porcen_mensual_empleo_naciòn : "");
 
   const setFechaHandler = (Date) => {
     setFecha(Date);

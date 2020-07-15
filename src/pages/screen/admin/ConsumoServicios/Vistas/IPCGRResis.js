@@ -4,11 +4,12 @@ import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 
 const IPCGResis = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [sector, setSector] = useState("");
-  const [ipc, setIpc] = useState("");
-  const [var_mensual, setVar_mensual] = useState("");
-  const [var_ia, setVar_ia] = useState("");
+  const [sector, setSector] = useState(typeof obj !== "undefined" ? obj.sector : "");
+  const [ipc, setIpc] = useState(typeof obj !== "undefined" ? obj.ipc : "");
+  const [var_mensual, setVar_mensual] = useState(typeof obj !== "undefined" ? obj.var_mensual : "");
+  const [var_ia, setVar_ia] = useState(typeof obj !== "undefined" ? obj.var_ia : "");
 
   const setFechaHandler = (Date) => {
     setFecha(Date);
@@ -186,13 +187,6 @@ const IPCGResis = (props) => {
           </div>
         </form>
       )}
-      <div className="divMsgBottom">
-        <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
-        >
-          {props.msg}
-        </span>
-      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const ListView = (props) => {
   const [cardsHeader, setCardsHeader] = useState("");
   const [edit, setEdit] = useState(false);
   const [obj, setObj] = useState([]);
-  
+
   useEffect(() => {
     setCards(
       props.rawData.map((element, i) => (
@@ -47,17 +47,20 @@ const ListView = (props) => {
             <span>{Object.values(element)[4]}</span>
           </div>
           <div className="tabButtonsConstent">
-            <span className="tabButtons" onClick={() => {
-                setObj(element)
-                setEdit(true)
-              }}>
+            <span
+              className="tabButtons"
+              onClick={() => {
+                setObj(element);
+                setEdit(true);
+              }}
+            >
               <img src={lapiz} alt="" height="auto" width="25%"></img>
             </span>
             <span
               className="tabButtons"
               onClick={() => {
-                onClickHandler(element._id, element.fecha)}
-              }
+                onClickHandler(element._id, element.fecha);
+              }}
             >
               <img src={basura} alt="" height="auto" width="25%"></img>
             </span>
@@ -72,7 +75,7 @@ const ListView = (props) => {
       const res = await AdminService.adminDelete(props.route, id);
       if (res.status === 200) {
         props.reload();
-        setEdit(false)
+        setEdit(false);
         alert.success(res.data.msg);
       } else {
         alert.error(res.data.msg);
@@ -93,9 +96,10 @@ const ListView = (props) => {
   return (
     <div>
       {edit ? (
-        <props.formToEdit 
-        saveToDb={editeToDb} 
-        obj={obj} />
+        <div>
+          <span>editando</span>
+          <props.formToEdit saveToDb={editeToDb} obj={obj} />
+        </div>
       ) : (
         <div>
           {cardsHeader}
