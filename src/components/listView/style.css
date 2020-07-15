@@ -13,11 +13,9 @@
   padding-left: 2vw;
   padding-right: 2vw;
 }
-.uno{
+.dataList > span {
   display: flex;
   flex: 1;
-  justify-content: space-between;
-  align-items: center;
 }
 .tabButtonsList{
   display: flex;
