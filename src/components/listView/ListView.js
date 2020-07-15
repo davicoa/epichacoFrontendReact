@@ -10,6 +10,8 @@ const ListView = (props) => {
   const [cards, setCards] = useState("");
   const [cardsHeader, setCardsHeader] = useState("");
 
+  const formToEdit = props.formToEdit
+
   useEffect(() => {
     setCards(
       props.rawData.slice(-5).map((element, i) => (
@@ -77,7 +79,9 @@ const ListView = (props) => {
   };
 
   return <div>
+    {formToEdit?"1":"2"}
     {cardsHeader}
-    {cards}</div>;
+    {cards}
+    </div>;
 };
 export default ListView;

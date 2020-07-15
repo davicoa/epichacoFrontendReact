@@ -21,6 +21,7 @@ const Main = () => {
   const [msg, setMsd] = useState("");
   const [datalist, setDatalist] = useState();
 
+  const componente = <IndicadoresLaborales />
   const saveToDb = async (route, body) => {
     setLoading(true);
     const res = await AdminService.adminPost(route, body);
@@ -74,7 +75,8 @@ const Main = () => {
                 <ListView
                   reload={loadListHandler}
                   rawData={datalist}
-                  route={screen} />
+                  route={screen} 
+                  formToEdit={<IndicadoresLaborales />}/>
               ) : (
                   <div>
                     {screen === "indicadoresLaborales" && (

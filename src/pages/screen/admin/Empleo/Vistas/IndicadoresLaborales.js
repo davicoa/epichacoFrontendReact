@@ -260,9 +260,9 @@ const IndicadoresLaborales = (props) => {
 
       <div className="divMsgBottom">
         <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
+         /*  style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }} */
         >
-          {props.msg}
+          {/* {props.msg} */}
         </span>
       </div>
     </div>
