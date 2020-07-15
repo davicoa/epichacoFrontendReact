@@ -6,19 +6,45 @@ import "react-datepicker/dist/react-datepicker.css";
 const Vehiculo = (props) => {
   const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [categoria, setCategoria] = useState(typeof obj !== "undefined" ? obj.categoria : "");
-  const [chaco_original, setChaco_original] = useState(typeof obj !== "undefined" ? obj.chaco_original : "");
-  const [var_mens_chaco_original, setVar_mens_chaco_original] = useState(typeof obj !== "undefined" ? obj.var_mens_chaco_original : "");
-  const [var_ia_chaco_original, setVar_ia_chaco_original] = useState(typeof obj !== "undefined" ? obj.var_ia_chaco_original : "");
-  const [chaco_deses, setChaco_deses] = useState(typeof obj !== "undefined" ? obj.chaco_deses : "");
-  const [var_mens_chaco_deses, setVar_mens_chaco_deses] = useState(typeof obj !== "undefined" ? obj.var_mens_chaco_deses : "");
-  const [var_ia_chaco_deses, setVar_ia_chaco_deses] = useState(typeof obj !== "undefined" ? obj.var_ia_chaco_deses : "");
-  const [nacion_original, setNacion_original] = useState(typeof obj !== "undefined" ? obj.nacion_original : "");
-  const [var_mens_nacion_original, setVar_mens_nacion_original] = useState(typeof obj !== "undefined" ? obj.var_mens_nacion_original : "");
-  const [var_ia_nacion_original, setVar_ia_nacion_original] = useState(typeof obj !== "undefined" ? obj.var_ia_nacion_original : "");
-  const [nacion_deses, setNacion_deses] = useState(typeof obj !== "undefined" ? obj.nacion_deses : "");
-  const [var_mens_nacion_deses, setVar_mens_nacion_deses] = useState(typeof obj !== "undefined" ? obj.var_mens_nacion_deses : "");
-  const [var_ia_nacion_deses, setVar_ia_nacion_deses] = useState(typeof obj !== "undefined" ? obj.var_ia_nacion_deses : "");
+  const [categoria, setCategoria] = useState(
+    typeof obj !== "undefined" ? obj.categoria : ""
+  );
+  const [chaco_original, setChaco_original] = useState(
+    typeof obj !== "undefined" ? obj.chaco_original : ""
+  );
+  const [var_mens_chaco_original, setVar_mens_chaco_original] = useState(
+    typeof obj !== "undefined" ? obj.var_mens_chaco_original : ""
+  );
+  const [var_ia_chaco_original, setVar_ia_chaco_original] = useState(
+    typeof obj !== "undefined" ? obj.var_ia_chaco_original : ""
+  );
+  const [chaco_deses, setChaco_deses] = useState(
+    typeof obj !== "undefined" ? obj.chaco_deses : ""
+  );
+  const [var_mens_chaco_deses, setVar_mens_chaco_deses] = useState(
+    typeof obj !== "undefined" ? obj.var_mens_chaco_deses : ""
+  );
+  const [var_ia_chaco_deses, setVar_ia_chaco_deses] = useState(
+    typeof obj !== "undefined" ? obj.var_ia_chaco_deses : ""
+  );
+  const [nacion_original, setNacion_original] = useState(
+    typeof obj !== "undefined" ? obj.nacion_original : ""
+  );
+  const [var_mens_nacion_original, setVar_mens_nacion_original] = useState(
+    typeof obj !== "undefined" ? obj.var_mens_nacion_original : ""
+  );
+  const [var_ia_nacion_original, setVar_ia_nacion_original] = useState(
+    typeof obj !== "undefined" ? obj.var_ia_nacion_original : ""
+  );
+  const [nacion_deses, setNacion_deses] = useState(
+    typeof obj !== "undefined" ? obj.nacion_deses : ""
+  );
+  const [var_mens_nacion_deses, setVar_mens_nacion_deses] = useState(
+    typeof obj !== "undefined" ? obj.var_mens_nacion_deses : ""
+  );
+  const [var_ia_nacion_deses, setVar_ia_nacion_deses] = useState(
+    typeof obj !== "undefined" ? obj.var_ia_nacion_deses : ""
+  );
 
   const setFechaHandler = (Date) => {
     setFecha(Date);
@@ -93,182 +119,174 @@ const Vehiculo = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Vehículo</span>
-      {props.loading ? (
-        <ClipLoader
-          css={("display: block", "margin: 0 auto", "border-color: blue")}
-          size={150}
-          color={"#123abc"}
-          loading={props.loading}
-        />
-      ) : (
-        <form onSubmit={savetobd}>
-          <div className="divExterno">
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">Fecha:</p>
-                <DatePicker
-                  className="divContaniner"
-                  dateFormat="dd/MM/yyyy"
-                  selected={fecha}
-                  name="fecha"
-                  onChange={(Date) => setFechaHandler(Date)}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">categoria</p>
-                <select
-                  value={categoria}
-                  name="categoria"
-                  onChange={setImputHandler}
-                  required
-                >
-                  <option value="" disabled>
-                    Seleccione una opcion
-                  </option>
-                  <option value="Patentamiento de autos">
-                    Patentamiento de autos
-                  </option>
-                  <option value="Patentamiento de motos">
-                    Patentamiento de motos
-                  </option>
-                  <option value="Transferencia de autos">
-                    Transferencia de autos
-                  </option>
-                </select>
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">chaco_original</p>
-                <input
-                  placeholder="chaco_original"
-                  type="text"
-                  value={chaco_original}
-                  name="chaco_original"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_mens_chaco_original</p>
-                <input
-                  placeholder="var_mens_chaco_original"
-                  type="text"
-                  value={var_mens_chaco_original}
-                  name="var_mens_chaco_original"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_ia_chaco_original</p>
-                <input
-                  placeholder="var_ia_chaco_original"
-                  type="text"
-                  value={var_ia_chaco_original}
-                  name="var_ia_chaco_original"
-                  onChange={setImputHandler}
-                />
-              </div>
 
-              <div className="divContaniner">
-                <p className="textinput">chaco_deses</p>
-                <input
-                  placeholder="chaco_deses"
-                  type="text"
-                  value={chaco_deses}
-                  name="chaco_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_mens_chaco_deses</p>
-                <input
-                  placeholder="var_ia_c_e_chaco"
-                  type="text"
-                  value={var_mens_chaco_deses}
-                  name="var_mens_chaco_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
+      <form onSubmit={savetobd}>
+        <div className="divExterno">
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">Fecha:</p>
+              <DatePicker
+                className="divContaniner"
+                dateFormat="dd/MM/yyyy"
+                selected={fecha}
+                name="fecha"
+                onChange={(Date) => setFechaHandler(Date)}
+              />
             </div>
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">var_ia_chaco_deses</p>
-                <input
-                  placeholder="var_ia_chaco_deses"
-                  type="text"
-                  value={var_ia_chaco_deses}
-                  name="var_ia_chaco_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">nacion_original</p>
-                <input
-                  placeholder="nacion_original"
-                  type="text"
-                  value={nacion_original}
-                  name="nacion_original"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_mens_nacion_original</p>
-                <input
-                  placeholder="var_mens_nacion_original"
-                  type="text"
-                  value={var_mens_nacion_original}
-                  name="var_mens_nacion_original"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_ia_nacion_original</p>
-                <input
-                  placeholder="var_ia_nacion_original"
-                  type="text"
-                  value={var_ia_nacion_original}
-                  name="var_ia_nacion_original"
-                  onChange={setImputHandler}
-                />
-              </div>
+            <div className="divContaniner">
+              <p className="textinput">categoria</p>
+              <select
+                value={categoria}
+                name="categoria"
+                onChange={setImputHandler}
+                required
+              >
+                <option value="" disabled>
+                  Seleccione una opcion
+                </option>
+                <option value="Patentamiento de autos">
+                  Patentamiento de autos
+                </option>
+                <option value="Patentamiento de motos">
+                  Patentamiento de motos
+                </option>
+                <option value="Transferencia de autos">
+                  Transferencia de autos
+                </option>
+              </select>
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">chaco_original</p>
+              <input
+                placeholder="chaco_original"
+                type="text"
+                value={chaco_original}
+                name="chaco_original"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_mens_chaco_original</p>
+              <input
+                placeholder="var_mens_chaco_original"
+                type="text"
+                value={var_mens_chaco_original}
+                name="var_mens_chaco_original"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_ia_chaco_original</p>
+              <input
+                placeholder="var_ia_chaco_original"
+                type="text"
+                value={var_ia_chaco_original}
+                name="var_ia_chaco_original"
+                onChange={setImputHandler}
+              />
+            </div>
 
-              <div className="divContaniner">
-                <p className="textinput">nacion_deses</p>
-                <input
-                  placeholder="nacion_deses"
-                  type="text"
-                  value={nacion_deses}
-                  name="nacion_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_mens_nacion_deses</p>
-                <input
-                  placeholder="var_mens_nacion_deses"
-                  type="text"
-                  value={var_mens_nacion_deses}
-                  name="var_mens_nacion_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">var_ia_nacion_deses</p>
-                <input
-                  placeholder="var_ia_nacion_deses"
-                  type="text"
-                  value={var_ia_nacion_deses}
-                  name="var_ia_nacion_deses"
-                  onChange={setImputHandler}
-                />
-              </div>
+            <div className="divContaniner">
+              <p className="textinput">chaco_deses</p>
+              <input
+                placeholder="chaco_deses"
+                type="text"
+                value={chaco_deses}
+                name="chaco_deses"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_mens_chaco_deses</p>
+              <input
+                placeholder="var_ia_c_e_chaco"
+                type="text"
+                value={var_mens_chaco_deses}
+                name="var_mens_chaco_deses"
+                onChange={setImputHandler}
+              />
             </div>
           </div>
-          <div className="divContaninerCenter">
-            <button className="botton" type="submit">
-              Guardar
-            </button>
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">var_ia_chaco_deses</p>
+              <input
+                placeholder="var_ia_chaco_deses"
+                type="text"
+                value={var_ia_chaco_deses}
+                name="var_ia_chaco_deses"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">nacion_original</p>
+              <input
+                placeholder="nacion_original"
+                type="text"
+                value={nacion_original}
+                name="nacion_original"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_mens_nacion_original</p>
+              <input
+                placeholder="var_mens_nacion_original"
+                type="text"
+                value={var_mens_nacion_original}
+                name="var_mens_nacion_original"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_ia_nacion_original</p>
+              <input
+                placeholder="var_ia_nacion_original"
+                type="text"
+                value={var_ia_nacion_original}
+                name="var_ia_nacion_original"
+                onChange={setImputHandler}
+              />
+            </div>
+
+            <div className="divContaniner">
+              <p className="textinput">nacion_deses</p>
+              <input
+                placeholder="nacion_deses"
+                type="text"
+                value={nacion_deses}
+                name="nacion_deses"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_mens_nacion_deses</p>
+              <input
+                placeholder="var_mens_nacion_deses"
+                type="text"
+                value={var_mens_nacion_deses}
+                name="var_mens_nacion_deses"
+                onChange={setImputHandler}
+              />
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">var_ia_nacion_deses</p>
+              <input
+                placeholder="var_ia_nacion_deses"
+                type="text"
+                value={var_ia_nacion_deses}
+                name="var_ia_nacion_deses"
+                onChange={setImputHandler}
+              />
+            </div>
           </div>
-        </form>
-      )}
+        </div>
+        <div className="divContaninerCenter">
+          <button className="botton" type="submit">
+            Guardar
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

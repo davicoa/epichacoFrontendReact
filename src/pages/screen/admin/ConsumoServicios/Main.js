@@ -109,19 +109,19 @@ const Main = () => {
             ) : (
               <div>
                 {screen === "ipcgrResis" && (
-                  <IPCGResis saveToDb={saveToDb} loading={loading} />
+                  <IPCGResis saveToDb={saveToDb}/>
                 )}
                 {screen === "cemento" && (
-                  <Cemento saveToDb={saveToDb} loading={loading} />
+                  <Cemento saveToDb={saveToDb}/>
                 )}
                 {screen === "combustible" && (
-                  <Combustible saveToDb={saveToDb} loading={loading} />
+                  <Combustible saveToDb={saveToDb}/>
                 )}
                 {screen === "supermercado" && (
-                  <Supermercado saveToDb={saveToDb} loading={loading} />
+                  <Supermercado saveToDb={saveToDb}/>
                 )}
                 {screen === "vehiculo" && (
-                  <Vehiculo saveToDb={saveToDb} loading={loading} />
+                  <Vehiculo saveToDb={saveToDb}/>
                 )}
               </div>
             )}
