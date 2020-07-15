@@ -5,7 +5,7 @@ import API_URL from "constant/apiUrl";
 class AdminService {
 
   adminGet(route){
-    return axios.get(API_URL + route, { headers: authHeader() })
+    return axios.get(API_URL + route+'/10', { headers: authHeader() })
   }
 
   adminPost(route, body) {

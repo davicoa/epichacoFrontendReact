@@ -14,7 +14,7 @@ const ListView = (props) => {
   
   useEffect(() => {
     setCards(
-      props.rawData.slice(-5).map((element, i) => (
+      props.rawData.map((element, i) => (
         <div className="listContainer" key={i}>
           <div
             className="dataList"
