@@ -7,6 +7,9 @@ import Empleoieric from "../Empleo/Vistas/Empleoieric";
 import PobrezaIndigencia from "../Empleo/Vistas/PobrezaIndigencia";
 import ClipLoader from "react-spinners/ClipLoader";
 
+import listaIcon from "images/icons-lista.png";
+import masIcon from "images/icons-mas.png";
+
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
@@ -52,10 +55,10 @@ const Main = () => {
               setLista(true);
             }}
           >
-            lista
+            <img src={listaIcon} alt="" height="auto" width="25%"></img>
           </span>
           <span onClick={() => setLista(false)} className="tabButtons">
-            add
+            <img src={masIcon} alt="" height="auto" width="25%"></img>
           </span>
         </div>
         {loading ? (
@@ -69,7 +72,7 @@ const Main = () => {
             <div>
               {lista ? (
                 <ListView
-                  reload = {loadListHandler}
+                  reload={loadListHandler}
                   rawData={datalist}
                   route={screen} />
               ) : (
