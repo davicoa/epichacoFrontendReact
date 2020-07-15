@@ -14,7 +14,7 @@ class AdminService {
         headers: authHeader(),
       })
       .then((response) => {
-        return response.data.msg;
+        return response;
       })
       .catch((err) => {
         return "Fallo en la carga";

@@ -13,20 +13,28 @@ import masIcon from "images/icons-mas.png";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
+import { useAlert } from "react-alert";
+
+
 let formActual = IndicadoresLaborales
 
 const Main = () => {
+  const alert = useAlert();
   const [screen, setScreen] = useState("indicadoresLaborales");
   const [lista, setLista] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [msg, setMsd] = useState("");
+  //const [msg, setMsd] = useState("");
   const [datalist, setDatalist] = useState();
   
   
   const saveToDb = async (route, body) => {
     setLoading(true);
     const res = await AdminService.adminPost(route, body);
-    setMsd(res);
+    if (res.status === 200) {
+      alert.success(res.data.msg);
+    } else {
+      alert.error(res.data.msg);
+    }
     setLoading(false);
   };
 
@@ -80,13 +88,14 @@ const Main = () => {
             <img src={masIcon} alt="" height="auto" width="25%"></img>
           </span>
         </div>
-        {loading ? (
+        {loading ? (<div className="ClipLoader" >
           <ClipLoader
             css={("display: block", "margin: 0 auto", "border-color: blue")}
             size={150}
             color={"#123abc"}
             loading={loading}
           />
+          </div>
         ) : (
             <div>
               {lista ? (
@@ -98,16 +107,16 @@ const Main = () => {
               ) : (
                   <div>
                     {screen === "indicadoresLaborales" && (
-                      <IndicadoresLaborales saveToDb={saveToDb} msg={msg} />
+                      <IndicadoresLaborales saveToDb={saveToDb}/>
                     )}
                     {screen === "empleoGeneral" && (
-                      <EmpleoGeneral saveToDb={saveToDb} msg={msg} />
+                      <EmpleoGeneral saveToDb={saveToDb}/>
                     )}
                     {screen === "empleoIERIC" && (
-                      <Empleoieric saveToDb={saveToDb} msg={msg} />
+                      <Empleoieric saveToDb={saveToDb}/>
                     )}
                     {screen === "pobrezaIndigencia" && (
-                      <PobrezaIndigencia saveToDb={saveToDb} msg={msg} />
+                      <PobrezaIndigencia saveToDb={saveToDb} />
                     )}
                   </div>
                 )}

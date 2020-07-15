@@ -41,7 +41,7 @@ const ListView = (props) => {
                 </div>
               )}
             <span>{i + 1}</span>
-            <span>{Object.values(element)[0]}</span>
+            <span>{Object.values(element)[1]}</span>
             <span>{Object.values(element)[2]}</span>
             <span>{Object.values(element)[3]}</span>
             <span>{Object.values(element)[4]}</span>

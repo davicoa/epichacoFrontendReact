@@ -151,6 +151,12 @@ button[type="button"] {
 .tabButtons:hover{
   background-color: rgba(92, 188, 209, 0.644);
 }
+
+.ClipLoader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 600px) {
   .textinput {
     display: none;
