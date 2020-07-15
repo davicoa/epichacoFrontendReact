@@ -14,7 +14,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(1);
-            props.screen("");
+            props.screen("forestoIndustria");
           }}
         >
           Foresto Industria

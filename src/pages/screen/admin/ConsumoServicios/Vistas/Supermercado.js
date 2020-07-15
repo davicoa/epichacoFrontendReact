@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Supermercado = (props) => {
