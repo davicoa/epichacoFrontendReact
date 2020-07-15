@@ -25,10 +25,10 @@ const Cemento = (props) => {
       case "semestre":
         setSemestre(e.target.value);
         break;
-      case "tasa":
+      case "alcance":
         setAlcance(e.target.value);
         break;
-      case "alcance":
+      case "tasa":
         setTasa(e.target.value);
         break;
       case "gran_resistencia":
