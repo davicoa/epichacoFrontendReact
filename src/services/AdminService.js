@@ -3,6 +3,11 @@ import authHeader from "./AuthHeader";
 import API_URL from "constant/apiUrl";
 
 class AdminService {
+
+  adminGet(route){
+    return axios.get(API_URL + route, { headers: authHeader() })
+  }
+
   adminPost(route, body) {
     return axios
       .post(API_URL + route, body, {
@@ -16,11 +21,22 @@ class AdminService {
       });
   }
 
-  adminGet(route){
-    return axios.get(API_URL + route, { headers: authHeader() })
+  adminUpdate(route, id,  body) {
+    console.log('adm', id);
+    return axios
+      .put(API_URL + route+'/'+id, body, {
+        headers: authHeader(),
+      })
+      .then((response) => {
+        return response;
+      })
+      .catch((err) => {
+        return "Fallo en la carga";
+      });
   }
 
   adminDelete(route, id){
+    console.log('admDelete', id);
     return axios.delete(API_URL + route+'/'+id, { headers: authHeader() })
   }
 }

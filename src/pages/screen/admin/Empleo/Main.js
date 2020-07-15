@@ -13,6 +13,7 @@ import masIcon from "images/icons-mas.png";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
+let formActual = IndicadoresLaborales
 
 const Main = () => {
   const [screen, setScreen] = useState("indicadoresLaborales");
@@ -20,8 +21,8 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [msg, setMsd] = useState("");
   const [datalist, setDatalist] = useState();
-
-  const componente = <IndicadoresLaborales />
+  
+  
   const saveToDb = async (route, body) => {
     setLoading(true);
     const res = await AdminService.adminPost(route, body);
@@ -37,6 +38,23 @@ const Main = () => {
   };
 
   const screenHandler = (val) => {
+    switch (val) {
+      case "indicadoresLaborales":
+        formActual = IndicadoresLaborales
+        break;
+      case "empleoGeneral":
+        formActual = EmpleoGeneral
+        break;
+      case "empleoIERIC":
+        console.log();
+        formActual = Empleoieric
+        break;
+      case "pobrezaIndigencia":
+        formActual = PobrezaIndigencia
+        break;
+      default:
+        break;
+    }
     setScreen(val);
     setLista(false);
   };
@@ -76,7 +94,7 @@ const Main = () => {
                   reload={loadListHandler}
                   rawData={datalist}
                   route={screen} 
-                  formToEdit={<IndicadoresLaborales />}/>
+                  formToEdit={formActual}/>
               ) : (
                   <div>
                     {screen === "indicadoresLaborales" && (

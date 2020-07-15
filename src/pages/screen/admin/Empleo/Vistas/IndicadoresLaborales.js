@@ -3,30 +3,22 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const IndicadoresLaborales = (props) => {
+  const obj = props.obj
+  console.log(typeof obj !== 'undefined'?obj._id:'');
   const [fecha, setFecha] = useState(new Date());
-  const [n_trimestre, setN_trimestre] = useState("");
-  const [trimestre, setTrimestre] = useState("");
-  const [tasa, setTasa] = useState("");
-  const [gran_resistencia, setGran_resistencia] = useState("");
-  const [
-    var_porcent_trimestral_gran_resistencia,
-    setVar_porcent_trimestral_gran_resistencia,
-  ] = useState("");
-  const [
-    var_porcent_ia_gran_resistencia,
-    setVar_porcent_ia_gran_resistencia,
-  ] = useState("");
-  const [nea, setNea] = useState("");
-  const [var_porcent_trimestral_nea, setVar_porcent_trimestral_nea] = useState(
-    ""
-  );
-  const [var_porcent_ia_nea, setVar_porcent_ia_nea] = useState("");
-  const [total_31_aglomerados, setTotal_31_aglomerados] = useState("");
-  const [
-    var_porcent_trimestral_total,
-    setVar_porcent_trimestral_total,
-  ] = useState("");
-  const [var_porcent_ia_total, setVar_porcent_ia_total] = useState("");
+  const [_id, set_id] = useState(typeof obj !== 'undefined'?obj._id:'');
+  const [n_trimestre, setN_trimestre] = useState(typeof obj !== 'undefined'?obj.n_trimestre:'');
+  const [trimestre, setTrimestre] = useState(typeof obj !== 'undefined'?obj.trimestre:'');
+  const [tasa, setTasa] = useState(typeof obj !== 'undefined'?obj.tasa:'');
+  const [gran_resistencia, setGran_resistencia] = useState(typeof obj !== 'undefined'?obj.gran_resistencia:'');
+  const [var_porcent_trimestral_gran_resistencia, setVar_porcent_trimestral_gran_resistencia] = useState(typeof obj !== 'undefined'?obj.var_porcent_trimestral_gran_resistencia:'');
+  const [var_porcent_ia_gran_resistencia, setVar_porcent_ia_gran_resistencia] = useState(typeof obj !== 'undefined'?obj.var_porcent_ia_gran_resistencia:'');
+  const [nea, setNea] = useState(typeof obj !== 'undefined'?obj.nea:'');
+  const [var_porcent_trimestral_nea, setVar_porcent_trimestral_nea] = useState(typeof obj !== 'undefined'?obj.var_porcent_trimestral_nea:'');
+  const [var_porcent_ia_nea, setVar_porcent_ia_nea] = useState(typeof obj !== 'undefined'?obj.var_porcent_ia_nea:'');
+  const [total_31_aglomerados, setTotal_31_aglomerados] = useState(typeof obj !== 'undefined'?obj.total_31_aglomerados:'');
+  const [var_porcent_trimestral_total, setVar_porcent_trimestral_total] = useState(typeof obj !== 'undefined'?obj.var_porcent_trimestral_total:'');
+  const [var_porcent_ia_total, setVar_porcent_ia_total] = useState(typeof obj !== 'undefined'?obj.var_porcent_ia_total:'');
 
   const setFechaHandler = (Date) => {
     setFecha(Date);
@@ -77,7 +69,7 @@ const IndicadoresLaborales = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
-    props.saveToDb("indicadoresLaborales", {
+    props.saveToDb("indicadoresLaborales",{
       fecha,
       n_trimestre,
       trimestre,
@@ -91,7 +83,7 @@ const IndicadoresLaborales = (props) => {
       total_31_aglomerados,
       var_porcent_trimestral_total,
       var_porcent_ia_total,
-    });
+    }, _id);
   };
 
   return (
