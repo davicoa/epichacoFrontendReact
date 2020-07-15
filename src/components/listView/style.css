@@ -1,0 +1,28 @@
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-left: 1vw;
+}
+.dataList {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.dataList > span {
+  display: flex;
+  flex: 1;
+}
+.tabButtonsList{
+  display: flex;
+  margin-right: 0.2vw;
+  color: white;
+  padding: 0.5vw;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+}

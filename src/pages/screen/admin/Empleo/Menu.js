@@ -14,7 +14,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(1);
-            props.screen("");
+            props.screen("indicadoresLaborales");
           }}
         >
           Indicadores Laborales
@@ -29,7 +29,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(2);
-            props.screen("EmpleoGeneral");
+            props.screen("empleoGeneral");
           }}
         >
           Empleo General
@@ -44,7 +44,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(3);
-            props.screen("EmpleoIERIC");
+            props.screen("empleoIERIC");
           }}
         >
           Empleo IERIC
@@ -59,7 +59,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(4);
-            props.screen("PobrezaIndigencia");
+            props.screen("pobrezaIndigencia");
           }}
         >
           Pobreza/Indigencia

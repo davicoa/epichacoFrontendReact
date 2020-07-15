@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const Faena = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [chaco, setChaco] = useState("");
-  const [var_mensual_chaco, setVar_mensual_chaco] = useState("");
-  const [var_ia_chaco, setVar_ia_chaco] = useState("");
-  const [nacion, setNacion] = useState("");
-  const [var_mensual_nacion, setVar_mensual_nacion] = useState("");
-  const [var_ia_nacion, setVar_ia_nacion] = useState("");
-  const [categoria, setCategoria] = useState("");
+  const [chaco, setChaco] = useState( typeof obj !== "undefined" ? obj.chaco : "");
+  const [var_mensual_chaco, setVar_mensual_chaco] = useState( typeof obj !== "undefined" ? obj.var_mensual_chaco : "");
+  const [var_ia_chaco, setVar_ia_chaco] = useState( typeof obj !== "undefined" ? obj.var_ia_chaco : "");
+  const [nacion, setNacion] = useState( typeof obj !== "undefined" ? obj.nacion : "");
+  const [var_mensual_nacion, setVar_mensual_nacion] = useState( typeof obj !== "undefined" ? obj.var_mensual_nacion : "");
+  const [var_ia_nacion, setVar_ia_nacion] = useState( typeof obj !== "undefined" ? obj.var_ia_nacion : "");
+  const [categoria, setCategoria] = useState( typeof obj !== "undefined" ? obj.categoria : "");
 
   const setFechaHandler = Date => {
     setFecha(Date);
@@ -63,14 +63,6 @@ const Faena = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Faena</span>
-      {props.loading ? (
-        <ClipLoader
-          css={("display: block", "margin: 0 auto", "border-color: blue")}
-          size={150}
-          color={"#123abc"}
-          loading={props.loading}
-        />
-      ) : (
           <form onSubmit={savetobd}>
             <div className="divContaninerCenter">
               <p className="textinput">Fecha:</p>
@@ -167,14 +159,6 @@ const Faena = (props) => {
             </button>
             </div>
           </form>
-        )}
-      <div className="divMsgBottom">
-        <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
-        >
-          {props.msg}
-        </span>
-      </div>
     </div>
   );
 };

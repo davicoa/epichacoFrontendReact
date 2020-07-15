@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const ForestalPrimario = (props) => {
+  const obj = props.obj;
   const [fecha, setFecha] = useState(new Date());
-  const [producto, setProducto] = useState("");
-  const [toneladas, setToneladas] = useState("");
-  const [var_mens, setVar_mens] = useState("");
-  const [var_ia, setVar_ia] = useState("");
+  const [producto, setProducto] = useState(typeof obj !== "undefined" ? obj.producto : "");
+  const [toneladas, setToneladas] = useState(typeof obj !== "undefined" ? obj.toneladas : "");
+  const [var_mens, setVar_mens] = useState(typeof obj !== "undefined" ? obj.var_mens : "");
+  const [var_ia, setVar_ia] = useState(typeof obj !== "undefined" ? obj.var_ia : "");
 
   const setFechaHandler = Date =>{
       setFecha(Date);
@@ -48,14 +48,6 @@ const ForestalPrimario = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Forestal Primario</span>
-      {props.loading ? (
-        <ClipLoader
-          css={("display: block", "margin: 0 auto", "border-color: blue")}
-          size={150}
-          color={"#123abc"}
-          loading={props.loading}
-        />
-      ) : (
         <form onSubmit={savetobd}>
           <div className="divContaniner">
             <p className="textinput">Fecha:</p>
@@ -118,14 +110,6 @@ const ForestalPrimario = (props) => {
             </button>
           </div>
         </form>
-      )}
-      <div className="divMsgBottom">
-        <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
-        >
-          {props.msg}
-        </span>
-      </div>
     </div>
   );
 };
