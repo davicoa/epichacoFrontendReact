@@ -4,10 +4,25 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
+
+const options = {
+  timeout: 5000,
+  position: positions.MIDDLE
+};
+
+const Ap = () => (
+  <Provider template={AlertTemplate} {...options}>
+    <App />
+  </Provider>
+);
+
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Ap />
   </BrowserRouter>,
   document.getElementById('root')
 );

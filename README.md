@@ -88,3 +88,6 @@ npm install axios
 ### `7_ axios`
 npm install react-validation validator
 
+### `8_ react-alert react-alert-template-basic`
+npm install --save react-alert react-alert-template-basic
+

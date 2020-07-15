@@ -69,7 +69,9 @@ const Main = () => {
             <div>
               {lista ? (
                 <ListView
-                  rawData={datalist} />
+                  reload = {loadListHandler}
+                  rawData={datalist}
+                  route={screen} />
               ) : (
                   <div>
                     {screen === "indicadoresLaborales" && (

@@ -19,5 +19,9 @@ class AdminService {
   adminGet(route){
     return axios.get(API_URL + route, { headers: authHeader() })
   }
+
+  adminDelete(route, id){
+    return axios.delete(API_URL + route+'/'+id, { headers: authHeader() })
+  }
 }
 export default new AdminService();
