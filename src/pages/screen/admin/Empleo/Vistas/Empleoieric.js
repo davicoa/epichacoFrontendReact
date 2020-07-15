@@ -118,7 +118,7 @@ const Empleoieric = (props) => {
                 placeholder="var_porcen_ia_empleo_chaco"
                 type="text"
                 value={var_porcen_ia_empleo_chaco}
-                name="vaquillvar_porcen_ia_empleo_chacoa_prenadas"
+                name="var_porcen_ia_empleo_chaco"
                 onChange={setImputHandler}
               />
             </div>
