@@ -5,7 +5,8 @@ import "../../style.css"
 
 const PreciosAgrosDiarios = (props) => {
     const obj = props.obj;
-    const [date, setFecha] = useState(new Date())
+    let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+    const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
     const [grano, setGrano] = useState(typeof obj !== "undefined" ? obj.grano : "")
     const [valor_actual, setValor_actual] = useState(typeof obj !== "undefined" ? obj.valor_actual : "")
     const [variacion_diaria, setVariacion_diaria] = useState(typeof obj !== "undefined" ? obj.variacion_diaria : "")

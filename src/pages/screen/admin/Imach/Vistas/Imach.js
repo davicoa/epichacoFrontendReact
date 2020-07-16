@@ -5,7 +5,9 @@ import "../../style.css";
 
 const ForestalPrimario = (props) => {
   const obj = props.obj;
-  const [date, setFecha] = useState(new Date());
+
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
   const [indice, setIndice] = useState(
     typeof obj !== "undefined" ? obj.indice : ""
   );

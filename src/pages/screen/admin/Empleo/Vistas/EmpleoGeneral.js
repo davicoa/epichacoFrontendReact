@@ -5,7 +5,8 @@ import "../../style.css";
 
 const EmpleoGeneral = (props) => {
   const obj = props.obj;
-  const [date, setFecha] = useState(new Date());
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
   const [rama_de_actividad, setRama_de_actividad] = useState(
     typeof obj !== "undefined" ? obj.rama_de_actividad : ""
   );

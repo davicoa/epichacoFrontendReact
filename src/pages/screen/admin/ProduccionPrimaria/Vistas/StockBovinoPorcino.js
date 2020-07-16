@@ -5,7 +5,8 @@ import "../../style.css";
 
 const StockBovinoPorcino = (props) => {
   const obj = props.obj;
-  const [date, setFecha] = useState(new Date());
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
   const [sector_id, setSector_id] = useState(typeof obj !== "undefined" ? obj.sector_id : "");
   const [sector_nombre, setSector_nombre] = useState(typeof obj !== "undefined" ? obj.sector_nombre : "");
   const [variable_id, setVariable_id] = useState(typeof obj !== "undefined" ? obj.variable_id : "");
