@@ -5,7 +5,7 @@ import "../../style.css";
 
 const ForestoIndustria = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [tipo_produccion, setTipo_produccion] = useState(typeof obj !== "undefined" ? obj.tipo_produccion : "");
   const [toneladas, setToneladas] = useState(typeof obj !== "undefined" ? obj.toneladas : "");
   const [var_mens, setVar_mens] = useState(typeof obj !== "undefined" ? obj.var_mens : "");
@@ -36,6 +36,7 @@ const ForestoIndustria = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("forestoIndustria", {
       fecha,
       tipo_produccion,
@@ -54,7 +55,7 @@ const ForestoIndustria = (props) => {
           <DatePicker
             className="divContaniner"
             dateFormat="dd/MM/yyyy"
-            selected={fecha}
+            selected={date}
             name="fecha"
             onChange={Date => setFechaHandler(Date)}
           />
