@@ -5,7 +5,8 @@ import "../../style.css";
 
 const ForestoIndustria = (props) => {
   const obj = props.obj;
-  const [date, setFecha] = useState(new Date());
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
   const [tipo_produccion, setTipo_produccion] = useState(typeof obj !== "undefined" ? obj.tipo_produccion : "");
   const [toneladas, setToneladas] = useState(typeof obj !== "undefined" ? obj.toneladas : "");
   const [var_mens, setVar_mens] = useState(typeof obj !== "undefined" ? obj.var_mens : "");

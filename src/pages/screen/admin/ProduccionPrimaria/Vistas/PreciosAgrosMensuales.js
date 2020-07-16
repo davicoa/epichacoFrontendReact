@@ -5,7 +5,8 @@ import "../../style.css";
 
 const PreciosAgrosMensuales = (props) => {
   const obj = props.obj;
-  const [date, setFecha] = useState(new Date());
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
   const [precio, setPrecio] = useState(typeof obj !== "undefined" ? obj.precio : "");
   const [var_mensual, setVar_mensual] = useState(typeof obj !== "undefined" ? obj.var_mensual : "");
   const [var_ia, setVar_ia] = useState(typeof obj !== "undefined" ? obj.var_ia : "");
