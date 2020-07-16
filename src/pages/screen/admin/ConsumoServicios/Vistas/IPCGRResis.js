@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const IPCGResis = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [sector, setSector] = useState(
     typeof obj !== "undefined" ? obj.sector : ""
   );
@@ -41,6 +41,7 @@ const IPCGResis = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("ipcgrResis", {
       fecha,
       sector,
@@ -60,7 +61,7 @@ const IPCGResis = (props) => {
           <DatePicker
             className="divContaniner"
             dateFormat="dd/MM/yyyy"
-            selected={fecha}
+            selected={date}
             name="fecha"
             onChange={(Date) => setFechaHandler(Date)}
           />

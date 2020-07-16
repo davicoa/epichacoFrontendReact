@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const IndicadoresLaborales = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [n_trimestre, setN_trimestre] = useState(
     typeof obj !== "undefined" ? obj.n_trimestre : ""
   );
@@ -98,6 +98,7 @@ const IndicadoresLaborales = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("indicadoresLaborales", {
       fecha,
       n_trimestre,
@@ -127,7 +128,7 @@ const IndicadoresLaborales = (props) => {
               <DatePicker
                 className="divContaniner"
                 dateFormat="dd/MM/yyyy"
-                selected={fecha}
+                selected={date}
                 name="fecha"
                 onChange={(Date) => setFechaHandler(Date)}
               />

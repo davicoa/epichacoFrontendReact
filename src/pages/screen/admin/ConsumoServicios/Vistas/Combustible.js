@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const Combustible = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [producto, setProducto] = useState(
     typeof obj !== "undefined" ? obj.producto : ""
   );
@@ -97,6 +97,7 @@ const Combustible = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("combustible", {
       fecha,
       producto,
@@ -127,7 +128,7 @@ const Combustible = (props) => {
               <DatePicker
                 className="divContaniner"
                 dateFormat="dd/MM/yyyy"
-                selected={fecha}
+                selected={date}
                 name="fecha"
                 onChange={(Date) => setFechaHandler(Date)}
               />

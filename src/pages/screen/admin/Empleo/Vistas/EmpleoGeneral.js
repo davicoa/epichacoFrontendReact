@@ -5,7 +5,7 @@ import "../../style.css";
 
 const EmpleoGeneral = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [rama_de_actividad, setRama_de_actividad] = useState(
     typeof obj !== "undefined" ? obj.rama_de_actividad : ""
   );
@@ -128,6 +128,7 @@ const EmpleoGeneral = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("empleoGeneral", {
       fecha,
       rama_de_actividad,
@@ -161,7 +162,7 @@ const EmpleoGeneral = (props) => {
               <DatePicker
                 className="divContaniner"
                 dateFormat="dd/MM/yyyy"
-                selected={fecha}
+                selected={date}
                 name="fecha"
                 onChange={(Date) => setFechaHandler(Date)}
               />

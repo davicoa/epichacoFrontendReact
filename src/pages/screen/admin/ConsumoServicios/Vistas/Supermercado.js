@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const Supermercado = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [producto, setProducto] = useState(
     typeof obj !== "undefined" ? obj.producto : ""
   );
@@ -97,6 +97,7 @@ const Supermercado = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("supermercado", {
       fecha,
       producto,
@@ -129,7 +130,7 @@ const Supermercado = (props) => {
               <DatePicker
                 className="divContaniner"
                 dateFormat="dd/MM/yyyy"
-                selected={fecha}
+                selected={date}
                 name="fecha"
                 onChange={(Date) => setFechaHandler(Date)}
               />
