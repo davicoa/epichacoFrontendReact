@@ -5,7 +5,7 @@ import "../../style.css"
 
 const PreciosAgrosDiarios = (props) => {
     const obj = props.obj;
-    const [fecha, setFecha] = useState(new Date())
+    const [date, setFecha] = useState(new Date())
     const [grano, setGrano] = useState(typeof obj !== "undefined" ? obj.grano : "")
     const [valor_actual, setValor_actual] = useState(typeof obj !== "undefined" ? obj.valor_actual : "")
     const [variacion_diaria, setVariacion_diaria] = useState(typeof obj !== "undefined" ? obj.variacion_diaria : "")
@@ -44,6 +44,7 @@ const PreciosAgrosDiarios = (props) => {
 
     const savetobd = (e) => {
         e.preventDefault();
+        let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
         props.saveToDb("preciosAgroDiarios", {
             fecha,
             grano,
@@ -64,7 +65,7 @@ const PreciosAgrosDiarios = (props) => {
                     <DatePicker
                         className="divContaniner"
                         dateFormat="dd/MM/yyyy"
-                        selected={fecha}
+                        selected={date}
                         name="fecha"
                         onChange={Date => setFechaHandler(Date)}
                     />

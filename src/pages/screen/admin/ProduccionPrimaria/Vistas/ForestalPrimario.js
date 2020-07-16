@@ -5,7 +5,7 @@ import "../../style.css";
 
 const ForestalPrimario = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [producto, setProducto] = useState(typeof obj !== "undefined" ? obj.producto : "");
   const [toneladas, setToneladas] = useState(typeof obj !== "undefined" ? obj.toneladas : "");
   const [var_mens, setVar_mens] = useState(typeof obj !== "undefined" ? obj.var_mens : "");
@@ -36,6 +36,7 @@ const ForestalPrimario = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("forestalPrimario", {
       fecha,
       producto,
@@ -54,7 +55,7 @@ const ForestalPrimario = (props) => {
             <DatePicker
               className="divContaniner"
               dateFormat="dd/MM/yyyy"
-              selected={fecha}
+              selected={date}
               name="fecha"
               onChange={Date =>setFechaHandler(Date)}
             />

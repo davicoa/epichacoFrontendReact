@@ -5,7 +5,7 @@ import "../../style.css";
 
 const StockBovinoPorcino = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [sector_id, setSector_id] = useState(typeof obj !== "undefined" ? obj.sector_id : "");
   const [sector_nombre, setSector_nombre] = useState(typeof obj !== "undefined" ? obj.sector_nombre : "");
   const [variable_id, setVariable_id] = useState(typeof obj !== "undefined" ? obj.variable_id : "");
@@ -78,6 +78,7 @@ const StockBovinoPorcino = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
     props.saveToDb("stockBovinoPorcino", {
       fecha,
       sector_id,
@@ -106,7 +107,7 @@ const StockBovinoPorcino = (props) => {
           <DatePicker
             className="divContaniner"
             dateFormat="dd/MM/yyyy"
-            selected={fecha}
+            selected={date}
             name="fecha"
             onChange={(Date) => setFechaHandler(Date)}
           />

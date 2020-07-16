@@ -305,7 +305,7 @@ export default [
     title: { antestitle: '', campotitle: "tasa", despuestitle: "" },
     subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
-    variable: { dondebuscar: "gran_resistencia", quebuscar: "" },
+    variable: { dondebuscar: "tasa", quebuscar: "Tasa de Desocupación" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",

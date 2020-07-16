@@ -5,7 +5,7 @@ import "../../style.css";
 
 const Faena = (props) => {
   const obj = props.obj;
-  const [fecha, setFecha] = useState(new Date());
+  const [date, setFecha] = useState(new Date());
   const [chaco, setChaco] = useState( typeof obj !== "undefined" ? obj.chaco : "");
   const [var_mensual_chaco, setVar_mensual_chaco] = useState( typeof obj !== "undefined" ? obj.var_mensual_chaco : "");
   const [var_ia_chaco, setVar_ia_chaco] = useState( typeof obj !== "undefined" ? obj.var_ia_chaco : "");
@@ -48,6 +48,7 @@ const Faena = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()
     props.saveToDb("faena", {
       fecha,
       chaco,
@@ -69,7 +70,7 @@ const Faena = (props) => {
               <DatePicker
                 className="divContaniner"
                 dateFormat="dd/MM/yyyy"
-                selected={fecha}
+                selected={date}
                 name="fecha"
                 onChange={Date => setFechaHandler(Date)}
               />

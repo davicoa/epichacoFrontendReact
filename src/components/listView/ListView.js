@@ -25,10 +25,11 @@ const ListView = (props) => {
                 <div className="listContainer" key={i}>
                   <div className="dataList">
                     <span>#</span>
-                    <span>{Object.keys(element)[1]}</span>
+                    <span>{element.fecha?"Fecha":Object.keys(element)[1]}</span>
                     <span>{Object.keys(element)[2]}</span>
                     <span>{Object.keys(element)[3]}</span>
-                    <span>{Object.keys(element)[4]}</span>
+                    <span>{element.var_mens?"Var mens":Object.keys(element)[4]}</span>
+                    <span>{element.var_ia?"Var i.a.":Object.keys(element)[5]}</span>
                   </div>
                   <div className="tabButtonsConstent">
                     <span className="tabButtonsList">
@@ -41,10 +42,11 @@ const ListView = (props) => {
                 </div>
               )}
             <span>{i + 1}</span>
-            <span>{Object.values(element)[1]}</span>
+            <span>{element.fecha?element.fecha:Object.values(element)[1]}</span>
             <span>{Object.values(element)[2]}</span>
             <span>{Object.values(element)[3]}</span>
-            <span>{Object.values(element)[4]}</span>
+            <span>{element.var_mens?element.var_mens:Object.values(element)[4]}</span>
+            <span>{element.var_ia?element.var_ia:Object.values(element)[5]}</span>
           </div>
           <div className="tabButtonsConstent">
             <span

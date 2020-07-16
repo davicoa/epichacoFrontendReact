@@ -52,7 +52,13 @@ const Card = (props) => {
           item[dondebuscar].toLowerCase() === quebuscar.toLowerCase()
         ) {
           if (item[ejey] !== null) {
-            EjeX.push(item[ejex]); //fecha
+            let aux = []
+            let aux2 = item[ejex]
+            if (antessubtitle !== ("VALOR AL")) {
+              aux = item[ejex].split("/")
+              aux2 = aux[1] + "/" + aux[2];
+            }
+            EjeX.push(aux2); //
             EjeY.push(
               parseFloat(
                 item[ejey]
@@ -82,7 +88,13 @@ const Card = (props) => {
         item[dondebuscarOpc].toLowerCase() === quebuscarOpc.toLowerCase()
       ) {
         if (item[ejey] !== null) {
-          EjeX.push(item[ejex]); //fecha
+          let aux = []
+          let aux2 = item[ejex]
+          if (antessubtitle !== ("VALOR AL")) {
+            aux = item[ejex].split("/")
+            aux2 = aux[1] + "/" + aux[2];
+          }
+          EjeX.push(aux2); //
           EjeY.push(
             parseFloat(
               item[ejey]
@@ -108,13 +120,13 @@ const Card = (props) => {
         }
       }
     });
-    
+
     let fechita = ""
     let d = new Date(EjeX.slice(-1))
-    if(d instanceof Date && !isNaN(d.valueOf())){
+    if (d instanceof Date && !isNaN(d.valueOf())) {
       let df = new Intl.DateTimeFormat('pt')
       fechita = df.format(d)
-    }else{
+    } else {
       fechita = EjeX.slice(-1)
     }
     //Arrow
@@ -131,8 +143,6 @@ const Card = (props) => {
         fechita
         : '')
     );
-
-
     //valor
     setValueView(
       props.dataGraph.valor.antesvalor +
@@ -208,9 +218,9 @@ const Card = (props) => {
                     <img
                       src={
                         arrowAndColor < 0
-                          ? (dirOpuesta)?upRedArrow:upGreenArrow
+                          ? (dirOpuesta) ? upRedArrow : upGreenArrow
                           : arrowAndColor > 0
-                            ? (dirOpuesta)?downGreenArrow:downRedArrow
+                            ? (dirOpuesta) ? downGreenArrow : downRedArrow
                             : ""
                       }
                       alt=""
@@ -221,9 +231,9 @@ const Card = (props) => {
                       style={{
                         color:
                           arrowAndColor < 0
-                            ? dirOpuesta?"red":"#3bb54c"
+                            ? dirOpuesta ? "red" : "#3bb54c"
                             : arrowAndColor > 0
-                              ? dirOpuesta?"#3bb54c":"red"
+                              ? dirOpuesta ? "#3bb54c" : "red"
                               : "#5F5F5F",
                       }}
                     >
