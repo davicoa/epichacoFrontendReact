@@ -76,7 +76,7 @@ const ForestalPrimario = (props) => {
         </div>
         <div className="divContaniner">
           <p className="textinput">Contraseña</p>
-          <input
+          <input className="contrasenia"
             placeholder="Contraseña"
             type="password"
             value={password}
@@ -87,7 +87,7 @@ const ForestalPrimario = (props) => {
         </div>
         <div className="divContaniner">
           <p className="textinput">Repetir Contraseña</p>
-          <input
+          <input className="contrasenia"
             placeholder="Repetir Contraseña"
             type="password"
             value={rpassword}
