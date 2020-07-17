@@ -4,7 +4,7 @@ input[type="email"] {
   margin-bottom: 0.3em;
 }
 
-input[type="password"] {
+.contrasenia {
   height: 4vh;
   width: 14.5vw;
   margin-bottom: 0.3em;
