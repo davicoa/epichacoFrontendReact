@@ -23,9 +23,9 @@ const Main = () => {
   const saveToDb = async (route, body) => {
     setLoading(true);
     const res = await AdminService.adminPost(route, body);
-    if (res.data.msg !== 'undefined' && res.data.msg === 200) {
+    if (res.status === 200) {
         alert.success(res.data.msg);
-    } else if (res.data.msg !== 'undefined' && res.status === 202) {
+    } else if (res.status === 202) {
       alert.show(res.data.msg);
     }else{
       alert.error(res.data.msg);
