@@ -81,8 +81,8 @@ const ListViewUsers = (props) => {
     }
   };
 
-  const editeToDb = async (route, body) => {
-    const res = await AdminService.adminUpdate(route, obj._id, body);
+  const editeToDb = async (body) => {
+    const res = await AdminService.adminPutUsers(obj._id, body);
     if (res.status === 200) {
       props.reload();
       alert.success(res.data.msg);

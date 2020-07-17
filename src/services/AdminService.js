@@ -5,7 +5,7 @@ import API_URL from "constant/apiUrl";
 class AdminService {
 
   //pedirs users
-  adminGetUsers() {
+  adminGetUsers(route) {
     return axios.get(API_URL + 'test/all', { headers: authHeader() })
   }
 

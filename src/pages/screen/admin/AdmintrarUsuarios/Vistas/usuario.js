@@ -4,21 +4,25 @@ import "../style.css";
 
 const ForestalPrimario = (props) => {
   const obj = props.obj;
-
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rpassword, setRPassword] = useState('');
-  const [role, setRole] = useState('');
+  
+  const [username, setUsername] = useState(typeof obj !== "undefined" ? obj.username : "");
+  const [email, setEmail] = useState(typeof obj !== "undefined" ? obj.email : "");
+  const [password, setPassword] = useState("");
+  const [rpassword, setRPassword] = useState("");
+  const [role, setRole] = useState(typeof obj !== "undefined" ? obj.role : "");
 
   const savetobd = (e) => {
     e.preventDefault();
-    e.target[3].setCustomValidity('');
-    if (password === rpassword) {
-        console.log('si'); 
-    }else{
-        console.log('no'); 
-        e.target[3].setCustomValidity("Contraseña no coinsiden");
+    if (password === rpassword) {   
+      props.saveToDb('auth/signup', {
+        username,
+        email,
+        password,
+        role,
+      });
+
+    } else {
+      e.target[3].setCustomValidity("Contraseña no coinsiden");
     }
   };
 
@@ -31,10 +35,12 @@ const ForestalPrimario = (props) => {
         setEmail(e.target.value);
         break;
       case "password":
+        e.target.setCustomValidity("");
         setPassword(e.target.value);
         break;
       case "rpassword":
-          setRPassword(e.target.value);
+        e.target.setCustomValidity("");
+        setRPassword(e.target.value);
         break;
       case "role":
         setRole(e.target.value);
@@ -96,8 +102,9 @@ const ForestalPrimario = (props) => {
             <option value="" disabled>
               Seleccione una opcion
             </option>
-            <option value="MODERATOR">Moderador</option>
             <option value="USER">Usuario</option>
+            <option value="MODERATOR">Moderador</option>
+            <option value="ADMIN" disabled>ADMINISTRADOR</option>
           </select>
         </div>
         <div className="divContaninerCenter">
