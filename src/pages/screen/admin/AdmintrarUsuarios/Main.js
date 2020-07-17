@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 import Usuario from "./Vistas/usuario"
-import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
 
-import ListView from "components/listView/ListView";
+import ListViewUsers from "components/listView/ListViewUsers";
 import ClipLoader from "react-spinners/ClipLoader";
 import listaIcon from "images/icons-lista.png";
 import masIcon from "images/icons-mas.png";
@@ -34,7 +33,7 @@ const Main = () => {
 
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen);
+    const res = await AdminService.adminGetUsers();
     setDatalist(res.data);
     setLoading(false);
   };
@@ -85,7 +84,7 @@ const Main = () => {
         ) : (
           <div>
             {lista ? (
-              <ListView
+              <ListViewUsers
                 reload={loadListHandler}
                 rawData={datalist}
                 route={screen}
