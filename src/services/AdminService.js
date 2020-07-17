@@ -22,7 +22,7 @@ class AdminService {
         return response;
       })
       .catch((err) => {
-        return "Fallo en la carga";
+        return {err, data: {msg: 'Server error!!!'}};
       });
   }
 
@@ -35,7 +35,7 @@ class AdminService {
         return response;
       })
       .catch((err) => {
-        return "Fallo en la carga";
+        return {err, data: {msg: 'Server error!!!'}};
       });
   }
 

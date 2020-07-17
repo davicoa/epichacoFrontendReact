@@ -102,9 +102,9 @@ const ForestalPrimario = (props) => {
             <option value="" disabled>
               Seleccione una opcion
             </option>
-            <option value="USER">Usuario</option>
-            <option value="MODERATOR">Moderador</option>
-            <option value="ADMIN" disabled>ADMINISTRADOR</option>
+            <option value={['user']}>Usuario</option>
+            <option value={['moderator']}>Moderador</option>
+            <option value={['admin']} disabled>ADMINISTRADOR</option>
           </select>
         </div>
         <div className="divContaninerCenter">
