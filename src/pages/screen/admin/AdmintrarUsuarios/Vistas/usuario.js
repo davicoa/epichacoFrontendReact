@@ -88,15 +88,15 @@ const ForestalPrimario = (props) => {
           />
         </div>
         <div className="divContaniner">
-          <p className="textinput"></p>
+          <p className="textinput">Generar Contraseña</p>
           <input
             placeholder="Randon"
             type="text"
             value={randon}
             readOnly
           />
-          <button type="reset" onClick={() => randomPass(8)}>Randon</button>
         </div>
+          <button type="reset" onClick={() => randomPass(8)}>Randon</button>
         <div className="divContaniner">
           <p className="textinput">Contraseña</p>
           <input className="contrasenia"

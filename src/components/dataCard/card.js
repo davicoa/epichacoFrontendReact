@@ -72,13 +72,12 @@ const Card = (props) => {
             if (item[camposubtitle]) {
               namesubtitle = item[camposubtitle];
             }
+
             if (item[campovalor]) {
-              valor.push(
-                parseFloat(
-                  item[campovalor]
-                    .replace(/,/g, ".")
-                    .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
-                )
+              let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
+              valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
+                num
+              ))
               ); // valor mostrado
             }
           }
@@ -109,12 +108,10 @@ const Card = (props) => {
             namesubtitle = item[camposubtitle];
           }
           if (item[campovalor]) {
-            valor.push(
-              parseFloat(
-                item[campovalor]
-                  .replace(/,/g, ".")
-                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
-              )
+            let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
+            valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
+              num
+            ))
             ); // valor mostrado
           }
         }
@@ -130,7 +127,15 @@ const Card = (props) => {
       fechita = EjeX.slice(-1)
     }
     //Arrow
-    setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+    if(EjeY.slice(-2)[0] < 0 && EjeY.slice(-1)[0] < 0){
+      if(EjeY.slice(-2)[0] > EjeY.slice(-1)[0]){
+        setArrowAndColor(1)
+      }else{
+        setArrowAndColor(-1)
+      }
+    }else{
+      setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+    }
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
