@@ -11,7 +11,7 @@ const ForestalPrimario = (props) => {
   const [rpassword, setRPassword] = useState("");
   const [role, setRole] = useState(typeof obj !== "undefined" ? obj.role : "");
 
-  const [randon, setRandon] = useState("");
+  const [random, setRandom] = useState("");
 
   const savetobd = (e) => {
     e.preventDefault();
@@ -59,8 +59,7 @@ const ForestalPrimario = (props) => {
     for (var i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    console.log("--->", result)
-    return setRandon(result);
+    return setRandom(result);
   }
 
   return (
@@ -90,13 +89,13 @@ const ForestalPrimario = (props) => {
         <div className="divContaniner">
           <p className="textinput">Generar Contraseña</p>
           <input
-            placeholder="Randon"
+            placeholder="Random"
             type="text"
-            value={randon}
+            value={random}
             readOnly
           />
         </div>
-          <button type="reset" onClick={() => randomPass(8)}>Randon</button>
+          <button type="reset" onClick={() => randomPass(10)}>Random</button>
         <div className="divContaniner">
           <p className="textinput">Contraseña</p>
           <input className="contrasenia"
