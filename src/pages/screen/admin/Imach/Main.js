@@ -4,7 +4,7 @@ import IMACH from "../Imach/Vistas/Imach";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
-
+import DownloadXlsx from "components/donwload/donwloadXlsx"
 import ListView from "components/listView/ListView";
 import ClipLoader from "react-spinners/ClipLoader";
 import listaIcon from "images/icons-lista.png";
@@ -17,6 +17,7 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
+  const [num, setNum] = useState("/10");
   const alert = useAlert();
 
   const saveToDb = async (route, body) => {
@@ -32,7 +33,7 @@ const Main = () => {
 
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen);
+    const res = await AdminService.adminGet(screen, num);
     setDatalist(res.data);
     setLoading(false);
   };
@@ -48,6 +49,7 @@ const Main = () => {
     setScreen(val);
     setLista(false);
   };
+
   return (
     <div className="mainContainer">
       <div className="mainMenu">
@@ -57,6 +59,9 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+          <DownloadXlsx
+            name = {screen}
+          />
           <span
             className="tabButtons"
             onClick={() => {
@@ -89,11 +94,7 @@ const Main = () => {
                 formToEdit={formActual}
               />
             ) : (
-              <div>
-                {screen === "imach" && (
-                  <IMACH saveToDb={saveToDb}/>
-                )}
-              </div>
+              <div>{screen === "imach" && <IMACH saveToDb={saveToDb} />}</div>
             )}
           </div>
         )}

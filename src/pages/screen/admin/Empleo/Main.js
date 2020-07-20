@@ -14,6 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
 import { useAlert } from "react-alert";
+import DownloadXlsx from "components/donwload/donwloadXlsx"
 
 
 let formActual = IndicadoresLaborales
@@ -23,6 +24,7 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
+  const [num, setNum] = useState('/10');
   const alert = useAlert();
   
   
@@ -39,7 +41,7 @@ const Main = () => {
 
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen);
+    const res = await AdminService.adminGet(screen,num);
     setDatalist(res.data)
     setLoading(false);
   };
@@ -74,6 +76,9 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+        <DownloadXlsx
+            name = {screen}
+          />
           <span
             className="tabButtons"
             onClick={() => {

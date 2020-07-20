@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "apexcharts": "^3.19.3",
     "axios": "^0.19.2",
+    "file-saver": "^2.0.2",
     "react": "^16.13.1",
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",
@@ -19,7 +20,8 @@
     "react-scripts": "3.4.1",
     "react-spinners": "^0.9.0",
     "react-validation": "^3.0.7",
-    "validator": "^13.1.1"
+    "validator": "^13.1.1",
+    "xlsx": "^0.16.4"
   },
   "scripts": {
     "start": "react-scripts start",
