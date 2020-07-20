@@ -9,6 +9,7 @@
     "apexcharts": "^3.19.3",
     "axios": "^0.19.2",
     "file-saver": "^2.0.2",
+    "infinite-react-carousel": "^1.2.11",
     "react": "^16.13.1",
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",

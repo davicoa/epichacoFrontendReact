@@ -94,3 +94,6 @@ npm install --save react-alert react-alert-template-basic
 ### `9_ npm install xlsx`
 npm install xlsx file-saver --save
 
+### `10_ npm install infinite-react-carousel --save`
+npm install infinite-react-carousel --save
+
