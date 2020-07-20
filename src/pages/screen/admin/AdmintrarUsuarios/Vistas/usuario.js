@@ -95,7 +95,7 @@ const ForestalPrimario = (props) => {
             readOnly
           />
         </div>
-          <button type="reset" onClick={() => randomPass(8)}>Random</button>
+          <button type="reset" onClick={() => randomPass(10)}>Random</button>
         <div className="divContaniner">
           <p className="textinput">Contraseña</p>
           <input className="contrasenia"
