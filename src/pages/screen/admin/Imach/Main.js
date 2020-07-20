@@ -17,6 +17,7 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
+  const [num, setNum] = useState("/10");
   const alert = useAlert();
 
   const saveToDb = async (route, body) => {
@@ -32,7 +33,7 @@ const Main = () => {
 
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen);
+    const res = await AdminService.adminGet(screen, num);
     setDatalist(res.data);
     setLoading(false);
   };
@@ -48,6 +49,14 @@ const Main = () => {
     setScreen(val);
     setLista(false);
   };
+
+  const donwloadCsv = async () => {
+    setLoading(true);
+    const res = await AdminService.adminGet(screen, num);
+
+    setLoading(false);
+  };
+
   return (
     <div className="mainContainer">
       <div className="mainMenu">
@@ -57,6 +66,11 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+          <span 
+            onClick={() => donwloadCsv()} 
+            className="tabButtons">
+            <img src={masIcon} alt="" height="auto" width="25%"></img>
+          </span>
           <span
             className="tabButtons"
             onClick={() => {
@@ -89,11 +103,7 @@ const Main = () => {
                 formToEdit={formActual}
               />
             ) : (
-              <div>
-                {screen === "imach" && (
-                  <IMACH saveToDb={saveToDb}/>
-                )}
-              </div>
+              <div>{screen === "imach" && <IMACH saveToDb={saveToDb} />}</div>
             )}
           </div>
         )}

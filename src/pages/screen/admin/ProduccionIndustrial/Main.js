@@ -17,6 +17,7 @@ const Main = () => {
     const [loading, setLoading] = useState(false);
     const [lista, setLista] = useState(false);
     const [datalist, setDatalist] = useState();
+    const [num, setNum] = useState('/10');
     const alert = useAlert();
 
     const saveToDb = async (route, body) => {
@@ -31,7 +32,7 @@ const Main = () => {
     };
     const loadListHandler = async () => {
         setLoading(true);
-        const res = await AdminService.adminGet(screen);
+        const res = await AdminService.adminGet(screen, num);
         setDatalist(res.data);
         setLoading(false);
     };

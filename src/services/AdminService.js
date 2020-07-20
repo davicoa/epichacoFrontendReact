@@ -9,8 +9,8 @@ class AdminService {
     return axios.get(API_URL + 'test/all', { headers: authHeader() })
   }
 
-  adminGet(route) {
-    return axios.get(API_URL + route + '/10', { headers: authHeader() })
+  adminGet(route, num) {
+    return axios.get(API_URL + route + num, { headers: authHeader() })
   }
 
   adminPost(route, body) {
