@@ -14,6 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
 import { useAlert } from "react-alert";
+import DownloadXlsx from "components/donwload/donwloadXlsx"
 
 
 let formActual = IndicadoresLaborales
@@ -75,6 +76,9 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+        <DownloadXlsx
+            name = {screen}
+          />
           <span
             className="tabButtons"
             onClick={() => {

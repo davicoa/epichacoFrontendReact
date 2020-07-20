@@ -14,6 +14,7 @@ import listaIcon from "images/icons-lista.png";
 import masIcon from "images/icons-mas.png";
 import AdminService from "services/AdminService";
 import { useAlert } from "react-alert";
+import DownloadXlsx from "components/donwload/donwloadXlsx";
 
 let formActual = IPCGResis;
 
@@ -22,7 +23,7 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
-  const [num, setNum] = useState('/10');
+  const [num, setNum] = useState("/10");
   const alert = useAlert();
 
   const saveToDb = async (route, body) => {
@@ -38,7 +39,7 @@ const Main = () => {
 
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen,num);
+    const res = await AdminService.adminGet(screen, num);
     setDatalist(res.data);
     setLoading(false);
   };
@@ -76,6 +77,7 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+          <DownloadXlsx name={screen} />
           <span
             className="tabButtons"
             onClick={() => {
@@ -109,21 +111,15 @@ const Main = () => {
               />
             ) : (
               <div>
-                {screen === "ipcgrResis" && (
-                  <IPCGResis saveToDb={saveToDb}/>
-                )}
-                {screen === "cemento" && (
-                  <Cemento saveToDb={saveToDb}/>
-                )}
+                {screen === "ipcgrResis" && <IPCGResis saveToDb={saveToDb} />}
+                {screen === "cemento" && <Cemento saveToDb={saveToDb} />}
                 {screen === "combustible" && (
-                  <Combustible saveToDb={saveToDb}/>
+                  <Combustible saveToDb={saveToDb} />
                 )}
                 {screen === "supermercado" && (
-                  <Supermercado saveToDb={saveToDb}/>
+                  <Supermercado saveToDb={saveToDb} />
                 )}
-                {screen === "vehiculo" && (
-                  <Vehiculo saveToDb={saveToDb}/>
-                )}
+                {screen === "vehiculo" && <Vehiculo saveToDb={saveToDb} />}
               </div>
             )}
           </div>

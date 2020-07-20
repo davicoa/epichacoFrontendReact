@@ -137,6 +137,7 @@ button[type="button"] {
   flex-direction: row;
   justify-content: flex-end;
 }
+
 .tabButtons{
   display: flex;
   margin-right: 0.2vw;

@@ -15,6 +15,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import listaIcon from "images/icons-lista.png";
 import masIcon from "images/icons-mas.png";
 import { useAlert } from "react-alert";
+import DownloadXlsx from "components/donwload/donwloadXlsx";
 
 let formActual = ForestalPrimario;
 
@@ -23,9 +24,8 @@ const Main = () => {
   const [loading, setLoading] = useState(false);
   const [lista, setLista] = useState(false);
   const [datalist, setDatalist] = useState();
-  const [num, setNum] = useState('/10');
+  const [num, setNum] = useState("/10");
   const alert = useAlert();
-
 
   const saveToDb = async (route, body) => {
     setLoading(true);
@@ -39,7 +39,7 @@ const Main = () => {
   };
   const loadListHandler = async () => {
     setLoading(true);
-    const res = await AdminService.adminGet(screen,num);
+    const res = await AdminService.adminGet(screen, num);
     setDatalist(res.data);
     setLoading(false);
   };
@@ -78,6 +78,7 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
+          <DownloadXlsx name={screen} />
           <span
             className="tabButtons"
             onClick={() => {
@@ -101,38 +102,36 @@ const Main = () => {
             />
           </div>
         ) : (
-            <div>
-              {lista ? (
-                <ListView
-                  reload={loadListHandler}
-                  rawData={datalist}
-                  route={screen}
-                  formToEdit={formActual}
-                />
-              ) : (
-                  <div>
-                    {screen === "forestalPrimario" && (
-                      <ForestalPrimario saveToDb={saveToDb} />
-                    )}
-                    {screen === "stockBovinoPorcino" && (
-                      <StockBovinoPorcino saveToDb={saveToDb} />
-                    )}
-                    {screen === "preciosAgroDiarios" && (
-                      <PreciosAgrosDiarios saveToDb={saveToDb} />
-                    )}
-                    {screen === "preciosAgroMensuales" && (
-                      <PreciosAgrosMensuales saveToDb={saveToDb} />
-                    )}
-                    {screen === "preciosGanaderos" && (
-                      <PreciosGanaderos saveToDb={saveToDb} />
-                    )}
-                    {screen === "faena" && (
-                      <Faena saveToDb={saveToDb} />
-                    )}
-                  </div>
+          <div>
+            {lista ? (
+              <ListView
+                reload={loadListHandler}
+                rawData={datalist}
+                route={screen}
+                formToEdit={formActual}
+              />
+            ) : (
+              <div>
+                {screen === "forestalPrimario" && (
+                  <ForestalPrimario saveToDb={saveToDb} />
                 )}
-            </div>
-          )}
+                {screen === "stockBovinoPorcino" && (
+                  <StockBovinoPorcino saveToDb={saveToDb} />
+                )}
+                {screen === "preciosAgroDiarios" && (
+                  <PreciosAgrosDiarios saveToDb={saveToDb} />
+                )}
+                {screen === "preciosAgroMensuales" && (
+                  <PreciosAgrosMensuales saveToDb={saveToDb} />
+                )}
+                {screen === "preciosGanaderos" && (
+                  <PreciosGanaderos saveToDb={saveToDb} />
+                )}
+                {screen === "faena" && <Faena saveToDb={saveToDb} />}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

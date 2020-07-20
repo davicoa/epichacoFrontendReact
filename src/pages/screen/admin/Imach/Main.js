@@ -4,7 +4,7 @@ import IMACH from "../Imach/Vistas/Imach";
 import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
-
+import DownloadXlsx from "components/donwload/donwloadXlsx"
 import ListView from "components/listView/ListView";
 import ClipLoader from "react-spinners/ClipLoader";
 import listaIcon from "images/icons-lista.png";
@@ -50,13 +50,6 @@ const Main = () => {
     setLista(false);
   };
 
-  const donwloadCsv = async () => {
-    setLoading(true);
-    const res = await AdminService.adminGet(screen, num);
-
-    setLoading(false);
-  };
-
   return (
     <div className="mainContainer">
       <div className="mainMenu">
@@ -66,11 +59,9 @@ const Main = () => {
       </div>
       <div className="mainForm">
         <div className="tabButtonsConstent">
-          <span 
-            onClick={() => donwloadCsv()} 
-            className="tabButtons">
-            <img src={masIcon} alt="" height="auto" width="25%"></img>
-          </span>
+          <DownloadXlsx
+            name = {screen}
+          />
           <span
             className="tabButtons"
             onClick={() => {
