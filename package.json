@@ -9,7 +9,6 @@
     "apexcharts": "^3.19.3",
     "axios": "^0.19.2",
     "file-saver": "^2.0.2",
-    "infinite-react-carousel": "^1.2.11",
     "react": "^16.13.1",
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",
@@ -19,8 +18,10 @@
     "react-jwt-auth": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-slick": "^0.27.0",
     "react-spinners": "^0.9.0",
     "react-validation": "^3.0.7",
+    "slick-carousel": "^1.8.1",
     "validator": "^13.1.1",
     "xlsx": "^0.16.4"
   },
