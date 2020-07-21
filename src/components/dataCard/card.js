@@ -127,13 +127,20 @@ const Card = (props) => {
       fechita = EjeX.slice(-1)
     }
     //Arrow
-    if(EjeY.slice(-2)[0] < 0 && EjeY.slice(-1)[0] < 0){
+    if(EjeY.slice(-2)[0] < 0){
       if(EjeY.slice(-2)[0] > EjeY.slice(-1)[0]){
         setArrowAndColor(1)
       }else{
         setArrowAndColor(-1)
       }
-    }else{
+    }else if(EjeY.slice(-2)[0] < 0){
+      if(EjeY.slice(-2)[0] < EjeY.slice(-1)[0]){
+        setArrowAndColor(1)
+      }else{
+        setArrowAndColor(-1)
+      }
+    }
+    else{
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
     }
     //tittle
@@ -148,14 +155,34 @@ const Card = (props) => {
         fechita
         : '')
     );
-    //valor
-    setValueView(
-      props.dataGraph.valor.antesvalor +
-      " " +
-      valor.slice(-1) +
-      " " +
-      props.dataGraph.valor.despuesvalor
-    );
+    //valor en pesos con comas $100,10
+    if(props.dataGraph.valor.antesvalor==="$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")){
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    } //valor con comas que no contengas puntos !100.000,10
+    else if(!valor.slice(-1).toString().includes(".") && valor.slice(-1).toString().includes(",")){
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    }//valor 100.000,10
+    else{
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1) +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      );
+    }
     //grafico
     setOptions(
       OptionsGraph(
