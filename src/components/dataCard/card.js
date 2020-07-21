@@ -164,6 +164,16 @@ const Card = (props) => {
         " " +
         props.dataGraph.valor.despuesvalor
       )
+    } //valor con comas que no contengas puntos !100.000,10
+    else if(valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")){
+      console.log(valor.slice(-1))
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " -" +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
     }//valor 100.000,10
     else{
       setValueView(
