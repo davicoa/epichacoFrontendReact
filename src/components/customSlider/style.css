@@ -1,8 +1,22 @@
-
-.carousel-track{
-    text-align:center;
-}
-
-.customSlider{
+.slick-list{
     background-color:#EBEBEB;
+    text-align: center;
+}
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+.sliderCardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vh;
+    width: 10vw;
+    background-color:#faf9f9;
+    border: transparent 0.016em solid;
+    cursor: pointer;
+}
+.sliderCardContainer:hover{
+    border: black 0.016em solid;
 }

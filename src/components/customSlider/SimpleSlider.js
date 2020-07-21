@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./style.css";
 
 class SimpleSlider extends React.Component {
   render() {
@@ -20,10 +21,24 @@ class SimpleSlider extends React.Component {
     return (
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <div className="sliderCardContainer">
+            <div>
+              dato1
+            </div>
+            <div>
+              valor1
+            </div>
+          </div>
         </div>
         <div>
-          <h3>2</h3>
+          <div className="sliderCardContainer">
+            <div>
+              dato2
+            </div>
+            <div>
+              valor2
+            </div>
+          </div>
         </div>
         <div>
           <h3>3</h3>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
-import logoChaco from "images/logoChaco.png";
+import logoChaco from "images/logo_chaco.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
