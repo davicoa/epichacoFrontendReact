@@ -6,10 +6,10 @@ import Embeds from "components/embeds/Embeds"
 const MainView = () => {
 
     const [screen, setScreen] = useState("");
-    const [embeds, setEmbeds] = useState("");
+    const [embeds, setEmbeds] = useState({});
 
-    const navEmbedHandler = (embeds) => {
-        setEmbeds(embeds)
+    const navEmbedHandler = (link, title) => {
+        setEmbeds({link: link, title:title})
     }
     const navHandler = (screen) => {
         setScreen(screen)
@@ -21,7 +21,7 @@ const MainView = () => {
             {screen === "" && (
                 <CardGrid />
             )}
-            {screen === "produccion" && <Embeds link={embeds}/>}
+            {screen === "produccion" && <Embeds embeds={embeds}/>}
         </div>
     )
 }

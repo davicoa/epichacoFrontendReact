@@ -1,5 +1,17 @@
-.embeds{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.embeds {
+  flex-direction: column;
+}
+
+.embedstitle {
+  text-align: center;
+}
+
+.embedsbody {
+  display: block;
+  height: 1080px;
+}
+
+.embedsiframe {
+  width: 100%;
+  height: 100%;
 }

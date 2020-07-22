@@ -57,10 +57,10 @@ ul {
 /* Links inside the dropdown */
 .dropdown-content span {
   color: black;
-  padding: 8px 60px;
+  padding: 1vh 30px;
+  width: 9vw;
   display: block;
   border-radius: 0.8vh;
-  height: 4vh;
 }
 
 /* Change color of dropdown links on hover */
