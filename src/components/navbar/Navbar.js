@@ -20,9 +20,9 @@ const Navbar = (props) => {
                     props.screen("produccion");
                 }}
             >
-                <div class="dropdown">
+                <div className="dropdown">
                     Producción
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                         <span onClick={() => props.navEmbedHandler("Producción Ganadera")} >Producción Ganadera</span>
                         <span onClick={() => props.navEmbedHandler("Producción Agrícola")}>Producción Agrícola</span>
                     </div>
