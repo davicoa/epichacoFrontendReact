@@ -28,7 +28,6 @@ const Card = (props) => {
   const dataFromApi = async () => {
     let EjeX = [];
     let EjeY = [];
-    let cantidad = 0;
     let nametitle = "";
     let namesubtitle = "";
     let valor = [];
@@ -47,7 +46,6 @@ const Card = (props) => {
       props.dataGraph.link
     );
     rawData.data.forEach((item) => {
-      cantidad++;
       if (dondebuscarOpc === "" && dondebuscar !== "") {
         if (
           quebuscar === "" ||
@@ -129,20 +127,20 @@ const Card = (props) => {
       fechita = EjeX.slice(-1)
     }
     //Arrow
-    if(EjeY.slice(-2)[0] < 0){
-      if(EjeY.slice(-2)[0] > EjeY.slice(-1)[0]){
+    if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] > EjeY.slice(-1)[0]) {
         setArrowAndColor(1)
-      }else{
+      } else {
         setArrowAndColor(-1)
       }
-    }else if(EjeY.slice(-2)[0] < 0){
-      if(EjeY.slice(-2)[0] < EjeY.slice(-1)[0]){
+    } else if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] < EjeY.slice(-1)[0]) {
         setArrowAndColor(1)
-      }else{
+      } else {
         setArrowAndColor(-1)
       }
     }
-    else{
+    else {
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
     }
     //tittle
@@ -158,7 +156,7 @@ const Card = (props) => {
         : '')
     );
     //valor en pesos con comas $100,10
-    if(props.dataGraph.valor.antesvalor==="$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")){
+    if (props.dataGraph.valor.antesvalor === "$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")) {
       setValueView(
         props.dataGraph.valor.antesvalor +
         " " +
@@ -167,7 +165,7 @@ const Card = (props) => {
         props.dataGraph.valor.despuesvalor
       )
     } //valor con comas con valor negativo
-    else if(valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")){
+    else if (valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")) {
       setValueView(
         props.dataGraph.valor.antesvalor +
         " -" +
@@ -176,7 +174,7 @@ const Card = (props) => {
         props.dataGraph.valor.despuesvalor
       )
     }//valor 100.000,10
-    else{
+    else {
       setValueView(
         props.dataGraph.valor.antesvalor +
         " " +
@@ -196,12 +194,12 @@ const Card = (props) => {
     );
     setLoading(false);
 
-    props.cargarSliderHandler(antestitle + " " + nametitle + " " + despuestitle+ " / " +props.dataGraph.valor.antesvalor +
-      " " +
-      valor.slice(-1) +
-      " " +
-      props.dataGraph.valor.despuesvalor, "10")
-    
+    props.cargarSliderHandler({
+      titulo: antestitle + " " + nametitle + " " + despuestitle,
+      valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
+    },
+    "85")
+
   };
 
   return (

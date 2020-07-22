@@ -14,6 +14,8 @@ let settings = {
   autoplaySpeed: 2000,
   cssEase: "linear",
   lazyLoad: 'progressive',
+  arrows: false,
+  centerMode: true
 }
 
 const SimpleSlider = (props) => {
@@ -22,7 +24,6 @@ const SimpleSlider = (props) => {
 
   useEffect(() => {
     reloadSlider();
-    console.log("----",sliderCard)
   }, []);
 
   const reloadSlider = () => {
@@ -31,7 +32,14 @@ const SimpleSlider = (props) => {
         <div key={i}>
           <div className="sliderCardContainer">
             <div>
-              {element}
+              {element.titulo}
+            </div>
+            <div>
+              <span style={{
+                color: element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")<0? "red" : "#3bb54c"
+              }}>
+                {element.valor}
+              </span>
             </div>
           </div>
         </div>

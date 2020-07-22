@@ -1,6 +1,7 @@
 .slick-list{
     background-color:#EBEBEB;
     text-align: center;
+    
 }
 .slick-track{
     display: flex;
@@ -8,13 +9,15 @@
 }
 .sliderCardContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-top: 0.5vh;
     height: 8vh;
     width: 14vw;
     background-color:#faf9f9;
     border: transparent 0.016em solid;
+    border-radius: 0.5vh;
     cursor: pointer;
 }
 .sliderCardContainer:hover{
