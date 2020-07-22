@@ -8,17 +8,20 @@ const MainView = () => {
     const [screen, setScreen] = useState("");
     const [embeds, setEmbeds] = useState("");
 
+    const navEmbedHandler = (embeds) => {
+        setEmbeds(embeds)
+    }
     const navHandler = (screen) => {
-        setEmbeds(screen)
+        setScreen(screen)
     }
 
     return (
         <div>
-            <NavBar navHandler={navHandler} />
+            <NavBar navEmbedHandler={navEmbedHandler} screen={navHandler} />
             {screen === "" && (
                 <CardGrid />
             )}
-            {screen === "1" && <Embeds />}
+            {screen === "produccion" && <Embeds link={embeds}/>}
         </div>
     )
 }
