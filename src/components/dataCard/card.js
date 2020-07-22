@@ -28,6 +28,7 @@ const Card = (props) => {
   const dataFromApi = async () => {
     let EjeX = [];
     let EjeY = [];
+    let cantidad = 0;
     let nametitle = "";
     let namesubtitle = "";
     let valor = [];
@@ -46,6 +47,7 @@ const Card = (props) => {
       props.dataGraph.link
     );
     rawData.data.forEach((item) => {
+      cantidad++;
       if (dondebuscarOpc === "" && dondebuscar !== "") {
         if (
           quebuscar === "" ||
@@ -164,9 +166,8 @@ const Card = (props) => {
         " " +
         props.dataGraph.valor.despuesvalor
       )
-    } //valor con comas que no contengas puntos !100.000,10
+    } //valor con comas con valor negativo
     else if(valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")){
-      console.log(valor.slice(-1))
       setValueView(
         props.dataGraph.valor.antesvalor +
         " -" +
@@ -193,8 +194,14 @@ const Card = (props) => {
         props.dataGraph.nacion
       )
     );
-
     setLoading(false);
+
+    props.cargarSliderHandler(antestitle + " " + nametitle + " " + despuestitle+ " / " +props.dataGraph.valor.antesvalor +
+      " " +
+      valor.slice(-1) +
+      " " +
+      props.dataGraph.valor.despuesvalor, "10")
+    
   };
 
   return (
