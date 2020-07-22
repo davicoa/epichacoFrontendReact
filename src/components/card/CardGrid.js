@@ -9,7 +9,7 @@ const CardGrid = () => {
   const [cards, setCards] = useState();
   const [load, setLoad] = useState(false);
 
-  const cargarSliderHandler = (valor, cantidad) => {
+  const cargarSliderHandler = (valor) => {
     arraySlider.push(valor)
     if(arraySlider.length >= 87){
       setLoad(true)
