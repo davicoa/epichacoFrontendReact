@@ -1,15 +1,22 @@
 import React from "react"
 import "./style.css"
 
-const Navbar = () => {
+const Navbar = (props) => {
+
     return (
         <nav className="navbarContainer">
             <ul className="activeNavTab">
-                <span>Monitor</span>
+                <span onClick={()=> props.navHandler("")}>Monitor</span>
             </ul>
             <span>|</span>
             <ul>
-                Producción
+                <div class="dropdown">
+                    Producción
+                <div class="dropdown-content">
+                        <span onClick={()=> props.navHandler(1)} >Producción Ganadera</span>
+                        <span onClick={()=> props.navHandler(2)}>Producción Agrícola</span>
+                    </div>
+                </div>
             </ul>
             <span>|</span>
             <ul>
