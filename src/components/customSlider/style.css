@@ -1,0 +1,44 @@
+.slick-list{
+    background-color:#EBEBEB;
+    text-align: center;
+    
+}
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+.sliderCardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5vh;
+    height: 8vh;
+    width: 14vw;
+    background-color:#faf9f9;
+    border: transparent 0.016em solid;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+.sliderCardContainer:hover{
+    border: black 0.016em solid;
+}
+
+.sliderValue{
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sValue1{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    margin-right: 0.6vw;
+}
+.sValue2{
+    flex: 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
-import logoChaco from "images/logoChaco.png";
+import logoChaco from "images/logo_chaco.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
@@ -127,14 +127,27 @@ const Card = (props) => {
       fechita = EjeX.slice(-1)
     }
     //Arrow
-    if(EjeY.slice(-2)[0] < 0 && EjeY.slice(-1)[0] < 0){
-      if(EjeY.slice(-2)[0] > EjeY.slice(-1)[0]){
+    let dirflecha = 0
+    if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] > EjeY.slice(-1)[0]) {
         setArrowAndColor(1)
-      }else{
+        dirflecha = 1;
+      } else {
         setArrowAndColor(-1)
+        dirflecha = -1;
       }
-    }else{
+    } else if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] < EjeY.slice(-1)[0]) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+      }
+    }
+    else {
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+      dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
     }
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
@@ -148,14 +161,34 @@ const Card = (props) => {
         fechita
         : '')
     );
-    //valor
-    setValueView(
-      props.dataGraph.valor.antesvalor +
-      " " +
-      valor.slice(-1) +
-      " " +
-      props.dataGraph.valor.despuesvalor
-    );
+    //valor en pesos con comas $100,10
+    if (props.dataGraph.valor.antesvalor === "$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")) {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    } //valor con comas con valor negativo
+    else if (valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")) {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " -" +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    }//valor 100.000,10
+    else {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1) +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      );
+    }
     //grafico
     setOptions(
       OptionsGraph(
@@ -165,8 +198,16 @@ const Card = (props) => {
         props.dataGraph.nacion
       )
     );
-
     setLoading(false);
+
+    props.cargarSliderHandler({
+      titulo: antestitle + " " + nametitle + " " + despuestitle,
+      valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
+      dirOpuesta: dirOpuesta,
+      dirflecha: dirflecha.toFixed(2)
+    },
+    "85")
+
   };
 
   return (

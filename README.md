@@ -94,3 +94,7 @@ npm install --save react-alert react-alert-template-basic
 ### `9_ npm install xlsx`
 npm install xlsx file-saver --save
 
+### `10_ react-slick`
+npm install react-slick --savee
+npm install slick-carousel --save
+
