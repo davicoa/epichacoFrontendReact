@@ -8,12 +8,10 @@ let arraySlider = []
 const CardGrid = () => {
   const [cards, setCards] = useState();
   const [load, setLoad] = useState(false);
-  const [slider, setSlider] = useState([]);
 
   const cargarSliderHandler = (valor, cantidad) => {
     arraySlider.push(valor)
-    setSlider(arraySlider)
-    if(arraySlider.length > cantidad){
+    if(arraySlider.length >= 87){
       setLoad(true)
     }
   }
@@ -40,7 +38,7 @@ const CardGrid = () => {
 
   return (
     <>
-      {load?<SimpleSlider slider={arraySlider} slider2={slider} />: ""}
+      {load?<SimpleSlider slider={arraySlider}/>: ""}
       <div className="grid_items">{cards}</div>
     </>
     );
