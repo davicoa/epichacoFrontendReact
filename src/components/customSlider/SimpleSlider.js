@@ -4,6 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
 
+import upGreenArrow from "images/arrowUpGreen.png";
+import upRedArrow from "images/arrowUpRed.png";
+import downGreenArrow from "images/arrowDownGreen.png";
+import downRedArrow from "images/arrowDownRed.png";
+
 let settings = {
   dots: false,
   infinite: true,
@@ -34,13 +39,33 @@ const SimpleSlider = (props) => {
             <div>
               {element.titulo}
             </div>
-            <div>
-              <span style={{
-                color: element.dirOpuesta ? element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "") < 0 ? "#3bb54c" : "red" : element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "") < 0 ? "red" : "#3bb54c",
-                fontWeight: 'bold'
-              }}>
-                {element.valor}
-              </span>
+            <div className="sliderValue">
+              <div className="sValue1">
+                <img
+                  src={
+                    element.dirflecha < 0
+                      ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
+                      : element.dirflecha > 0
+                        ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
+                        : ""
+                  }
+                  alt=""
+                  height="auto"
+                  width="20%"
+                ></img>
+              </div>
+              <div className="sValue2">
+                <span style={{
+                  color:
+                    element.dirflecha < 0
+                      ? element.dirOpuesta ? "red" : "#3bb54c"
+                      : element.dirflecha > 0
+                        ? element.dirOpuesta ? "#3bb54c" : "red"
+                        : "#5F5F5F",
+                }}>
+                  {element.valor}
+                </span>
+              </div>
             </div>
           </div>
         </div>

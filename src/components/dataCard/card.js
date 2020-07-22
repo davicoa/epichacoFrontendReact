@@ -127,21 +127,27 @@ const Card = (props) => {
       fechita = EjeX.slice(-1)
     }
     //Arrow
+    let dirflecha = 0
     if (EjeY.slice(-2)[0] < 0) {
       if (EjeY.slice(-2)[0] > EjeY.slice(-1)[0]) {
         setArrowAndColor(1)
+        dirflecha = 1;
       } else {
         setArrowAndColor(-1)
+        dirflecha = -1;
       }
     } else if (EjeY.slice(-2)[0] < 0) {
       if (EjeY.slice(-2)[0] < EjeY.slice(-1)[0]) {
         setArrowAndColor(1)
+        dirflecha = 1;
       } else {
         setArrowAndColor(-1)
+        dirflecha = -1;
       }
     }
     else {
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+      dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
     }
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
@@ -197,7 +203,8 @@ const Card = (props) => {
     props.cargarSliderHandler({
       titulo: antestitle + " " + nametitle + " " + despuestitle,
       valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
-      dirOpuesta: dirOpuesta
+      dirOpuesta: dirOpuesta,
+      dirflecha: dirflecha.toFixed(2)
     },
     "85")
 

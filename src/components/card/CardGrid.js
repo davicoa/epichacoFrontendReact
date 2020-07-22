@@ -13,7 +13,6 @@ const CardGrid = () => {
   const cargarSliderHandler = (valor, cantidad) => {
     arraySlider.push(valor)
     setSlider(arraySlider)
-    console.log(arraySlider)
     if(arraySlider.length > cantidad){
       setLoad(true)
     }
