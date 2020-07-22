@@ -205,8 +205,7 @@ const Card = (props) => {
       valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
       dirOpuesta: dirOpuesta,
       dirflecha: dirflecha.toFixed(2)
-    },
-    "85")
+    })
 
   };
 
