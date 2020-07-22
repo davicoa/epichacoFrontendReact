@@ -36,7 +36,8 @@ const SimpleSlider = (props) => {
             </div>
             <div>
               <span style={{
-                color: element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")<0? "red" : "#3bb54c"
+                color: element.dirOpuesta ? element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "") < 0 ? "#3bb54c" : "red" : element.valor.replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "") < 0 ? "red" : "#3bb54c",
+                fontWeight: 'bold'
               }}>
                 {element.valor}
               </span>

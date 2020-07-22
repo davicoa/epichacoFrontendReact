@@ -197,6 +197,7 @@ const Card = (props) => {
     props.cargarSliderHandler({
       titulo: antestitle + " " + nametitle + " " + despuestitle,
       valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
+      dirOpuesta: dirOpuesta
     },
     "85")
 
