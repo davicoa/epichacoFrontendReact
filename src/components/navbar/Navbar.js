@@ -3,7 +3,7 @@ import "./style.css";
 
 const Navbar = (props) => {
   const [active, setAtive] = useState(0);
-  const [activeSubTab, setAtiveSubTab] = useState('');
+  const [activeSubTab, setAtiveSubTab] = useState("");
   return (
     <nav className="navbarContainer">
       <ul
@@ -17,20 +17,27 @@ const Navbar = (props) => {
       </ul>
       <span>|</span>
       <ul className={active === 1 ? "activeNavTab" : ""}>
-        <div class="dropdown">
+        <div className="dropdown">
           Producción
-          <div class="dropdown-content">
+          <div className="dropdown-content">
             <span
-                className={active === 0 ? "activeNavTab" : ""}
-                onClick={() => {
-                    props.navEmbedHandler("Producción Ganadera");
-                    props.screen("produccion");
-                    setAtive(1);
-                }}
+              className={active === 0 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler("Producción Ganadera");
+                props.screen("produccion");
+                setAtive(1);
+              }}
             >
               Producción Ganadera
             </span>
-            <span onClick={() => props.navEmbedHandler("Producción Agrícola")}>
+            <span
+              className={active === 0 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler("Producción Agrícola");
+                props.screen("produccion");
+                setAtive(1);
+              }}
+            >
               Producción Agrícola
             </span>
           </div>
