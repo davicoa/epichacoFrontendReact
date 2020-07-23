@@ -10,7 +10,7 @@ const Embeds = (props) => {
         <h1>{title}</h1>
       </div>
       <div className="embedsbody">
-        <iframe scrolling="no"
+        <iframe scrolling="no" title='embeds'
          className="embedsiframe" src={link}></iframe>
       </div>
     </div>
