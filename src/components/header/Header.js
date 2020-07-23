@@ -30,7 +30,7 @@ const Header = () => {
               className="logoutAdministrar2"
               onClick={() => routeChange("/")}
             >
-              Back
+              Monitor
             </span>
            
             :
@@ -48,7 +48,7 @@ const Header = () => {
             window.location.reload();
            }}
            >
-             Logout</span>
+             Salir</span>
         </div>
       )}
     </header>
