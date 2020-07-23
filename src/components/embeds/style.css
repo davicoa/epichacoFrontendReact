@@ -7,11 +7,14 @@
 }
 
 .embedsbody {
-  display: block;
-  height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .embedsiframe {
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  min-height: 100vh;
+  margin-bottom: 0px;
+  padding-bottom: 8.3vh;
 }
