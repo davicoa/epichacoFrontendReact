@@ -4,6 +4,7 @@
 
 .embedstitle {
   text-align: center;
+  font-size: 10px;
 }
 
 .embedsbody {
@@ -13,8 +14,8 @@
 }
 
 .embedsiframe {
-  width: 99%;
+  width: 101%;
   min-height: 100vh;
   margin-bottom: 0px;
-  padding-bottom: 8.3vh;
+  padding-bottom: 8.06vh;
 }
