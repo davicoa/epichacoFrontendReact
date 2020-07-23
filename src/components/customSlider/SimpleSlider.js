@@ -8,6 +8,7 @@ import upGreenArrow from "images/arrowUpGreen.png";
 import upRedArrow from "images/arrowUpRed.png";
 import downGreenArrow from "images/arrowDownGreen.png";
 import downRedArrow from "images/arrowDownRed.png";
+import arrowNone from "images/arrowNone.png";
 
 let settings = {
   dots: false,
@@ -67,7 +68,7 @@ const SimpleSlider = (props) => {
                       ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
                       : element.dirflecha > 0
                         ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
-                        : ""
+                        : arrowNone
                   }
                   alt=""
                   height="auto"
