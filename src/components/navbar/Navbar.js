@@ -265,15 +265,153 @@ const Navbar = (props) => {
       </ul>
       <span>|</span>
       <ul className={active === 4 ? "activeNavTab dropdown" : "dropdown"}>
-        Comercio
+        <div>
+          Comercio
+          <div className="dropdown-content">
+            <span
+              className={activeSubTab === 120 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Índice de Precios al Consumidor"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(120);
+                setAtive(4);
+              }}
+            >
+              IPC
+            </span>
+            <span
+              className={activeSubTab === 121 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Evolución IPC - Gran Resistencia"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(121);
+                setAtive(4);
+              }}
+            >
+              Evolución IPC - GR
+            </span>
+            <span
+              className={activeSubTab === 122 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Ventas de Supermercados"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(122);
+                setAtive(4);
+              }}
+            >
+              Ventas de Supermercados
+            </span>
+          </div>
+        </div>
       </ul>
       <span>|</span>
       <ul className={active === 5 ? "activeNavTab dropdown" : "dropdown"}>
-        Construcción
+        <div>
+          Construcción
+          <div className="dropdown-content">
+            <span
+              className={activeSubTab === 130 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Índice de Costo de la Construcción"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(130);
+                setAtive(5);
+              }}
+            >
+              ICC
+            </span>
+            <span
+              className={activeSubTab === 131 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Cemento - total"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(131);
+                setAtive(5);
+              }}
+            >
+              Cemento
+            </span>
+            <span
+              className={activeSubTab === 132 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "UVI - UVA"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(132);
+                setAtive(5);
+              }}
+            >
+              UVI - UVA
+            </span>
+          </div>
+        </div>
       </ul>
       <span>|</span>
       <ul className={active === 6 ? "activeNavTab dropdown" : "dropdown"}>
-        Mas...
+        <div>
+          Mas...
+          <div className="dropdown-content">
+            <span
+              className={activeSubTab === 140 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "IMACH"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(140);
+                setAtive(6);
+              }}
+            >
+              IMACH
+            </span>
+            <span
+              className={activeSubTab === 141 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Combustible"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(141);
+                setAtive(6);
+              }}
+            >
+              Combustible
+            </span>
+            <span
+              className={activeSubTab === 142 ? "activeNavTab" : ""}
+              onClick={() => {
+                props.navEmbedHandler(
+                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "Patentamientos y transferencias de vehículos"
+                );
+                props.screen("produccion");
+                setAtiveSubTab(142);
+                setAtive(6);
+              }}
+            >
+              Autos Y Motos
+            </span>
+          </div>
+        </div>
       </ul>
     </nav>
   );
