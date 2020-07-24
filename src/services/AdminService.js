@@ -6,7 +6,7 @@ class AdminService {
 
   //pedirs users
   adminGetUsers(route) {
-    return axios.get(API_URL + 'test/all', { headers: authHeader() })
+    return axios.get(API_URL + route, { headers: authHeader() })
   }
 
   adminGet(route, num) {
