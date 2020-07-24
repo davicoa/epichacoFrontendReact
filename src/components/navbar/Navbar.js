@@ -116,7 +116,7 @@ const Navbar = (props) => {
               className={activeSubTab === 106 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiNGU2NWRhZmEtMjU5OS00MDJjLTkxODQtMzRkZWUwZWJjMjY0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Actividad Industrial"
                 );
                 props.screen("produccion");
@@ -130,7 +130,7 @@ const Navbar = (props) => {
               className={activeSubTab === 107 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiY2FiYmJmYmYtZWQwOS00YjE1LTgxOGUtMzZlY2YwMWVmNTlhIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Foresto Industrial"
                 );
                 props.screen("produccion");
@@ -144,7 +144,7 @@ const Navbar = (props) => {
               className={activeSubTab === 108 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiNzJhOWY4ZjItNmI0MS00Y2I0LWEyZWQtNTE5MDZhMjg3ZTI5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Faena"
                 );
                 props.screen("produccion");
@@ -166,7 +166,7 @@ const Navbar = (props) => {
               className={activeSubTab === 109 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMTRmMjRlN2YtZjg2Mi00M2MxLWIyZmMtMjYyY2JlZGQ3MWMwIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Salario"
                 );
                 props.screen("produccion");
@@ -180,7 +180,7 @@ const Navbar = (props) => {
               className={activeSubTab === 110 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiM2FhODVhMzUtY2YxMS00MGFmLTg1ZDAtZDdiZTkzMDU4ZjM2IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Empleo"
                 );
                 props.screen("produccion");
@@ -194,7 +194,7 @@ const Navbar = (props) => {
               className={activeSubTab === 111 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiYzM2ODVhMTEtNzRlOS00NmViLThkOTItMmY1OTU0MDhkOGFjIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Empresas empleadoras"
                 );
                 props.screen("produccion");
@@ -208,7 +208,7 @@ const Navbar = (props) => {
               className={activeSubTab === 112 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiODdkYmJhZGItNDI3Yy00YzU3LTg5OTItZGE4MzhiYTdmZTVkIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Empleados promedio"
                 );
                 props.screen("produccion");
@@ -222,7 +222,7 @@ const Navbar = (props) => {
               className={activeSubTab === 113 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiYzExYzQyYTMtM2ZhOC00NDY1LWFjMDAtYzU0MjA1YzI2OWQ1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Indicadores laborales"
                 );
                 props.screen("produccion");
@@ -236,7 +236,7 @@ const Navbar = (props) => {
               className={activeSubTab === 114 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiYTk3OTNjYTItYTdiYS00NmE3LTlkYWEtODMzZDI2MTE2MDIyIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Convenios de Corresponsabilidad Gremial"
                 );
                 props.screen("produccion");
@@ -250,7 +250,7 @@ const Navbar = (props) => {
               className={activeSubTab === 115 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMTc5NDBhNjUtZmRmYy00ZTk2LTllOGMtZmI0MDg4ODQ5Y2NhIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Call Center"
                 );
                 props.screen("produccion");
@@ -272,7 +272,7 @@ const Navbar = (props) => {
               className={activeSubTab === 120 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiZWYzNDg0NmItN2IzNy00YzAzLWI0YmQtY2E0YTQzY2MzYzBlIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Índice de Precios al Consumidor"
                 );
                 props.screen("produccion");
@@ -286,7 +286,7 @@ const Navbar = (props) => {
               className={activeSubTab === 121 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiYTllZWZkMjQtZWU1Yi00MzFiLTgyNGMtMDQ1MjRiMDI4NGZiIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Evolución IPC - Gran Resistencia"
                 );
                 props.screen("produccion");
@@ -300,7 +300,7 @@ const Navbar = (props) => {
               className={activeSubTab === 122 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMDdlMDcxMjctYzQxNi00ZjYxLWI5NjUtMDUzMDk0ZTE3MzdkIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Ventas de Supermercados"
                 );
                 props.screen("produccion");
@@ -322,7 +322,7 @@ const Navbar = (props) => {
               className={activeSubTab === 130 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMmZhNjc4ZDEtZGQ4Yy00MzViLTgyYzAtYzk1YWMzZWEwNTY3IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Índice de Costo de la Construcción"
                 );
                 props.screen("produccion");
@@ -336,7 +336,7 @@ const Navbar = (props) => {
               className={activeSubTab === 131 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMjQwOGI1YzUtYjU0Yi00MjNmLTg5ODUtMmE3NmU1ZGQzMmEwIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Cemento - total"
                 );
                 props.screen("produccion");
@@ -350,7 +350,7 @@ const Navbar = (props) => {
               className={activeSubTab === 132 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiZmY4MjY0NTYtZWRiZC00MDE0LTk2YTEtMGI0M2E1ZjdjOGZmIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "UVI - UVA"
                 );
                 props.screen("produccion");
@@ -372,7 +372,7 @@ const Navbar = (props) => {
               className={activeSubTab === 140 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmViNDEwMDYtMDU0ZC00ZmVmLTg1ZjAtMjFiMDM3MjA4N2I1IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiNzY0ODBiY2ItOTQyNy00NWUyLWI0YjktZjk3ZGVjOTBkNGRmIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "IMACH"
                 );
                 props.screen("produccion");
@@ -386,7 +386,7 @@ const Navbar = (props) => {
               className={activeSubTab === 141 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiYWIyZDVlMWYtZmE1ZC00NTM4LWJkM2QtNzJlMzAyYWIyMzg0IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMzQ5YTQzMjMtMzA4Ni00ZTAxLTg3NWEtMzlkM2E4ODA3MDkzIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Combustible"
                 );
                 props.screen("produccion");
@@ -400,7 +400,7 @@ const Navbar = (props) => {
               className={activeSubTab === 142 ? "activeNavTab" : ""}
               onClick={() => {
                 props.navEmbedHandler(
-                  "https://app.powerbi.com/view?r=eyJrIjoiNmNjMDQ2MTYtY2UzNi00MDkyLTliNzktYTkxYTQ1MDk0MDM5IiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
+                  "https://app.powerbi.com/view?r=eyJrIjoiMTYyMzFhN2QtNzk4ZC00ZThkLThhOWQtYTM0M2E5N2ZlOWMxIiwidCI6ImQ5ZGMxNmQ2LWU3MWUtNGUxNi1hYTEyLWQ1OGY3ZDVmZDE5ZiJ9",
                   "Patentamientos y transferencias de vehículos"
                 );
                 props.screen("produccion");
