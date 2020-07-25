@@ -24,7 +24,7 @@ const Admin = () => {
       {screen === "administrarUsuarios" && <AdministrarUsuarios />}
       {screen === "" && (
         <div className="defaultScreen">
-          <span>BETA en construcción: Area para Carga de datos</span>
+          <span>En construcción: Area para Carga de datos</span>
         </div>
       )}
     </div>
