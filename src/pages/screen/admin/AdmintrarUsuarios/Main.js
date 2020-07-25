@@ -95,10 +95,7 @@ const Main = () => {
           <div>
             {lista && activity && (
               <ListViewUsersTracker
-                reload={loadListHandler}
                 rawData={datalist}
-                route={"auth/delete"}
-                formToEdit={formActual}
               />
             )}
             {lista && !activity && (
