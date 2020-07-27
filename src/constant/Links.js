@@ -10,7 +10,8 @@ export default [
     graficoTexto: "cotizacion",
     nacion: true,
     dirOpuesta: false,
-  }, 
+  },
+
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
   
   { //dolar blue
@@ -84,7 +85,6 @@ export default [
     dirOpuesta: true,
   },
 
-  
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
   
   { //Inflación núcleo (IPC núcleo)
@@ -100,7 +100,6 @@ export default [
     dirOpuesta: true,
   },
 
-  
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
   
   { //PBI
@@ -129,8 +128,7 @@ export default [
     graficoTexto: "Indice",
     nacion: true,
     dirOpuesta: true,
-  }, 
-    
+  },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
   { //IMACH
@@ -143,7 +141,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
 
   { //IPI Índice de producción industrial (IPI)
@@ -156,7 +154,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   }, 
     
 
@@ -171,7 +169,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "var_ia",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
 
   { //Capacidad instalada de la industria
@@ -296,7 +294,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
@@ -351,7 +349,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
@@ -378,7 +376,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
@@ -421,7 +419,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   }, 
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
@@ -451,7 +449,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
@@ -466,7 +464,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
@@ -653,7 +651,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
 
   { //// Patentamiento de autos
@@ -666,7 +664,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_autos.json", //Patentamiento de autos (%)
@@ -1013,7 +1011,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_granos_oleaginosos.json", //Molienda de soja - Granos oleaginosos (%)
@@ -1028,7 +1026,7 @@ export default [
   grafico: { ejex: "Fecha", ejey: "Var interanual" },
   graficoTexto: "Var interanual",
   nacion: true,
-  dirOpuesta: false,
+  dirOpuesta: true,
 },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_aceite.json", //Molienda de soja - Aceite (%)
@@ -1043,7 +1041,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_harina.json", //Molienda de soja - harina (%)
@@ -1058,7 +1056,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variacion interanual" },
     graficoTexto: "Variacion interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_gas.json", //Producción de gas (%)
@@ -1088,7 +1086,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_acero_crudo.json", //Producción de acero crudo (%)
@@ -1103,7 +1101,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_laminados_no_planos_en_caliente.json", //Producción de laminados no planos en caliente (%)
@@ -1134,7 +1132,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Hogar 2" },
     graficoTexto: "Hogar 2",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/canasta_b%C3%A1sica_alimentaria.json", //Canasta básica alimentaria
@@ -1164,7 +1162,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/pobreza.json", //pobreza
@@ -1178,7 +1176,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   { //// Indigencia
@@ -1191,7 +1189,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indigencia.json", //Indigencia
@@ -1218,7 +1216,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variacion mensual" },
     graficoTexto: "Variacion mensual",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: true,
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_confianza_del_consumidor_%28icc%29.json", //Índice de confianza del consumidor (ICC)
 ];
