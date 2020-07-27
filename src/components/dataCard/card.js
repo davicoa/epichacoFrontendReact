@@ -74,10 +74,7 @@ const Card = (props) => {
             }
 
             if (item[campovalor]) {
-              let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
-              valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
-                num
-              ))
+              valor.push(parseFloat(item[campovalor].replace(/[&/\\#+()$~%'":*?<>{}.]/g, "").replace(/,/g, ".")).toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
               ); // valor mostrado
             }
           }
@@ -108,10 +105,7 @@ const Card = (props) => {
             namesubtitle = item[camposubtitle];
           }
           if (item[campovalor]) {
-            let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
-            valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
-              num
-            ))
+            valor.push(parseFloat(item[campovalor].replace(/[&/\\#+()$~%'":*?<>{}.]/g, "").replace(/,/g, ".")).toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
             ); // valor mostrado
           }
         }
@@ -161,26 +155,15 @@ const Card = (props) => {
         fechita
         : '')
     );
-    //valor en pesos con comas $100,10
-    if (props.dataGraph.valor.antesvalor === "$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")) {
-      setValueView(
-        props.dataGraph.valor.antesvalor +
-        " " +
-        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
-        " " +
-        props.dataGraph.valor.despuesvalor
-      )
-    }
-    //valor 100.000,10
-    else {
-      setValueView(
-        props.dataGraph.valor.antesvalor +
-        " " +
-        valor.slice(-1) +
-        " " +
-        props.dataGraph.valor.despuesvalor
-      );
-    }
+    //valor
+    setValueView(
+      props.dataGraph.valor.antesvalor +
+      " " +
+      valor.slice(-1)
+      +
+      " " +
+      props.dataGraph.valor.despuesvalor
+    );
     //grafico
     setOptions(
       OptionsGraph(
@@ -275,7 +258,7 @@ const Card = (props) => {
                               : arrowAndColor > 0
                                 ? dirOpuesta ? "#3bb54c" : "red"
                                 : "#5F5F5F"
-                          : "#5F5F5F"
+                            : "#5F5F5F"
                       }}
                     >
                       {valueView}
