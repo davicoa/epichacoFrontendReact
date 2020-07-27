@@ -20,7 +20,7 @@ let settings = {
   autoplaySpeed: 800,
   arrows: false,
   centerMode: true,
-  
+
   slidesPerRow: 1,
   accessibility: false,
   adaptiveHeight: false,
@@ -64,11 +64,13 @@ const SimpleSlider = (props) => {
               <div className="sValue1">
                 <img
                   src={
-                    element.dirflecha < 0
-                      ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
-                      : element.dirflecha > 0
-                        ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
-                        : arrowNone
+                    element.dirOpuesta !== null ?
+                      element.dirflecha < 0
+                        ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
+                        : element.dirflecha > 0
+                          ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
+                          : arrowNone
+                      : arrowNone
                   }
                   alt=""
                   height="auto"
@@ -78,11 +80,13 @@ const SimpleSlider = (props) => {
               <div className="sValue2">
                 <span style={{
                   color:
-                    element.dirflecha < 0
-                      ? element.dirOpuesta ? "red" : "#3bb54c"
-                      : element.dirflecha > 0
-                        ? element.dirOpuesta ? "#3bb54c" : "red"
-                        : "#5F5F5F",
+                    element.dirOpuesta !== null ?
+                      element.dirflecha < 0
+                        ? element.dirOpuesta ? "red" : "#3bb54c"
+                        : element.dirflecha > 0
+                          ? element.dirOpuesta ? "#3bb54c" : "red"
+                          : "#5F5F5F"
+                    : "#5F5F5F"
                 }}>
                   {element.valor}
                 </span>

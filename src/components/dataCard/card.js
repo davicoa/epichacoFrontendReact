@@ -170,16 +170,8 @@ const Card = (props) => {
         " " +
         props.dataGraph.valor.despuesvalor
       )
-    } //valor con comas con valor negativo
-    else if (valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")) {
-      setValueView(
-        props.dataGraph.valor.antesvalor +
-        " -" +
-        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
-        " " +
-        props.dataGraph.valor.despuesvalor
-      )
-    }//valor 100.000,10
+    }
+    //valor 100.000,10
     else {
       setValueView(
         props.dataGraph.valor.antesvalor +
@@ -262,11 +254,13 @@ const Card = (props) => {
                   <span style={{ marginLeft: "2%", fontSize: "1.5em" }}>
                     <img
                       src={
-                        arrowAndColor < 0
-                          ? (dirOpuesta) ? upRedArrow : upGreenArrow
-                          : arrowAndColor > 0
-                            ? (dirOpuesta) ? downGreenArrow : downRedArrow
-                            : ""
+                        dirOpuesta !== null ?
+                          arrowAndColor < 0
+                            ? (dirOpuesta) ? upRedArrow : upGreenArrow
+                            : arrowAndColor > 0
+                              ? (dirOpuesta) ? downGreenArrow : downRedArrow
+                              : ""
+                          : ""
                       }
                       alt=""
                       height="auto"
@@ -275,11 +269,13 @@ const Card = (props) => {
                     <span
                       style={{
                         color:
-                          arrowAndColor < 0
-                            ? dirOpuesta ? "red" : "#3bb54c"
-                            : arrowAndColor > 0
-                              ? dirOpuesta ? "#3bb54c" : "red"
-                              : "#5F5F5F",
+                          dirOpuesta !== null ?
+                            arrowAndColor < 0
+                              ? dirOpuesta ? "red" : "#3bb54c"
+                              : arrowAndColor > 0
+                                ? dirOpuesta ? "#3bb54c" : "red"
+                                : "#5F5F5F"
+                          : "#5F5F5F"
                       }}
                     >
                       {valueView}
