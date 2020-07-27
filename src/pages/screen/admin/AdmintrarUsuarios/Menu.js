@@ -17,7 +17,7 @@ const Menu = (props) => {
             props.screen("listUser");
           }}
         >
-          Usuario
+          Crear Usuario
         </span>
         <span
           className={

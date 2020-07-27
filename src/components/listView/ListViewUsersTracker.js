@@ -44,7 +44,7 @@ const ListViewUsers = (props) => {
             <span>{i + 1}</span>
             <span>{element.createdAt.split("T")[0]}</span>
             <span>{element.createdBy.email}</span>
-            <span>{element.action}</span>
+            <span>{element.action === "DELETE" ? "BORRADO" : element.action === "PUT" ? "ACTUALIZADO" : "CREADO"}</span>
             <span>{element.route}</span>
           </div>
           <div className="tabButtonsConstent">
@@ -71,7 +71,7 @@ const ListViewUsers = (props) => {
             <span><span>Fecha: &nbsp; </span>{Details.createdAt}</span>
             <span><span>Usuario: &nbsp; </span>{Details.createdBy.username}</span>
             <span><span>Email: &nbsp; </span>{Details.createdBy.email}</span>
-            <span><span>Accion: &nbsp; </span>{Details.action}</span>
+            <span><span>Accion: &nbsp; </span>{Details.action === "DELETE" ? "BORRADO" : Details.action === "PUT" ? "ACTUALIZADO" : "CREADO"}</span>
             <span><span>Ruta: &nbsp; </span>{Details.route}</span>
             <span><span>Rol: &nbsp; </span>{Details.createdBy.roles[0].name}</span>
             <span><span>IP: &nbsp; </span>{Details.ip}</span>
