@@ -179,9 +179,9 @@ const Card = (props) => {
       titulo: antestitle + " " + nametitle + " " + despuestitle,
       valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
       dirOpuesta: dirOpuesta,
-      dirflecha: dirflecha.toFixed(2)
+      dirflecha: dirflecha.toFixed(2),
+      nacion: props.dataGraph.nacion
     })
-
   };
 
   return (

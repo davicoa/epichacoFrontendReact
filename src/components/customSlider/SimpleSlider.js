@@ -56,7 +56,7 @@ const SimpleSlider = (props) => {
     setSliderCard(
       props.slider.map((element, i) =>
         <div key={i}>
-          <div className="sliderCardContainer">
+          <div className="sliderCardContainer" style={{backgroundColor: (element.nacion? "#b2e3fb":"#bdffb5")}}>
             <div>
               {element.titulo}
             </div>
