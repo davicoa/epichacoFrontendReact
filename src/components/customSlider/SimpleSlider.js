@@ -11,13 +11,35 @@ import downRedArrow from "images/arrowDownRed.png";
 import arrowNone from "images/arrowNone.png";
 
 let settings = {
+  /* 
+  //primer test
+  dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear" 
+
+  //segundo test
+      speed: 10000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+      
+      */
+
   dots: false,
   infinite: true,
   slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 2000,
+  speed: 10000,
+  autoplaySpeed: 0,
   cssEase: "linear"
 }
 
@@ -26,7 +48,10 @@ const SimpleSlider = (props) => {
   const [sliderCard, setSliderCard] = useState("");
 
   useEffect(() => {
-    reloadSlider();
+    reloadSlider()
+    return (() => {
+      console.log("asd");
+    });
   }, []);
 
   const reloadSlider = () => {
