@@ -11,37 +11,36 @@ import downRedArrow from "images/arrowDownRed.png";
 import arrowNone from "images/arrowNone.png";
 
 let settings = {
+  /* 
+  //primer test
+  dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear" 
+
+  //segundo test
+      speed: 10000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+      
+      */
+
   dots: false,
   infinite: true,
   slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 800,
-  arrows: false,
-  centerMode: true,
-
-  slidesPerRow: 1,
-  accessibility: false,
-  adaptiveHeight: false,
-  centerPadding: 50,
-  draggable: true,
-  fade: false,
-  focusOnSelect: false,
-  initialSlide: 0,
-  pauseOnDotsHover: false,
-  pauseOnFocus: false,
-  pauseOnHover: true,
-  rows: 1,
-  slide: "div",
-  swipe: true,
-  swipeToSlide: false,
-  touchMove: true,
-  touchThreshold: 5,
-  useCSS: true,
-  useTransform: true,
-  variableWidth: false,
-  vertical: false,
+  speed: 10000,
+  autoplaySpeed: 0,
+  cssEase: "linear"
 }
 
 const SimpleSlider = (props) => {
@@ -49,14 +48,17 @@ const SimpleSlider = (props) => {
   const [sliderCard, setSliderCard] = useState("");
 
   useEffect(() => {
-    reloadSlider();
+    reloadSlider()
+    return (() => {
+      console.log("asd");
+    });
   }, []);
 
   const reloadSlider = () => {
     setSliderCard(
       props.slider.map((element, i) =>
         <div key={i}>
-          <div className="sliderCardContainer" style={{backgroundColor: (element.nacion? "#e0f5ff":"#daffd6")}}>
+          <div className="sliderCardContainer" style={{ backgroundColor: (element.nacion ? "#e0f5ff" : "#daffd6") }}>
             <div>
               {element.titulo}
             </div>
@@ -86,7 +88,7 @@ const SimpleSlider = (props) => {
                         : element.dirflecha > 0
                           ? element.dirOpuesta ? "#3bb54c" : "red"
                           : "#5F5F5F"
-                    : "#5F5F5F"
+                      : "#5F5F5F"
                 }}>
                   {element.valor}
                 </span>
