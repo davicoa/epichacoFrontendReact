@@ -13,17 +13,21 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 0.5vh;
-    height: 8vh;
-    width: 14vw;
+    height: 10vh;
+    width: auto;
     background-color:#faf9f9;
     border: transparent 0.016em solid;
     border-radius: 0.5vh;
     cursor: pointer;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 .sliderCardContainer:hover{
     border: black 0.016em solid;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    font-size: 110%;
 }
-
 .sliderValue{
     font-weight: bold;
     display: flex;

@@ -10,55 +10,51 @@ import downGreenArrow from "images/arrowDownGreen.png";
 import downRedArrow from "images/arrowDownRed.png";
 import arrowNone from "images/arrowNone.png";
 
-let settings = {
-  /* 
-  //primer test
-  dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear" 
-
-  //segundo test
-      speed: 10000,
-        autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: 'linear',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true
-      
-      */
-
-  dots: false,
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 10000,
-  autoplaySpeed: 0,
-  cssEase: "linear"
-}
-
 const SimpleSlider = (props) => {
 
   const [sliderCard, setSliderCard] = useState("");
+  const [toShow, setToShow] = useState(window.innerWidth <= 600 ? 2 : 6);
+
+  let settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: toShow,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 0,
+    cssEase: "linear"
+  }
 
   useEffect(() => {
     reloadSlider()
-    return (() => {
-      console.log("asd");
-    });
+
+    function handleResize() {
+      setToShow(
+        window.innerWidth > 1150 ? 6 :
+          window.innerWidth > 1000 ? 5 :
+            window.innerWidth > 800 ? 4 :
+              window.innerWidth > 600 ? 3 :
+                window.innerWidth > 400 ? 2 : 1
+      )
+
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return _ => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, []);
 
   const reloadSlider = () => {
     setSliderCard(
       props.slider.map((element, i) =>
         <div key={i}>
-          <div className="sliderCardContainer" style={{ backgroundColor: (element.nacion ? "#e0f5ff" : "#daffd6") }}>
+          <div className="sliderCardContainer"
+            style={{
+              backgroundColor: (element.nacion ? "rgb(224, 245, 255, 1)" : "rgb(218, 255, 214, 1)"),
+            }}>
             <div>
               {element.titulo}
             </div>
@@ -101,7 +97,7 @@ const SimpleSlider = (props) => {
   }
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} style={{ maxHeight: '10vh' }}>
       {sliderCard}
     </Slider>
   )
