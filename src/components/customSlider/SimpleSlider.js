@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
 
-import upGreenArrow from "images/arrowUpGreen.png";
-import upRedArrow from "images/arrowUpRed.png";
-import downGreenArrow from "images/arrowDownGreen.png";
-import downRedArrow from "images/arrowDownRed.png";
+import upGreenArrow from "images/arrow/arrowUpGreen.png";
+import upRedArrow from "images/arrow/arrowUpRed.png";
+import downGreenArrow from "images/arrow/arrowDownGreen.png";
+import downRedArrow from "images/arrow/arrowDownRed.png";
 import arrowNone from "images/arrowNone.png";
 
 const SimpleSlider = (props) => {
@@ -72,7 +72,7 @@ const SimpleSlider = (props) => {
                   }
                   alt=""
                   height="auto"
-                  width="20%"
+                  width="40%"
                 ></img>
               </div>
               <div className="sValue2">
