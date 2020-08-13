@@ -273,7 +273,7 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json",
     title: { antestitle: 'Valor UVA', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
+    valor: { antesvalor: " $", campovalor: "Cantidad", despuesvalor: "" },
     variable: { dondebuscar: "Tipo", quebuscar: "UVA" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
