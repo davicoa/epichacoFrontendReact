@@ -98,3 +98,4 @@ npm install xlsx file-saver --save
 npm install react-slick --savee
 npm install slick-carousel --save
 
+npm i react-moment

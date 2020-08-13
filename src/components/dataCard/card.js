@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
+import moment from 'moment';
+
 import logoChaco from "images/logo_chaco.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
@@ -45,6 +47,9 @@ const Card = (props) => {
     const rawData = await ApiGraphsDataService.getDataGraph(
       props.dataGraph.link
     );
+
+    rawData.data.sort((a, b) => new Date(a.fecha) > new Date(b.fecha))
+
     rawData.data.forEach((item) => {
       if (dondebuscarOpc === "" && dondebuscar !== "") {
         if (
@@ -52,13 +57,7 @@ const Card = (props) => {
           item[dondebuscar].toLowerCase() === quebuscar.toLowerCase()
         ) {
           if (item[ejey] !== null) {
-            let aux = []
-            let aux2 = item[ejex]
-            if (antessubtitle !== ("VALOR AL")) {
-              aux = item[ejex].split("/")
-              aux2 = aux[1] + "/" + aux[2];
-            }
-            EjeX.push(aux2); //
+            EjeX.push(item[ejex]);
             EjeY.push(
               parseFloat(
                 item[ejey]
@@ -77,8 +76,8 @@ const Card = (props) => {
               valor.push(
                 parseFloat(
                   item[campovalor]
-                  .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
-                  .replace(/,/g, "."))
+                    .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                    .replace(/,/g, "."))
                   .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
               ); // valor mostrado
             }
@@ -89,13 +88,7 @@ const Card = (props) => {
         item[dondebuscarOpc].toLowerCase() === quebuscarOpc.toLowerCase()
       ) {
         if (item[ejey] !== null) {
-          let aux = []
-          let aux2 = item[ejex]
-          if (antessubtitle !== ("VALOR AL")) {
-            aux = item[ejex].split("/")
-            aux2 = aux[1] + "/" + aux[2];
-          }
-          EjeX.push(aux2); //
+          EjeX.push(item[ejex]);
           EjeY.push(
             parseFloat(
               item[ejey]
@@ -121,14 +114,6 @@ const Card = (props) => {
       }
     });
 
-    let fechita = ""
-    let d = new Date(EjeX.slice(-1))
-    if (d instanceof Date && !isNaN(d.valueOf())) {
-      let df = new Intl.DateTimeFormat('pt')
-      fechita = df.format(d)
-    } else {
-      fechita = EjeX.slice(-1)
-    }
     //Arrow
     let dirflecha = 0
     if (EjeY.slice(-2)[0] < 0) {
@@ -155,13 +140,14 @@ const Card = (props) => {
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
+    
     setSubtitle(
       antessubtitle +
       " " +
       namesubtitle +
       " " +
       (fechaSubtitle ?
-        fechita
+        moment(EjeX.slice(-1), 'DD/MM/YYYY').format(props.dataGraph.dateFormart.subtitle)
         : '')
     );
     //valor
@@ -176,7 +162,9 @@ const Card = (props) => {
     //grafico
     setOptions(
       OptionsGraph(
-        EjeX.slice(-10),
+        EjeX.slice(-10).map((date) => {
+          return moment(date, 'DD/MM/YYYY').format(props.dataGraph.dateFormart.graph)
+        }),
         EjeY.slice(-10),
         props.dataGraph.graficoTexto,
         props.dataGraph.nacion

@@ -1,4 +1,5 @@
 export default function setOptions(EjeX, EjeY, name, color = false) {
+  console.log("----------",EjeY);
   return {
     series: [
       {
