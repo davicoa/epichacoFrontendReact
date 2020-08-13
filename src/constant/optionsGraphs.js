@@ -20,7 +20,6 @@ export default function setOptions(EjeX, EjeY, name, color = false) {
           show: false,
         },
       },
-
       dataLabels: {
         enabled: false,
       },
@@ -51,12 +50,22 @@ export default function setOptions(EjeX, EjeY, name, color = false) {
         labels: {
           show: false,
         },
+        tooltip: {
+          enabled: false,
+        },
       },
       yaxis: {
         labels: {
           show: false,
         },
       },
+      tooltip: {
+        enabled: true,
+        marker: {
+            show: false,
+        },
+      },
+
     },
   };
 }
