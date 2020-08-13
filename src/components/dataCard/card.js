@@ -74,7 +74,12 @@ const Card = (props) => {
             }
 
             if (item[campovalor]) {
-              valor.push(parseFloat(item[campovalor].replace(/[&/\\#+()$~%'":*?<>{}.]/g, "").replace(/,/g, ".")).toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+              valor.push(
+                parseFloat(
+                  item[campovalor]
+                  .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                  .replace(/,/g, "."))
+                  .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
               ); // valor mostrado
             }
           }
@@ -105,7 +110,11 @@ const Card = (props) => {
             namesubtitle = item[camposubtitle];
           }
           if (item[campovalor]) {
-            valor.push(parseFloat(item[campovalor].replace(/[&/\\#+()$~%'":*?<>{}.]/g, "").replace(/,/g, ".")).toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+            valor.push(
+              parseFloat(item[campovalor]
+                .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                .replace(/,/g, "."))
+                .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
             ); // valor mostrado
           }
         }
