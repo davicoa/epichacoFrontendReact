@@ -20,7 +20,6 @@
   padding-top: 6vh;
 }
 .apexContainer{
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
