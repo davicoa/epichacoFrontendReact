@@ -10,6 +10,7 @@ export default [
     graficoTexto: "Cotización",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
@@ -25,6 +26,7 @@ export default [
     graficoTexto: "Cotización",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
@@ -40,6 +42,7 @@ export default [
     graficoTexto: "Cotización",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
@@ -54,6 +57,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   //=================
 
@@ -68,6 +72,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
@@ -83,6 +88,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
@@ -98,6 +104,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
@@ -113,6 +120,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
@@ -128,6 +136,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
@@ -142,6 +151,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //IPI Índice de producción industrial (IPI)
@@ -155,6 +165,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
 
@@ -170,6 +181,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //Capacidad instalada de la industria
@@ -183,6 +195,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
 
@@ -198,6 +211,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
   {//Producción Forestal Aberturas //produccion industrial
     link: "https://epichaco.tk/api/forestoIndustria",
@@ -210,6 +224,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   {//Producción Tanino
@@ -223,6 +238,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   { ////ISAC//Indicador sintético de la construcción (ISAC)
@@ -236,6 +252,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
 
@@ -266,6 +283,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -280,6 +298,7 @@ export default [
     graficoTexto: "Valor",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
@@ -294,6 +313,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { ////Tasa de desocupación
@@ -307,6 +327,7 @@ export default [
     graficoTexto: "Valor",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
@@ -321,6 +342,7 @@ export default [
     graficoTexto: "Valor",
     nacion: false,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { ////Trabajadores Registrados
@@ -334,6 +356,7 @@ export default [
     graficoTexto: "Variación",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
@@ -348,6 +371,7 @@ export default [
     graficoTexto: "Variación",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -362,6 +386,7 @@ export default [
     graficoTexto: "Indice",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
   { //Tasas de actividad (nación y pcia)
@@ -375,6 +400,7 @@ export default [
     graficoTexto: "Valor",
     nacion: false,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   { ////Tasa de empleo
@@ -388,6 +414,7 @@ export default [
     graficoTexto: "Valor",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
@@ -402,6 +429,7 @@ export default [
     graficoTexto: "Valor",
     nacion: false,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM" }
   },
 
   { ////Salario mínima, vital y móvil
@@ -415,6 +443,7 @@ export default [
     graficoTexto: "Valor",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   /* -------------REVISADOS-------------- */
@@ -433,6 +462,7 @@ export default [
     graficoTexto: "Indice",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
@@ -448,6 +478,7 @@ export default [
     graficoTexto: "Millones de dólares",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/saldo_comercial.json", //Saldo comercial
@@ -463,6 +494,7 @@ export default [
     graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
@@ -478,6 +510,7 @@ export default [
     graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
@@ -493,6 +526,7 @@ export default [
     graficoTexto: "Cantidad",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json", //Balanza de pagos
@@ -507,6 +541,7 @@ export default [
     graficoTexto: "var ai",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   {//Carbón en bolsa
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -519,6 +554,7 @@ export default [
     graficoTexto: "var_mens",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   {//"Rollos", //Producción Rollos
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -531,6 +567,7 @@ export default [
     graficoTexto: "var ai",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { ////Recaudación de seguridad social
@@ -544,6 +581,7 @@ export default [
     graficoTexto: "Var inteanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -560,6 +598,7 @@ export default [
     graficoTexto: "Cantidad",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -576,6 +615,7 @@ export default [
     graficoTexto: "Cantidad",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -592,6 +632,7 @@ export default [
     graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -607,6 +648,7 @@ export default [
     graficoTexto: "var ai",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -621,6 +663,7 @@ export default [
     graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -636,6 +679,7 @@ export default [
     graficoTexto: "var ai",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Producción de autos (%)
@@ -649,6 +693,7 @@ export default [
     graficoTexto: "Producción",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -665,6 +710,7 @@ export default [
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Patentamiento de autos
@@ -678,6 +724,7 @@ export default [
     graficoTexto: "Cantidad",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_autos.json", //Patentamiento de autos (%)
@@ -692,6 +739,7 @@ export default [
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Exportación de Vehículos
@@ -705,6 +753,7 @@ export default [
     graficoTexto: "Producción",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -721,6 +770,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_motos.json",//Patentamiento de motos (%)
@@ -735,6 +785,7 @@ export default [
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Producción de bovinos
@@ -748,6 +799,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -763,6 +815,7 @@ export default [
     graficoTexto: "total_cabezas",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Faena de bovinos
@@ -776,6 +829,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -792,6 +846,7 @@ export default [
     graficoTexto: "var_ia_chaco",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Exportación de carne vacuna
@@ -805,6 +860,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -820,6 +876,7 @@ export default [
     graficoTexto: "ternero",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   {//Precios Terneros (Nación y Provincia) - Domo A/G
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -832,6 +889,7 @@ export default [
     graficoTexto: "ternero",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   {//Precios Terneros (Nación y Provincia) - ZOna Norte
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -844,6 +902,7 @@ export default [
     graficoTexto: "ternero",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Producción de porcinos
@@ -857,6 +916,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_porcinos.json", //Producción de porcinos (%)
@@ -872,6 +932,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
 
@@ -887,6 +948,7 @@ export default [
     graficoTexto: "var_ia_chaco",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Exportación de porcinos
@@ -900,6 +962,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_porcinos.json", //Exportación de porcinos (%)
@@ -914,6 +977,7 @@ export default [
     graficoTexto: "total_cabezas",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Producción de leche
@@ -926,6 +990,8 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
+    dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_leche.json", //Producción de leche (%)
@@ -940,6 +1006,7 @@ export default [
     graficoTexto: "Girasol",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //$Maíz                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -952,6 +1019,7 @@ export default [
     graficoTexto: "Maíz",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //$Soja                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -964,6 +1032,7 @@ export default [
     graficoTexto: "Soja",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //$Trigo                           => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -976,6 +1045,7 @@ export default [
     graficoTexto: "Trigo",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //Precio Fibra Algodón - Merc Int => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -988,6 +1058,7 @@ export default [
     graficoTexto: "C-1/2",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //Precio Sorgo                    => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -1000,6 +1071,7 @@ export default [
     graficoTexto: "precio",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   { //Precio arroz cascara            => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -1012,6 +1084,7 @@ export default [
     graficoTexto: "precio",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Molienda de soja - Granos oleaginosos
@@ -1025,6 +1098,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_granos_oleaginosos.json", //Molienda de soja - Granos oleaginosos (%)
@@ -1040,6 +1114,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_aceite.json", //Molienda de soja - Aceite (%)
@@ -1055,6 +1130,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_harina.json", //Molienda de soja - harina (%)
@@ -1070,6 +1146,7 @@ export default [
     graficoTexto: "Variacion interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_gas.json", //Producción de gas (%)
@@ -1085,6 +1162,7 @@ export default [
     graficoTexto: "Variacion interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_petr%C3%B3leo.json", //Producción de petróleo (%)
@@ -1100,6 +1178,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_acero_crudo.json", //Producción de acero crudo (%)
@@ -1115,6 +1194,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_laminados_no_planos_en_caliente.json", //Producción de laminados no planos en caliente (%)
@@ -1130,6 +1210,7 @@ export default [
     graficoTexto: "Var interanual",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_hierro_%28%25%29.json", //Producción de hierro (%)
@@ -1146,6 +1227,7 @@ export default [
     graficoTexto: "Hogar 2",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/canasta_b%C3%A1sica_alimentaria.json", //Canasta básica alimentaria
@@ -1161,6 +1243,7 @@ export default [
     graficoTexto: "Hogar 2",
     nacion: true,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/canasta_b%C3%A1sica_total.json", //Canasta básica total
@@ -1176,6 +1259,7 @@ export default [
     graficoTexto: "Indice",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/pobreza.json", //pobreza
@@ -1190,6 +1274,7 @@ export default [
     graficoTexto: "gran_resistencia",
     nacion: false,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Indigencia
@@ -1203,6 +1288,7 @@ export default [
     graficoTexto: "Indice",
     nacion: true,
     dirOpuesta: null,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indigencia.json", //Indigencia
@@ -1217,6 +1303,7 @@ export default [
     graficoTexto: "gran_resistencia",
     nacion: false,
     dirOpuesta: false,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
 
   { //// Índice de confianza del consumidor
@@ -1230,6 +1317,7 @@ export default [
     graficoTexto: "Variacion mensual",
     nacion: true,
     dirOpuesta: true,
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_confianza_del_consumidor_%28icc%29.json", //Índice de confianza del consumidor (ICC)
 ];
