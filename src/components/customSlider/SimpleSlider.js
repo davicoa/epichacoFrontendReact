@@ -55,7 +55,7 @@ const SimpleSlider = (props) => {
             style={{
               backgroundColor: (element.nacion ? "rgb(224, 245, 255, 1)" : "rgb(218, 255, 214, 1)"),
             }}>
-            <div>
+            <div className="titleSider">
               {element.titulo}
             </div>
             <div className="sliderValue">

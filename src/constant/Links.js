@@ -381,7 +381,7 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json",
     title: { antestitle: 'Tasa de Empleo', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "" },
+    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
     variable: { dondebuscar: "Tipo", quebuscar: "Empleo" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Indice" },
