@@ -3,13 +3,13 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",
     title: { antestitle: 'Dolar Oficial -', campotitle: "tipo", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "$", campovalor: "cotizacion", despuesvalor: "" },
+    valor: { antesvalor: " $", campovalor: "cotizacion", despuesvalor: "" },
     variable: { dondebuscar: "tipo", quebuscar: "Venta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "Cotización",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
@@ -24,7 +24,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "Cotización",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
@@ -39,21 +39,21 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Precio" },
     graficoTexto: "Cotización",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
   {//=== IPC Chaco ===
     link: "https://epichaco.tk/api/ipcgrResis",
     title: { antestitle: 'IPC', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_mens", despuesvalor: "%" },
     variable: { dondebuscar: "sector", quebuscar: "Nivel General" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "Variación",
     nacion: false,
-    dirOpuesta: true,
+    dirOpuesta: null,
   },
   //=================
   
@@ -67,7 +67,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación",
     nacion: true,
-    dirOpuesta: true,
+    dirOpuesta: null,
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
@@ -82,7 +82,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Variación",
     nacion: true,
-    dirOpuesta: true,
+    dirOpuesta: null,
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
@@ -97,7 +97,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación",
     nacion: true,
-    dirOpuesta: true,
+    dirOpuesta: null,
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
@@ -134,7 +134,7 @@ export default [
   { //IMACH
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'IMACH', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "indice", quebuscar: "IMACH" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -162,7 +162,7 @@ export default [
   { //Consumo Eléctrico Industrial
     link: "https://epichaco.tk/api/imach",
     title: { antestitle: 'Consumo Eléctrico Industrial', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "indice", quebuscar: "Energía Industrial" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -190,7 +190,7 @@ export default [
   { //Producción Forestal Muebles
     link: "https://epichaco.tk/api/forestoIndustria",
     title: { antestitle: 'Producción Muebles', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "tipo_produccion", quebuscar: "Muebles" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -202,7 +202,7 @@ export default [
   {//Producción Forestal Aberturas //produccion industrial
     link: "https://epichaco.tk/api/forestoIndustria",
     title: { antestitle: 'Producción Aberturas', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia", despuesvalor: "%" },
     variable: { dondebuscar: "tipo_produccion", quebuscar: "Aberturas" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -246,7 +246,7 @@ export default [
   {//Cemento Total CHACO
     link: "http://epichaco.tk/api/cemento",
     title: { antestitle: 'Despacho de Cemento', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_ia_s_e_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "producto", quebuscar: "Cemento Total" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -267,14 +267,14 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Valor",
     nacion: true,
-    dirOpuesta: false,
+    dirOpuesta: null,
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
   {//Empleo IERIC
     link: "https://epichaco.tk/api/empleoIERIC",
     title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "var_porcen_ia_empleo_chaco", despuesvalor: "%" },
     variable: { dondebuscar: "empleo_chaco", quebuscar: "" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -301,14 +301,14 @@ export default [
   {//Tasas de Desocupación (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: 'Tasa de Desocupación', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Tasa de Desocupación" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
 
   { ////Trabajadores Registrados
@@ -328,7 +328,7 @@ export default [
   {//Empleo general
     link: "https://epichaco.tk/api/empleoGeneral",
     title: { antestitle: 'Empleo Registrado', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "variacion_ia_provincia", despuesvalor: "%" },
     variable: { dondebuscar: "rama_de_actividad", quebuscar: "Total" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -355,14 +355,14 @@ export default [
   { //Tasas de actividad (nación y pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: 'Tasa de Actividad Laboral', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Tasa de Actividad" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
   
   { ////Tasa de empleo
@@ -382,14 +382,14 @@ export default [
   { //Tasas de Empleo (nación y Pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: 'Tasa de Empleo', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACION INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: "", campovalor: "gran_resistencia", despuesvalor: "%" },
     variable: { dondebuscar: "tasa", quebuscar: "Tasa de Empleo" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor",
     nacion: false,
-    dirOpuesta: false,
+    dirOpuesta: null,
   },
 
   { ////Salario mínima, vital y móvil
@@ -406,7 +406,7 @@ export default [
   }, 
     
   /* -------------REVISADOS-------------- */
-  
+
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/salario_m%C3%ADnimo%2C_vital_y_m%C3%B3vil.json", //"Tipo": "Salario mínimo, vital y móvil", "Salario": "16.875,00",
   
     
