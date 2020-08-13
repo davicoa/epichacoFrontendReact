@@ -59,6 +59,13 @@ export default function setOptions(EjeX, EjeY, name, color = false) {
           show: false,
         },
       },
+      tooltip: {
+        enabled: true,
+        marker: {
+            show: false,
+        },
+      },
+
     },
   };
 }
