@@ -1,4 +1,5 @@
 export default function setOptions(EjeX, EjeY, name, color = false) {
+
   return {
     series: [
       {
@@ -64,6 +65,11 @@ export default function setOptions(EjeX, EjeY, name, color = false) {
         marker: {
             show: false,
         },
+        y: [{
+          formatter: function (y) {
+            return  y.toFixed(2);
+          }
+        }]
       },
 
     },
