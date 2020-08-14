@@ -19,7 +19,7 @@
     "react-jwt-auth": "^0.6.0",
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "react-slick": "^0.27.0",
     "react-spinners": "^0.9.0",
     "react-validation": "^3.0.7",
