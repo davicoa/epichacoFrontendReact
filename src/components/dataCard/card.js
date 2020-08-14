@@ -14,6 +14,9 @@ import upRedArrow from "images/arrowUpRed.png";
 import downGreenArrow from "images/arrowDownGreen.png";
 import downRedArrow from "images/arrowDownRed.png";
 
+import arrowDownGray from "images/arrowDownGray.png"
+import arrowUpGray from "images/arrowUpGray.png"
+
 const Card = (props) => {
   const [loading, setLoading] = useState(true);
   const [options, setOptions] = useState();
@@ -140,7 +143,7 @@ const Card = (props) => {
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
-    
+
     setSubtitle(
       antessubtitle +
       " " +
@@ -240,7 +243,11 @@ const Card = (props) => {
                             : arrowAndColor > 0
                               ? (dirOpuesta) ? downGreenArrow : downRedArrow
                               : ""
-                          : ""
+                          :
+                          arrowAndColor < 0
+                            ? (dirOpuesta) ? arrowUpGray : arrowUpGray
+                            : arrowAndColor > 0
+                              ? (dirOpuesta) ? arrowDownGray : arrowDownGray : ""
                       }
                       alt=""
                       height="auto"
