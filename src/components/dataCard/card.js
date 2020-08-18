@@ -24,7 +24,8 @@ const Card = (props) => {
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
   const [arrowAndColor, setArrowAndColor] = useState("");
-  const dirOpuesta = props.dataGraph.dirOpuesta;
+  const {dirOpuesta, varIntAnual} = props.dataGraph.arrow;
+  const {maximumFractionDigits, minimumFractionDigits} = props.dataGraph.decimalPrecision;
 
   useEffect(() => {
     dataFromApi();
@@ -64,8 +65,8 @@ const Card = (props) => {
             EjeY.push(
               parseFloat(
                 item[ejey]
-                  .replace(/,/g, ".")
-                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+                .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                .replace(/,/g, ".")
               )
             ); //dato
             if (item[campotitle]) {
@@ -81,7 +82,7 @@ const Card = (props) => {
                   item[campovalor]
                     .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
                     .replace(/,/g, "."))
-                  .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+                  .toLocaleString('de-DE', { maximumFractionDigits: maximumFractionDigits, minimumFractionDigits: minimumFractionDigits })
               ); // valor mostrado
             }
           }
@@ -95,8 +96,8 @@ const Card = (props) => {
           EjeY.push(
             parseFloat(
               item[ejey]
-                .replace(/,/g, ".")
-                .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+              .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+              .replace(/,/g, ".")
             )
           ); //dato
           if (item[campotitle]) {
@@ -110,36 +111,52 @@ const Card = (props) => {
               parseFloat(item[campovalor]
                 .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
                 .replace(/,/g, "."))
-                .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+                .toLocaleString('de-DE', { maximumFractionDigits: maximumFractionDigits, minimumFractionDigits: minimumFractionDigits })
             ); // valor mostrado
           }
         }
       }
     });
 
-    //Arrow
+    //   Arrow
     let dirflecha = 0
-    if (EjeY.slice(-2)[0] < 0) {
-      if (EjeY.slice(-2)[0] > EjeY.slice(-1)[0]) {
-        setArrowAndColor(1)
-        dirflecha = 1;
-      } else {
-        setArrowAndColor(-1)
-        dirflecha = -1;
-      }
-    } else if (EjeY.slice(-2)[0] < 0) {
-      if (EjeY.slice(-2)[0] < EjeY.slice(-1)[0]) {
-        setArrowAndColor(1)
-        dirflecha = 1;
-      } else {
-        setArrowAndColor(-1)
-        dirflecha = -1;
+    let index = EjeY.length - 2
+    if(varIntAnual){
+      index = EjeX.findIndex(element => moment(element, 'DD/MM/YYYY').format("MM/YYYY") === moment(EjeX.slice(-1), 'DD/MM/YYYY').subtract(1, 'years').format("MM/YYYY"))
+      if (index === -1) {
+        index = EjeY.length - 2
       }
     }
-    else {
+    if (EjeY[index] < 0) {
+      if (EjeY[index] > EjeY[EjeY.length-1]) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+      }
+    } else if (EjeY[index] < 0) {
+      if (EjeY[index] < EjeY[EjeY.length-1]) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+      }
+    } else {
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
       dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
     }
+
+    // carousel
+    props.cargarSliderHandler({
+      titulo: antestitle + " " + nametitle + " " + despuestitle,
+      valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
+      dirOpuesta: dirOpuesta,
+      dirflecha: dirflecha.toFixed(2),
+      nacion: props.dataGraph.nacion
+    })
+
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
@@ -170,18 +187,11 @@ const Card = (props) => {
         }),
         EjeY.slice(-10),
         props.dataGraph.graficoTexto,
-        props.dataGraph.nacion
+        props.dataGraph.nacion,
+        props.dataGraph.decimalPrecision
       )
     );
     setLoading(false);
-
-    props.cargarSliderHandler({
-      titulo: antestitle + " " + nametitle + " " + despuestitle,
-      valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
-      dirOpuesta: dirOpuesta,
-      dirflecha: dirflecha.toFixed(2),
-      nacion: props.dataGraph.nacion
-    })
   };
 
   return (
