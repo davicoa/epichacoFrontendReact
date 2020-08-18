@@ -69,7 +69,7 @@ export default function setOptions(EjeX, EjeY, name, color = false, decimalPreci
             formatter: function (y) {
               return (
                 parseFloat(y.toString())
-                  .toLocaleString('de-DE', { maximumFractionDigits: decimalPrecision, minimumFractionDigits: decimalPrecision })
+                  .toLocaleString('de-DE', { maximumFractionDigits: decimalPrecision.maximumFractionDigits, minimumFractionDigits: decimalPrecision.minimumFractionDigits })
               )
             },
           },
