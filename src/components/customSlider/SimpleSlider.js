@@ -10,6 +10,9 @@ import downGreenArrow from "images/arrow/arrowDownGreen.png";
 import downRedArrow from "images/arrow/arrowDownRed.png";
 import arrowNone from "images/arrowNone.png";
 
+import arrowDownGray from "images/arrow/arrowDownGray.png"
+import arrowUpGray from "images/arrow/arrowUpGray.png"
+
 const SimpleSlider = (props) => {
 
   const [sliderCard, setSliderCard] = useState("");
@@ -68,7 +71,12 @@ const SimpleSlider = (props) => {
                         : element.dirflecha > 0
                           ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
                           : arrowNone
-                      : arrowNone
+                      : 
+                      element.dirflecha < 0
+                        ? (element.dirOpuesta) ? arrowUpGray : arrowUpGray
+                        : element.dirflecha > 0
+                          ? (element.dirOpuesta) ? arrowDownGray : arrowDownGray
+                          : arrowNone
                   }
                   alt=""
                   height="auto"
