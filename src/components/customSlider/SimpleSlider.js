@@ -81,7 +81,6 @@ const SimpleSlider = (props) => {
                   alt=""
                   height="auto"
                   width="40%"
-                  style={{color: 'rgba(34, 12, 64, 0.6)'}}
                 ></img>
               </div>
               <div className="sValue2">

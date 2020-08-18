@@ -64,8 +64,8 @@ const Card = (props) => {
             EjeY.push(
               parseFloat(
                 item[ejey]
-                  .replace(/,/g, ".")
-                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+                .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                .replace(/,/g, ".")
               )
             ); //dato
             if (item[campotitle]) {
@@ -81,7 +81,7 @@ const Card = (props) => {
                   item[campovalor]
                     .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
                     .replace(/,/g, "."))
-                  .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+                  .toLocaleString('de-DE', { maximumFractionDigits: props.dataGraph.decimalPrecision, minimumFractionDigits: props.dataGraph.decimalPrecision })
               ); // valor mostrado
             }
           }
@@ -95,8 +95,8 @@ const Card = (props) => {
           EjeY.push(
             parseFloat(
               item[ejey]
-                .replace(/,/g, ".")
-                .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
+              .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+              .replace(/,/g, ".")
             )
           ); //dato
           if (item[campotitle]) {
@@ -110,7 +110,7 @@ const Card = (props) => {
               parseFloat(item[campovalor]
                 .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
                 .replace(/,/g, "."))
-                .toLocaleString('de-DE', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+                .toLocaleString('de-DE', { maximumFractionDigits: props.dataGraph.decimalPrecision, minimumFractionDigits: props.dataGraph.decimalPrecision })
             ); // valor mostrado
           }
         }
@@ -170,7 +170,8 @@ const Card = (props) => {
         }),
         EjeY.slice(-10),
         props.dataGraph.graficoTexto,
-        props.dataGraph.nacion
+        props.dataGraph.nacion,
+        props.dataGraph.decimalPrecision
       )
     );
     setLoading(false);
