@@ -319,6 +319,21 @@ export default [
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
+  {//Empleo IERIC Nacion
+    link: "https://epichaco.tk/api/empleoIERIC",
+    title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "var_porcen_ia_empleo_nacion", despuesvalor: "%" },
+    variable: { dondebuscar: "empleo_chaco", quebuscar: "" },
+    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
+    grafico: { ejex: "fecha", ejey: "var_porcen_ia_empleo_nacion" },
+    graficoTexto: "Variación:",
+    nacion: true,
+    arrow: { dirOpuesta: false, varIntAnual: true },
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
+  },
+
   {//Empleo IERIC
     link: "https://epichaco.tk/api/empleoIERIC",
     title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
