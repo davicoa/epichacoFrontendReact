@@ -9,9 +9,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "Cotización:",
     nacion: true,
-    arrow: { dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_minorista.json",  //dólar_minorista
@@ -26,9 +26,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "cotizacion" },
     graficoTexto: "Cotización:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/d%C3%B3lar_blue.json",       //dolar blu
@@ -43,9 +43,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Precio" },
     graficoTexto: "Cotización:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/euro_minorista_-_venta.json", //EURO VENTA
@@ -59,9 +59,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   //=================
 
@@ -75,9 +75,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
@@ -92,9 +92,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_mayorista.json", //Inflación mayorista
@@ -109,9 +109,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_n%C3%BAcleo_%28ipc_n%C3%BAcleo%29.json",//Inflación núcleo (IPC núcleo)
@@ -126,9 +126,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
@@ -143,9 +143,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/estimador_mensual_de_la_actividad_econ%C3%B3mica_%28emae%29.json", //EMAE//Estimador mensual de la actividad económica (EMAE)
@@ -159,9 +159,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //IPI Índice de producción industrial (IPI)
@@ -174,9 +174,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: true},
+    arrow: { dirOpuesta: true, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -191,9 +191,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: true, varIntAnual: true},
+    arrow: { dirOpuesta: true, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //Capacidad instalada de la industria
@@ -206,9 +206,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -223,9 +223,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: true, varIntAnual: true},
+    arrow: { dirOpuesta: true, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   {//Producción Forestal Aberturas //produccion industrial
     link: "https://epichaco.tk/api/forestoIndustria",
@@ -237,9 +237,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: true, varIntAnual: true},
+    arrow: { dirOpuesta: true, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   {//Producción Tanino
@@ -252,9 +252,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: true, varIntAnual: true},
+    arrow: { dirOpuesta: true, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////ISAC//Indicador sintético de la construcción (ISAC)
@@ -267,26 +267,26 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
 
-
-  /* { ////Despacho de cemento 
+  { ////Despacho de cemento 
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json",
-    title: { antestitle: 'Despacho de cemento en toneladas', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VALOR AL', camposubtitle: "", fechaSubtitle: true },
-    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
+    title: { antestitle: 'Despacho de Cemento', campotitle: "", despuestitle: "" },
+    subtitle: { antessubtitle: 'VARIACIÓN INTERANUAL AL', camposubtitle: "", fechaSubtitle: true },
+    valor: { antesvalor: "", campovalor: "Var interanual", despuesvalor: "%" },
     variable: { dondebuscar: "Tipo", quebuscar: "Despacho de cemento en toneladas" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
-    grafico: { ejex: "Fecha", ejey: "Cantidad" },
-    graficoTexto: "Cantidad",
+    grafico: { ejex: "Fecha", ejey: "Var interanual" },
+    graficoTexto: "Variación:",
     nacion: true,
-    dirOpuesta: false,
-  },  */
-
+    arrow: { dirOpuesta: false, varIntAnual: true },
+    dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
+  },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/despacho_de_cemento.json", //Despacho de cemento (%)
   {//Cemento Total CHACO
@@ -299,11 +299,10 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_s_e_chaco" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
-
 
   { ////valor UVA
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json",
@@ -315,12 +314,11 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
-  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
   {//Empleo IERIC
     link: "https://epichaco.tk/api/empleoIERIC",
     title: { antestitle: 'Empleo IERIC', campotitle: "", despuestitle: "" },
@@ -331,9 +329,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_porcen_ia_empleo_chaco" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////Tasa de desocupación
@@ -346,9 +344,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
@@ -362,9 +360,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor:",
     nacion: false,
-    arrow: {dirOpuesta: null, varIntAnual: true},
+    arrow: { dirOpuesta: null, varIntAnual: true },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////Trabajadores Registrados
@@ -377,12 +375,11 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
-  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
   {//Empleo general
     link: "https://epichaco.tk/api/empleoGeneral",
     title: { antestitle: 'Empleo Registrado', campotitle: "", despuestitle: "" },
@@ -393,9 +390,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "variacion_ia_provincia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -409,9 +406,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_actividad_laboral.json", //"Tipo": "Actividad", "Indice": "46,00"
   { //Tasas de actividad (nación y pcia)
@@ -424,9 +421,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor:",
     nacion: false,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////Tasa de empleo
@@ -439,12 +436,11 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
-  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_empleo.json", //Tasa de empleo
   { //Tasas de Empleo (nación y Pcia)
     link: "https://epichaco.tk/api/indicadoresLaborales",
     title: { antestitle: 'Tasa de Empleo', campotitle: "", despuestitle: "" },
@@ -455,9 +451,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "Valor:",
     nacion: false,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////Salario mínima, vital y móvil
@@ -470,9 +466,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Salario" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
   /* -------------REVISADOS-------------- */
@@ -490,9 +486,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/deuda_externa.json", //Deuda externa
@@ -507,9 +503,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Millones de dólares" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/saldo_comercial.json", //Saldo comercial
@@ -522,11 +518,11 @@ export default [
     variable: { dondebuscar: "Tipo", quebuscar: "Importaciones" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
-    graficoTexto: "Variación:",
+    graficoTexto: "VALOR TRIMESTRAL AL:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/importaciones.json", //Importaciones
@@ -541,9 +537,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaciones.json", //Exportaciones
@@ -551,16 +547,16 @@ export default [
   { ////Balanza de pagos
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json",
     title: { antestitle: 'Balanza de pagos', campotitle: "", despuestitle: "" },
-    subtitle: { antessubtitle: 'VARIACIÓN AL', camposubtitle: "", fechaSubtitle: true },
+    subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
     valor: { antesvalor: " US$", campovalor: "Cantidad", despuesvalor: "" },
     variable: { dondebuscar: "Tipo", quebuscar: "cuenta corriente por trimestre" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/balanza_de_pagos.json", //Balanza de pagos
@@ -574,9 +570,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   {//Carbón en bolsa
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -588,9 +584,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_mens" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   {//"Rollos", //Producción Rollos
     link: "http://epichaco.tk/api/forestalPrimario",
@@ -602,9 +598,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { ////Recaudación de seguridad social
@@ -617,13 +613,10 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var inteanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
-
-
-  //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/recaudaci%C3%B3n_de_seguridad_social.json", //Recaudación de seguridad social
 
   { ////Resultado financiero
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/resultado_financiero.json",
@@ -635,9 +628,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
 
@@ -653,9 +646,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Valor:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0} 
+    decimalPrecision: { maximumFractionDigits: 0, minimumFractionDigits: 0 }
   },
 
 
@@ -671,9 +664,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -688,9 +681,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -704,9 +697,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -721,9 +714,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: true},
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //============================ visto 18/08/2020 ======================================
@@ -738,9 +731,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Producción" },
     graficoTexto: "Producción",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -756,9 +749,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Patentamiento de autos
@@ -771,9 +764,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_autos.json", //Patentamiento de autos (%)
@@ -787,9 +780,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Exportación de Vehículos
@@ -802,9 +795,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Producción" },
     graficoTexto: "Producción",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -820,9 +813,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/patentamiento_de_motos.json",//Patentamiento de motos (%)
@@ -836,9 +829,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco_original" },
     graficoTexto: "var_ia_chaco_original",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Producción de bovinos
@@ -851,9 +844,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -868,9 +861,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "total_cabezas" },
     graficoTexto: "total_cabezas",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Faena de bovinos
@@ -883,9 +876,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -901,9 +894,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var_ia_chaco",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Exportación de carne vacuna
@@ -916,9 +909,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -933,9 +926,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   {//Precios Terneros (Nación y Provincia) - Domo A/G
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -947,9 +940,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   {//Precios Terneros (Nación y Provincia) - ZOna Norte
     link: "http://epichaco.tk/api/preciosGanaderos",
@@ -961,9 +954,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "ternero" },
     graficoTexto: "ternero",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Producción de porcinos
@@ -976,9 +969,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_porcinos.json", //Producción de porcinos (%)
@@ -993,9 +986,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
 
@@ -1010,9 +1003,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia_chaco" },
     graficoTexto: "var_ia_chaco",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Exportación de porcinos
@@ -1025,9 +1018,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/exportaci%C3%B3n_de_porcinos.json", //Exportación de porcinos (%)
@@ -1041,9 +1034,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "total_cabezas" },
     graficoTexto: "total_cabezas",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Producción de leche
@@ -1056,9 +1049,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_leche.json", //Producción de leche (%)
@@ -1072,9 +1065,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Girasol",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //$Maíz                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -1086,9 +1079,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Maíz",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //$Soja                            => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -1100,9 +1093,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Soja",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //$Trigo                           => nacional
     link: "http://epichaco.tk/api/preciosAgroDiarios",
@@ -1114,9 +1107,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "valor_actual" },
     graficoTexto: "Trigo",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //Precio Fibra Algodón - Merc Int => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -1128,9 +1121,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "C-1/2",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //Precio Sorgo                    => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -1142,9 +1135,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "precio",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   { //Precio arroz cascara            => nacional
     link: "http://epichaco.tk/api/preciosAgroMensuales",
@@ -1156,9 +1149,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "precio" },
     graficoTexto: "precio",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Molienda de soja - Granos oleaginosos
@@ -1171,9 +1164,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_granos_oleaginosos.json", //Molienda de soja - Granos oleaginosos (%)
@@ -1188,9 +1181,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_aceite.json", //Molienda de soja - Aceite (%)
@@ -1205,9 +1198,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/molienda_de_soja_-_harina.json", //Molienda de soja - harina (%)
@@ -1220,11 +1213,11 @@ export default [
     variable: { dondebuscar: "Tipo", quebuscar: "Producción de gas (en miles de m3)" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Variacion interanual" },
-    graficoTexto: "Variacion interanual",
+    graficoTexto: "Variación interanual:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_gas.json", //Producción de gas (%)
@@ -1237,11 +1230,11 @@ export default [
     variable: { dondebuscar: "Tipo", quebuscar: "Producción de petróleo (m3)" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Variacion interanual" },
-    graficoTexto: "Variacion interanual",
+    graficoTexto: "Variación interanual:",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_petr%C3%B3leo.json", //Producción de petróleo (%)
@@ -1256,9 +1249,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_acero_crudo.json", //Producción de acero crudo (%)
@@ -1273,9 +1266,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_laminados_no_planos_en_caliente.json", //Producción de laminados no planos en caliente (%)
@@ -1290,9 +1283,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producci%C3%B3n_de_hierro_%28%25%29.json", //Producción de hierro (%)
@@ -1308,9 +1301,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Hogar 2" },
     graficoTexto: "Hogar 2",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/canasta_b%C3%A1sica_alimentaria.json", //Canasta básica alimentaria
@@ -1325,9 +1318,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Hogar 2" },
     graficoTexto: "Hogar 2",
     nacion: true,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/canasta_b%C3%A1sica_total.json", //Canasta básica total
@@ -1342,9 +1335,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/pobreza.json", //pobreza
@@ -1358,9 +1351,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Indigencia
@@ -1373,9 +1366,9 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-    arrow: {dirOpuesta: null, varIntAnual: false},
+    arrow: { dirOpuesta: null, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indigencia.json", //Indigencia
@@ -1389,9 +1382,9 @@ export default [
     grafico: { ejex: "fecha", ejey: "gran_resistencia" },
     graficoTexto: "gran_resistencia",
     nacion: false,
-    arrow: {dirOpuesta: false, varIntAnual: false},
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
 
   { //// Índice de confianza del consumidor
@@ -1402,11 +1395,11 @@ export default [
     variable: { dondebuscar: "Tipo", quebuscar: "Nacional" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Variacion mensual" },
-    graficoTexto: "Variacion mensual",
+    graficoTexto: "Variación mensual:",
     nacion: true,
-    arrow: {dirOpuesta: true, varIntAnual: false},
+    arrow: { dirOpuesta: true, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "DD/MM/YYYY" },
-    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2} 
+    decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/%C3%ADndice_de_confianza_del_consumidor_%28icc%29.json", //Índice de confianza del consumidor (ICC)
 ];
