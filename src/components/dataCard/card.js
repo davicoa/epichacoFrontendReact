@@ -217,6 +217,8 @@ const Card = (props) => {
                     className="headerGraphicon"
                     src={props.dataGraph.nacion ? logoEscudo : logoChaco}
                     alt="Escudo"
+                    height={props.dataGraph.nacion ? "115%": "90%"}
+                    width={props.dataGraph.nacion ? "auto": "auto"}
                   ></img>
                 </div>
                 <br />
