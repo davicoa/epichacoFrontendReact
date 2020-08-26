@@ -174,7 +174,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: true },
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -191,7 +191,7 @@ export default [
     grafico: { ejex: "fecha", ejey: "var_ia" },
     graficoTexto: "Variación:",
     nacion: false,
-    arrow: { dirOpuesta: true, varIntAnual: true },
+    arrow: { dirOpuesta: false, varIntAnual: true },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -206,7 +206,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "DD/MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1179,7 +1179,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1196,7 +1196,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1213,7 +1213,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1230,7 +1230,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variacion interanual" },
     graficoTexto: "Variación interanual:",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1264,7 +1264,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1281,7 +1281,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Var interanual" },
     graficoTexto: "Var interanual",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
@@ -1412,7 +1412,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variacion mensual" },
     graficoTexto: "Variación mensual:",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
