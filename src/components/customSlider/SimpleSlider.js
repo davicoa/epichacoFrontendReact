@@ -14,6 +14,8 @@ import arrowDownGray from "images/arrow/arrowDownGray.png"
 import arrowUpGray from "images/arrow/arrowUpGray.png"
 
 const SimpleSlider = (props) => {
+  
+  console.log(props.slider);
 
   const [sliderCard, setSliderCard] = useState("");
   const [toShow, setToShow] = useState(window.innerWidth <= 600 ? 2 : 6);
@@ -66,6 +68,22 @@ const SimpleSlider = (props) => {
                 <img
                   src={
                     element.dirOpuesta !== null ?
+                      element.dirOpuesta ?
+                        element.arrowAndColor > 0 ? //flecha abajo
+                          element.arrowColor > 0 ? downRedArrow : downGreenArrow :
+                          element.arrowAndColor < 0 ? //flecha arriba
+                            element.arrowColor > 0 ? upRedArrow : upGreenArrow
+                            : arrowNone
+                        :
+                        element.arrowAndColor < 0 ? //flecha abajo
+                          element.arrowColor < 0 ? downRedArrow : downGreenArrow :
+                          element.arrowAndColor > 0 ? //flecha arriba
+                            element.arrowColor < 0 ? upRedArrow : upGreenArrow
+                            : arrowNone
+                      : element.arrowColor < 0 ? arrowDownGray : arrowUpGray
+                  }
+                  /* src={
+                    element.dirOpuesta !== null ?
                       element.dirflecha < 0
                         ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
                         : element.dirflecha > 0
@@ -77,7 +95,7 @@ const SimpleSlider = (props) => {
                         : element.dirflecha > 0
                           ? (element.dirOpuesta) ? arrowDownGray : arrowDownGray
                           : arrowNone
-                  }
+                  } */
                   alt=""
                   height="auto"
                   width="40%"
@@ -87,11 +105,7 @@ const SimpleSlider = (props) => {
                 <span style={{
                   color:
                     element.dirOpuesta !== null ?
-                      element.dirflecha < 0
-                        ? element.dirOpuesta ? "red" : "#3bb54c"
-                        : element.dirflecha > 0
-                          ? element.dirOpuesta ? "#3bb54c" : "red"
-                          : "#5F5F5F"
+                      element.dirOpuesta ? element.arrowColor < 0 ? "#3bb54c" : "red" : element.arrowColor > 0 ? "#3bb54c" : "red"
                       : "#5F5F5F"
                 }}>
                   {element.valor}
