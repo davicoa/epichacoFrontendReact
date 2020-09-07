@@ -15,7 +15,7 @@ import arrowUpGray from "images/arrow/arrowUpGray.png"
 
 const SimpleSlider = (props) => {
   
-  console.log(props.slider);
+  //console.log(props.slider);
 
   const [sliderCard, setSliderCard] = useState("");
   const [toShow, setToShow] = useState(window.innerWidth <= 600 ? 2 : 6);
@@ -58,9 +58,13 @@ const SimpleSlider = (props) => {
         <div key={i}>
           <div className="sliderCardContainer"
             style={{
-              backgroundColor: (element.nacion ? "rgb(224, 245, 255, 1)" : "rgb(218, 255, 214, 1)"),
+              backgroundColor: (element.nacion ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 1)"),
             }}>
-            <div className="titleSider">
+            <div className="titleSider" style={{
+              borderBottom: '5px solid',
+              borderBottomColor: (element.nacion ? "rgba(178, 227, 251, 1)" : "rgba(187, 252, 178, 1)"),
+              borderBottomWidth: '4px',
+            }}>
               {element.titulo}
             </div>
             <div className="sliderValue">

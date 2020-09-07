@@ -1,7 +1,6 @@
 .slick-list{
     background-color:#EBEBEB;
     text-align: center;
-    
 }
 .slick-track{
     display: flex;
@@ -12,7 +11,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 0.8vh;
+    margin-top: 1.6vh;
     height: 10vh;
     cursor: pointer;
     margin-left: 0.5vw;
@@ -22,19 +21,22 @@
     border: black 0.016em solid;
     color: rgb(75, 75, 75);
     font-weight: bold;
-    font-size: 110%;
+    font-size: 100%;
 }
 .titleSider{
     display: flex;
     align-items: center;
-    height: 50%;
+    height: 40%;
+    font-size: 90%;
+    padding-top: 0.5vh;
 }
 .sliderValue{
     font-weight: bold;
     flex-direction: row;
     display: flex;
     align-items: center;
-    height: 50%;
+    height: 60%;
+    padding-bottom: 0.8vh;
 }
 .sValue1{
     width: 30%;
