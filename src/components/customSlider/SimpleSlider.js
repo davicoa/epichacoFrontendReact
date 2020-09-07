@@ -123,7 +123,7 @@ const SimpleSlider = (props) => {
   }
 
   return (
-    <Slider {...settings} style={{ maxHeight: '10vh' }}>
+    <Slider {...settings} style={{ maxHeight: '10vh', width: '100%' }}>
       {sliderCard}
     </Slider>
   )
