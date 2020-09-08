@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import "./style.css";
+const user = JSON.parse(localStorage.getItem("user"));
 
 const NavbarAdmin = (props) => {
   const [active, setAtive] = useState(0);
@@ -54,6 +55,20 @@ const NavbarAdmin = (props) => {
       >
         <span>Consumo/Servicios</span>
       </ul>
+      {user.roles.some((role) => role === "ROLE_ADMIN") && (<Fragment>
+        
+          <span>|</span>
+          <ul
+            className={active === 6 ? "activeNavTab" : ""}
+            onClick={() => {
+              setAtive(6);
+              props.screen("administrarUsuarios");
+            }}
+          >
+            <span>Administrar Usuarios</span>
+          </ul>
+          </Fragment>
+      )}
     </nav>
   );
 };

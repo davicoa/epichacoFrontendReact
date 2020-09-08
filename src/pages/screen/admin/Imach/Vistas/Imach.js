@@ -1,20 +1,29 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const ForestalPrimario = (props) => {
+  const obj = props.obj;
 
-  const [fecha, setFecha] = useState(new Date());
-  const [indice, setIndice] = useState("");
-  const [valor, setValor] = useState("");
-  const [var_mens, setVar_mens] = useState("");
-  const [var_ia, setVar_ia] = useState("");
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
+  const [indice, setIndice] = useState(
+    typeof obj !== "undefined" ? obj.indice : ""
+  );
+  const [valor, setValor] = useState(
+    typeof obj !== "undefined" ? obj.valor : ""
+  );
+  const [var_mens, setVar_mens] = useState(
+    typeof obj !== "undefined" ? obj.var_mens : ""
+  );
+  const [var_ia, setVar_ia] = useState(
+    typeof obj !== "undefined" ? obj.var_ia : ""
+  );
 
-  const setFechaHandler = Date => {
+  const setFechaHandler = (Date) => {
     setFecha(Date);
-  }
+  };
 
   const setImputHandler = (e) => {
     switch (e.target.name) {
@@ -37,6 +46,7 @@ const ForestalPrimario = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getUTCDate().toString().padStart(2, "0")+"/"+(date.getUTCMonth()+1).toString().padStart(2, "0")+"/"+date.getUTCFullYear()
     props.saveToDb("imach", {
       fecha,
       indice,
@@ -49,94 +59,80 @@ const ForestalPrimario = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">IMACH</span>
-      {props.loading ? (
-        <ClipLoader
-          css={("display: block", "margin: 0 auto", "border-color: blue")}
-          size={150}
-          color={"#123abc"}
-          loading={props.loading}
-        />
-      ) : (
-          <form onSubmit={savetobd}>
-            <div className="divContaninerCenter">
-              <p className="textinput">Fecha:</p>
-              <DatePicker
-                className="divContaniner"
-                dateFormat="dd/MM/yyyy"
-                selected={fecha}
-                name="fecha"
-                onChange={Date => setFechaHandler(Date)}
+      <form onSubmit={savetobd}>
+        <div className="divContaninerCenter">
+          <p className="textinput">Fecha:</p>
+          <DatePicker
+            className="divContaniner"
+            dateFormat="dd/MM/yyyy"
+            selected={date}
+            name="fecha"
+            onChange={(Date) => setFechaHandler(Date)}
+          />
+        </div>
+        <div className="divExterno">
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">Indice</p>
+              <select
+                value={indice}
+                name="indice"
+                onChange={setImputHandler}
+                required
+              >
+                <option value="" disabled>
+                  Seleccione una opcion
+                </option>
+                <option value="IMACH">IMACH</option>
+                <option value="Gas Oil">Gas Oil</option>
+                <option value="Coparticipación">Coparticipación</option>
+                <option value="Cemento">Cemento</option>
+                <option value="Patentamientos">Patentamientos</option>
+                <option value="Energía Industrial">Energía Industrial</option>
+                <option value="Supermercados">Supermercados</option>
+                <option value="Empleo Formal">Empleo Formal</option>
+              </select>
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">Valor</p>
+              <input
+                placeholder="Valor"
+                type="text"
+                value={valor}
+                name="valor"
+                onChange={setImputHandler}
               />
             </div>
-            <div className="divExterno">
-              <div className="divInterno">
-                <div className="divContaniner">
-                  <p className="textinput">Indice</p>
-                  <select
-                      value={indice}
-                      name="indice"
-                      onChange={setImputHandler}
-                      required
-                    >
-                        <option value="" disabled>Seleccione una opcion</option>
-                        <option value="IMACH">IMACH</option>
-                        <option value="Gas Oil">Gas Oil</option>
-                        <option value="Coparticipación">Coparticipación</option>
-                        <option value="Cemento">Cemento</option>
-                        <option value="Patentamientos">Patentamientos</option>
-                        <option value="Energía Industrial">Energía Industrial</option>
-                        <option value="Supermercados">Supermercados</option>
-                        <option value="Empleo Formal">Empleo Formal</option>
-                  </select>
-                </div>
-                <div className="divContaniner">
-                  <p className="textinput">Valor</p>
-                  <input
-                    placeholder="Valor"
-                    type="text"
-                    value={valor}
-                    name="valor"
-                    onChange={setImputHandler}
-                  />
-                </div>
-              </div>
-              <div className="divInterno">
-                <div className="divContaniner">
-                  <p className="textinput">var_mens</p>
-                  <input
-                    placeholder="var_mens"
-                    type="text"
-                    value={var_mens}
-                    name="var_mens"
-                    onChange={setImputHandler}
-                  />
-                </div>
-                <div className="divContaniner">
-                  <p className="textinput">Var i.a.</p>
-                  <input
-                    placeholder="Var i.a."
-                    type="text"
-                    value={var_ia}
-                    name="var_ia"
-                    onChange={setImputHandler}
-                  />
-                </div>
-              </div>
+          </div>
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">var_mens</p>
+              <input
+                placeholder="var_mens"
+                type="text"
+                value={var_mens}
+                name="var_mens"
+                onChange={setImputHandler}
+              />
             </div>
-            <div className="divContaninerCenter">
-              <button className="botton" type="submit">
-                Guardar
-            </button>
+            <div className="divContaniner">
+              <p className="textinput">Var i.a.</p>
+              <input
+                placeholder="Var i.a."
+                type="text"
+                value={var_ia}
+                name="var_ia"
+                onChange={setImputHandler}
+              />
             </div>
-          </form>
-        )}
-      <div className="divMsgBottom">
-        <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
-        >
-          {props.msg}
-        </span>
-      </div>
+          </div>
+        </div>
+        <div className="divContaninerCenter">
+          <button className="botton" type="submit">
+            Guardar
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

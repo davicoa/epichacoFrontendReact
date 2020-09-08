@@ -14,7 +14,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(1);
-            props.screen("");
+            props.screen("ipcgrResis");
           }}
         >
           IPC-GR RESIS
@@ -29,7 +29,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(2);
-            props.screen("Cemento");
+            props.screen("cemento");
           }}
         >
           Cemento
@@ -44,7 +44,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(3);
-            props.screen("Combustible");
+            props.screen("combustible");
           }}
         >
           Combustible
@@ -59,7 +59,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(4);
-            props.screen("Supermercado");
+            props.screen("supermercado");
           }}
         >
           Supermercado
@@ -75,7 +75,7 @@ const Menu = (props) => {
           }
           onClick={() => {
             setAtive(5);
-            props.screen("Vehiculo");
+            props.screen("vehiculo");
           }}
         >
           Vehículo

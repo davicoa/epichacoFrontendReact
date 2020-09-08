@@ -10,7 +10,7 @@ const Menu = (props) => {
           className={active===1?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(1)
-            props.screen("");
+            props.screen("forestalPrimario");
           }}
         >
           Forestal Primario
@@ -21,7 +21,7 @@ const Menu = (props) => {
           className={active===2?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(2)
-            props.screen("StockBovinoPorcino");
+            props.screen("stockBovinoPorcino");
           }}
         >
           Stock BovinoPorcino
@@ -33,7 +33,7 @@ const Menu = (props) => {
           className={active===3?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(3)
-            props.screen("PreciosAgrosDiarios");
+            props.screen("preciosAgroDiarios");
           }}
         >
           Precios Agros Diarios
@@ -45,7 +45,7 @@ const Menu = (props) => {
          className={active===4?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(4)
-            props.screen("PreciosAgrosMensuales");
+            props.screen("preciosAgroMensuales");
           }}
         >
           Precios Agros Mensuales
@@ -57,7 +57,7 @@ const Menu = (props) => {
           className={active===5?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(5)
-            props.screen("PreciosGanaderos");
+            props.screen("preciosGanaderos");
           }}
         >
           Precios Ganaderos
@@ -69,7 +69,7 @@ const Menu = (props) => {
           className={active===6?'menuProduccionprimaria activeNavTabPanel':'menuProduccionprimaria'}
           onClick={() => {
             setAtive(6)
-            props.screen("Faena");
+            props.screen("faena");
           }}
         >
           Faena

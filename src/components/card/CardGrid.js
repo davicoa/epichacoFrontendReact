@@ -1,37 +1,46 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import DataCard from "components/dataCard/DataCard";
 import Card from "components/dataCard/card";
 import LINK from "constant/Links";
 
+import SimpleSlider from "components/customSlider/SimpleSlider"
+let arraySlider = []
 const CardGrid = () => {
   const [cards, setCards] = useState();
+  const [load, setLoad] = useState(false);
+
+  const cargarSliderHandler = (valor) => {
+    arraySlider.push(valor)
+    if(arraySlider.length >= 87){
+      setLoad(true)
+    }
+  }
+  
 
   const reloadCard = () => {
     setCards(
       LINK.map((element, i) =>
-        element instanceof Object ? (
-          <div key={i} className="grid_item">
-            <Card dataGraph={element} />
-          </div>
-        ) : (
-          <div key={i} className="grid_item">
-            <DataCard links={element} posicion={i} />
-          </div>
-        )
+        <div key={i} className="grid_item">
+          <Card dataGraph={element} cargarSliderHandler={cargarSliderHandler}/>
+        </div>
       )
-    );
-  };
+    )
+  }
 
   // refrescar cada 15 min
   useEffect(() => {
-    reloadCard();
+    reloadCard()
     const interval = setInterval(() => {
-      reloadCard();
-    }, 900000);
+      reloadCard()
+    }, 900000)
     return () => clearInterval(interval);
-  }, []);
+  }, [])
 
-  return <div className="grid_items">{cards}</div>;
+  return (
+    <>
+      {load?<SimpleSlider slider={arraySlider}/>: ""}
+      <div className="grid_items">{cards}</div>
+    </>
+    );
 };
 export default CardGrid;

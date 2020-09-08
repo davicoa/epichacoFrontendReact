@@ -10,20 +10,64 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../style.css";
 import AdminService from "services/AdminService";
 
+import ListView from "components/listView/ListView";
+import ClipLoader from "react-spinners/ClipLoader";
+import listaIcon from "images/icons-lista.png";
+import masIcon from "images/icons-mas.png";
+import { useAlert } from "react-alert";
+import DownloadXlsx from "components/donwload/donwloadXlsx";
+
+let formActual = ForestalPrimario;
+
 const Main = () => {
-  const [screen, setScreen] = useState("");
+  const [screen, setScreen] = useState("forestalPrimario");
   const [loading, setLoading] = useState(false);
-  const [msg, setMsd] = useState("");
+  const [lista, setLista] = useState(false);
+  const [datalist, setDatalist] = useState();
+  const [num, setNum] = useState("/10");
+  const alert = useAlert();
 
   const saveToDb = async (route, body) => {
     setLoading(true);
     const res = await AdminService.adminPost(route, body);
-    setMsd(res);
+    if (res.status === 200) {
+      alert.success(res.data.msg);
+    } else {
+      alert.error(res.data.msg);
+    }
     setLoading(false);
   };
-
+  const loadListHandler = async () => {
+    setLoading(true);
+    const res = await AdminService.adminGet(screen, num);
+    setDatalist(res.data);
+    setLoading(false);
+  };
   const screenHandler = (val) => {
+    switch (val) {
+      case "forestalPrimario":
+        formActual = ForestalPrimario;
+        break;
+      case "stockBovinoPorcino":
+        formActual = StockBovinoPorcino;
+        break;
+      case "preciosAgroDiarios":
+        formActual = PreciosAgrosDiarios;
+        break;
+      case "preciosAgroMensuales":
+        formActual = PreciosAgrosMensuales;
+        break;
+      case "preciosGanaderos":
+        formActual = PreciosGanaderos;
+        break;
+      case "faena":
+        formActual = Faena;
+        break;
+      default:
+        break;
+    }
     setScreen(val);
+    setLista(false);
   };
   return (
     <div className="mainContainer">
@@ -33,45 +77,61 @@ const Main = () => {
         </div>
       </div>
       <div className="mainForm">
-        <div>
-          {screen === "StockBovinoPorcino" ? (
-            <StockBovinoPorcino
-              saveToDb={saveToDb}
-              loading={loading}
-              msg={msg}
-            />
-          ) : screen === "PreciosAgrosDiarios" ? (
-            <PreciosAgrosDiarios
-              saveToDb={saveToDb}
-              loading={loading}
-              msg={msg}
-            />
-          ) : screen === "PreciosAgrosMensuales" ? (
-            <PreciosAgrosMensuales
-              saveToDb={saveToDb}
-              loading={loading}
-              msg={msg}
-            />
-          ) : screen === "PreciosGanaderos" ? (
-            <PreciosGanaderos 
-              saveToDb={saveToDb} 
-              loading={loading}
-              msg={msg} 
-             />
-          ) : screen === "Faena" ? (
-            <Faena 
-              saveToDb={saveToDb} 
-              loading={loading} 
-              msg={msg} 
-            />
-          ) : (
-            <ForestalPrimario 
-              saveToDb={saveToDb} 
-              loading={loading} 
-              msg={msg} 
-            />
-          )}
+        <div className="tabButtonsConstent">
+          <DownloadXlsx name={screen} />
+          <span
+            className="tabButtons"
+            onClick={() => {
+              loadListHandler();
+              setLista(true);
+            }}
+          >
+            <img src={listaIcon} alt="" height="auto" width="25%"></img>
+          </span>
+          <span onClick={() => setLista(false)} className="tabButtons">
+            <img src={masIcon} alt="" height="auto" width="25%"></img>
+          </span>
         </div>
+        {loading ? (
+          <div className="ClipLoader">
+            <ClipLoader
+              css={("display: block", "margin: 0 auto", "border-color: blue")}
+              size={150}
+              color={"#123abc"}
+              loading={loading}
+            />
+          </div>
+        ) : (
+          <div>
+            {lista ? (
+              <ListView
+                reload={loadListHandler}
+                rawData={datalist}
+                route={screen}
+                formToEdit={formActual}
+              />
+            ) : (
+              <div>
+                {screen === "forestalPrimario" && (
+                  <ForestalPrimario saveToDb={saveToDb} />
+                )}
+                {screen === "stockBovinoPorcino" && (
+                  <StockBovinoPorcino saveToDb={saveToDb} />
+                )}
+                {screen === "preciosAgroDiarios" && (
+                  <PreciosAgrosDiarios saveToDb={saveToDb} />
+                )}
+                {screen === "preciosAgroMensuales" && (
+                  <PreciosAgrosMensuales saveToDb={saveToDb} />
+                )}
+                {screen === "preciosGanaderos" && (
+                  <PreciosGanaderos saveToDb={saveToDb} />
+                )}
+                {screen === "faena" && <Faena saveToDb={saveToDb} />}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

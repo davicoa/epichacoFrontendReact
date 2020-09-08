@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import AuthService from "services/AuthService" 
 const user = JSON.parse(localStorage.getItem("user"));
 
 const Header = () => {
   const history = useHistory();
+  let location = useLocation();
 
-  const routeChange = () => {
-    let path = `admin`;
+  const routeChange = path => {
     history.push(path);
     window.location.reload();
   };
@@ -25,13 +25,21 @@ const Header = () => {
           {user.roles.some(
             (role) => role === "ROLE_ADMIN" || role === "ROLE_MODERATOR"
           ) && (
-            
+            (location.pathname ==='/admin')?
             <span
               className="logoutAdministrar2"
-              onClick={() => routeChange("admin")}
+              onClick={() => routeChange("/")}
             >
-              Administrar
+              Back
             </span>
+           
+            :
+            <span
+            className="logoutAdministrar2"
+            onClick={() => routeChange("admin")}
+          >
+            Administrar
+          </span>
           )}
           <span
            className="logoutAdministrar2"

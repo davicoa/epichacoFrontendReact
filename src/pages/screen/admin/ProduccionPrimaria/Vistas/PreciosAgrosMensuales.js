@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../style.css";
 
 const PreciosAgrosMensuales = (props) => {
-  const [fecha, setFecha] = useState(new Date());
-  const [precio, setPrecio] = useState("");
-  const [var_mensual, setVar_mensual] = useState("");
-  const [var_ia, setVar_ia] = useState("");
-  const [producto, setProducto] = useState("");
+  const obj = props.obj;
+  let aux = typeof obj !== "undefined"? obj.fecha.split("/"):"undefined"
+  const [date, setFecha] = useState(aux !== "undefined" ? new Date(aux[1]+'/'+aux[0]+'/'+aux[2]) : new Date());
+  const [precio, setPrecio] = useState(typeof obj !== "undefined" ? obj.precio : "");
+  const [var_mensual, setVar_mensual] = useState(typeof obj !== "undefined" ? obj.var_mensual : "");
+  const [var_ia, setVar_ia] = useState(typeof obj !== "undefined" ? obj.var_ia : "");
+  const [producto, setProducto] = useState(typeof obj !== "undefined" ? obj.producto : "");
 
   const setFechaHandler = (Date) => {
     setFecha(Date);
@@ -36,6 +37,7 @@ const PreciosAgrosMensuales = (props) => {
 
   const savetobd = (e) => {
     e.preventDefault();
+    let fecha = date.getUTCDate().toString().padStart(2, "0")+"/"+(date.getUTCMonth()+1).toString().padStart(2, "0")+"/"+date.getUTCFullYear()
     props.saveToDb("preciosAgroMensuales", {
       fecha,
       precio,
@@ -48,90 +50,74 @@ const PreciosAgrosMensuales = (props) => {
   return (
     <div className="formContainer">
       <span className="tituloDatoACargar">Precios Agros Mensuales</span>
-      {props.loading ? (
-        <ClipLoader
-          css={("display: block", "margin: 0 auto", "border-color: blue")}
-          size={150}
-          color={"#123abc"}
-          loading={props.loading}
-        />
-      ) : (
-        <form onSubmit={savetobd}>
-          <div className="divContaninerCenter">
-            <p className="textinput">Fecha:</p>
-            <DatePicker
-              className="divContaniner"
-              dateFormat="dd/MM/yyyy"
-              selected={fecha}
-              name="fecha"
-              onChange={(Date) => setFechaHandler(Date)}
-            />
-          </div>
-          <div className="divExterno">
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">Precio</p>
-                <input
-                  placeholder="Precio"
-                  type="text"
-                  value={precio}
-                  name="precio"
-                  onChange={setImputHandler}
-                />
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">Var mensual</p>
-                <input
-                  placeholder="Var mensual"
-                  type="text"
-                  value={var_mensual}
-                  name="var_mensual"
-                  onChange={setImputHandler}
-                />
-              </div>
+      <form onSubmit={savetobd}>
+        <div className="divContaninerCenter">
+          <p className="textinput">Fecha:</p>
+          <DatePicker
+            className="divContaniner"
+            dateFormat="dd/MM/yyyy"
+            selected={date}
+            name="fecha"
+            onChange={(Date) => setFechaHandler(Date)}
+          />
+        </div>
+        <div className="divExterno">
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">Precio</p>
+              <input
+                placeholder="Precio"
+                type="text"
+                value={precio}
+                name="precio"
+                onChange={setImputHandler}
+              />
             </div>
-            <div className="divInterno">
-              <div className="divContaniner">
-                <p className="textinput">Producto</p>
-                <select
-                  value={producto}
-                  name="producto"
-                  onChange={setImputHandler}
-                  required
-                >
-                    <option value="" disabled> Seleccione una opcion</option>
-                    <option value="Arroz U$S| Tonelada">Arroz U$S| Tonelada</option>
-                    <option value="Sorgo U$S| Tonelada">Sorgo U$S| Tonelada</option>
-                    <option value="Fibra de Algodón-Mercado Interno U$S| KG">Fibra de Algodón-Mercado Interno U$S| KG</option>
-                    <option value="Fibra de Algodón FOB Bs As C-1/2 U$S | CTS | Libra">Fibra de Algodón FOB Bs As C-1/2 U$S | CTS | Libra</option>
-                </select>
-              </div>
-              <div className="divContaniner">
-                <p className="textinput">Var i.a.</p>
-                <input
-                  placeholder="Var i.a."
-                  type="text"
-                  value={var_ia}
-                  name="var_ia"
-                  onChange={setImputHandler}
-                />
-              </div>
+            <div className="divContaniner">
+              <p className="textinput">Var mensual</p>
+              <input
+                placeholder="Var mensual"
+                type="text"
+                value={var_mensual}
+                name="var_mensual"
+                onChange={setImputHandler}
+              />
             </div>
           </div>
-          <div className="divContaninerCenter">
-            <button className="botton" type="submit">
-              Guardar
+          <div className="divInterno">
+            <div className="divContaniner">
+              <p className="textinput">Producto</p>
+              <select
+                value={producto}
+                name="producto"
+                onChange={setImputHandler}
+                required
+              >
+                <option value="" disabled> Seleccione una opcion</option>
+                <option value="Arroz U$S| Tonelada">Arroz U$S| Tonelada</option>
+                <option value="Sorgo U$S| Tonelada">Sorgo U$S| Tonelada</option>
+                <option value="Fibra de Algodón-Mercado Interno U$S| KG">Fibra de Algodón-Mercado Interno U$S| KG</option>
+                <option value="Fibra de Algodón FOB Bs As C-1/2 U$S | CTS | Libra">Fibra de Algodón FOB Bs As C-1/2 U$S | CTS | Libra</option>
+              </select>
+            </div>
+            <div className="divContaniner">
+              <p className="textinput">Var i.a.</p>
+              <input
+                placeholder="Var i.a."
+                type="text"
+                value={var_ia}
+                name="var_ia"
+                onChange={setImputHandler}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="divContaninerCenter">
+          <button className="botton" type="submit">
+            Guardar
             </button>
-          </div>
-        </form>
-      )}
-      <div className="divMsgBottom">
-        <span
-          style={{ color: props.msg === "Fallo en la carga" ? "red" : "green" }}
-        >
-          {props.msg}
-        </span>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

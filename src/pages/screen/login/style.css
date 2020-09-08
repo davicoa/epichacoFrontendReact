@@ -53,14 +53,14 @@ label {
   margin-top: 5vh;
   color: #ffffff;
   width: 100%;
-  background-color: rgba(0, 229, 201, 1);
+  background-color: #5cbbd1;
   cursor: pointer;
   border-radius: 1px;
   font-size: 24px;
   padding: 1vh;
 }
 .bottonLogin:hover {
-  background-color: rgba(0, 229, 202, 0.726);
+  background-color: #54a1b3;
 }
 
 .alert-danger{

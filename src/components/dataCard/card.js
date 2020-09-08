@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import ReactApexChart from "react-apexcharts";
 import ClipLoader from "react-spinners/ClipLoader";
-import logoChaco from "images/ISO_Mesadetrabajo_1.png";
+import logoChaco from "images/logo_chaco.png";
 import logoEscudo from "images/logo_escudo.png";
 import OptionsGraph from "constant/optionsGraphs";
 import ApiGraphsDataService from "services/ApiGraphsDataService";
-import upArrow from "images/Up_green_arrow-2.png";
-import downArrow from "images/Down_red_arrow-2.png";
+
+import upGreenArrow from "images/arrowUpGreen.png";
+import upRedArrow from "images/arrowUpRed.png";
+import downGreenArrow from "images/arrowDownGreen.png";
+import downRedArrow from "images/arrowDownRed.png";
 
 const Card = (props) => {
   const [loading, setLoading] = useState(true);
@@ -16,6 +19,7 @@ const Card = (props) => {
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
   const [arrowAndColor, setArrowAndColor] = useState("");
+  const dirOpuesta = props.dataGraph.dirOpuesta;
 
   useEffect(() => {
     dataFromApi();
@@ -48,7 +52,13 @@ const Card = (props) => {
           item[dondebuscar].toLowerCase() === quebuscar.toLowerCase()
         ) {
           if (item[ejey] !== null) {
-            EjeX.push(item[ejex]); //fecha
+            let aux = []
+            let aux2 = item[ejex]
+            if (antessubtitle !== ("VALOR AL")) {
+              aux = item[ejex].split("/")
+              aux2 = aux[1] + "/" + aux[2];
+            }
+            EjeX.push(aux2); //
             EjeY.push(
               parseFloat(
                 item[ejey]
@@ -62,13 +72,12 @@ const Card = (props) => {
             if (item[camposubtitle]) {
               namesubtitle = item[camposubtitle];
             }
+
             if (item[campovalor]) {
-              valor.push(
-                parseFloat(
-                  item[campovalor]
-                    .replace(/,/g, ".")
-                    .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
-                )
+              let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
+              valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
+                num
+              ))
               ); // valor mostrado
             }
           }
@@ -78,7 +87,13 @@ const Card = (props) => {
         item[dondebuscarOpc].toLowerCase() === quebuscarOpc.toLowerCase()
       ) {
         if (item[ejey] !== null) {
-          EjeX.push(item[ejex]); //fecha
+          let aux = []
+          let aux2 = item[ejex]
+          if (antessubtitle !== ("VALOR AL")) {
+            aux = item[ejex].split("/")
+            aux2 = aux[1] + "/" + aux[2];
+          }
+          EjeX.push(aux2); //
           EjeY.push(
             parseFloat(
               item[ejey]
@@ -93,28 +108,47 @@ const Card = (props) => {
             namesubtitle = item[camposubtitle];
           }
           if (item[campovalor]) {
-            valor.push(
-              parseFloat(
-                item[campovalor]
-                  .replace(/,/g, ".")
-                  .replace(/[&/\\#+()$~%'":*?<>{}]/g, "")
-              )
+            let num = item[campovalor].replace(/\./g, '').replace(/,/g, ".").replace(/[&/\\#+()$~%:*?<>{}]/g, "")
+            valor.push(new Intl.NumberFormat(["ban", "id"]).format(parseFloat(
+              num
+            ))
             ); // valor mostrado
           }
         }
       }
     });
-    
+
     let fechita = ""
     let d = new Date(EjeX.slice(-1))
-    if(d instanceof Date && !isNaN(d.valueOf())){
+    if (d instanceof Date && !isNaN(d.valueOf())) {
       let df = new Intl.DateTimeFormat('pt')
       fechita = df.format(d)
-    }else{
+    } else {
       fechita = EjeX.slice(-1)
     }
     //Arrow
-    setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+    let dirflecha = 0
+    if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] > EjeY.slice(-1)[0]) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+      }
+    } else if (EjeY.slice(-2)[0] < 0) {
+      if (EjeY.slice(-2)[0] < EjeY.slice(-1)[0]) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+      }
+    }
+    else {
+      setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
+      dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
+    }
     //tittle
     setTitle(antestitle + " " + nametitle + " " + despuestitle);
     //subtitle
@@ -127,16 +161,34 @@ const Card = (props) => {
         fechita
         : '')
     );
-
-
-    //valor
-    setValueView(
-      props.dataGraph.valor.antesvalor +
-      " " +
-      valor.slice(-1) +
-      " " +
-      props.dataGraph.valor.despuesvalor
-    );
+    //valor en pesos con comas $100,10
+    if (props.dataGraph.valor.antesvalor === "$" && valor.slice(-1).toString().includes(",") && !valor.slice(-1).toString().includes(".")) {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    } //valor con comas con valor negativo
+    else if (valor.slice(-1).toString().includes("-") && valor.slice(-1).toString().includes(",")) {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " -" +
+        valor.slice(-1).toString().match(/(\d*,\d{0,2})/)[0] +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      )
+    }//valor 100.000,10
+    else {
+      setValueView(
+        props.dataGraph.valor.antesvalor +
+        " " +
+        valor.slice(-1) +
+        " " +
+        props.dataGraph.valor.despuesvalor
+      );
+    }
     //grafico
     setOptions(
       OptionsGraph(
@@ -146,8 +198,15 @@ const Card = (props) => {
         props.dataGraph.nacion
       )
     );
-
     setLoading(false);
+
+    props.cargarSliderHandler({
+      titulo: antestitle + " " + nametitle + " " + despuestitle,
+      valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
+      dirOpuesta: dirOpuesta,
+      dirflecha: dirflecha.toFixed(2)
+    })
+
   };
 
   return (
@@ -204,9 +263,9 @@ const Card = (props) => {
                     <img
                       src={
                         arrowAndColor < 0
-                          ? upArrow
+                          ? (dirOpuesta) ? upRedArrow : upGreenArrow
                           : arrowAndColor > 0
-                            ? downArrow
+                            ? (dirOpuesta) ? downGreenArrow : downRedArrow
                             : ""
                       }
                       alt=""
@@ -217,9 +276,9 @@ const Card = (props) => {
                       style={{
                         color:
                           arrowAndColor < 0
-                            ? "#3bb54c"
+                            ? dirOpuesta ? "red" : "#3bb54c"
                             : arrowAndColor > 0
-                              ? "red"
+                              ? dirOpuesta ? "#3bb54c" : "red"
                               : "#5F5F5F",
                       }}
                     >
