@@ -60,20 +60,13 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json",
     title: { antestitle: '', campotitle: "Tipo", despuestitle: "" },
     subtitle: { antessubtitle: 'VARIACIÓN MENSUAL AL', camposubtitle: "", fechaSubtitle: true },
-<<<<<<< HEAD
-    valor: { antesvalor: "$", campovalor: "Indice", despuesvalor: "" },
-=======
     valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
     variable: { dondebuscar: "Tipo", quebuscar: "IPC" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: true,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   },
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/inflaci%C3%B3n_%28ipc%29.json", //IPC //Inflación (T)
@@ -88,10 +81,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: true,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   },
 
   
@@ -107,10 +97,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: true,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   },
 
   
@@ -126,10 +113,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
     
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/producto_bruto_interno_%28pbi%29.json", //PBI//Producto bruto interno (PBI)
@@ -144,10 +128,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
     
 
@@ -175,10 +156,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
     
 
@@ -206,10 +184,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
     
 
@@ -250,10 +225,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
     //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/indicador_sint%C3%A9tico_de_la_construcci%C3%B3n_%28isac%29.json", //ISAC//Indicador sintético de la construcción (ISAC)
   
@@ -268,10 +240,7 @@ export default [
       grafico: { ejex: "Fecha", ejey: "Cantidad" },
       graficoTexto: "Cantidad",
       nacion: true,
-<<<<<<< HEAD
-=======
       dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
     }, 
       
 
@@ -300,10 +269,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Cantidad" },
     graficoTexto: "Cantidad",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/valor_uva.json", //valor uva
@@ -324,20 +290,13 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json",
     title: { antestitle: 'Tasa de desocupación', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
-<<<<<<< HEAD
-    valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "" },
-=======
     valor: { antesvalor: "", campovalor: "Indice", despuesvalor: "%" },
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
     variable: { dondebuscar: "Tipo", quebuscar: "Desocupación abierta" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
     grafico: { ejex: "Fecha", ejey: "Indice" },
     graficoTexto: "Indice",
     nacion: true,
-<<<<<<< HEAD
-=======
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/tasa_de_desocupaci%C3%B3n.json", //Tasa de desocupación
@@ -358,14 +317,6 @@ export default [
     link: "https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json",
     title: { antestitle: 'Trabajadores Registrados', campotitle: "", despuestitle: "" },
     subtitle: { antessubtitle: 'VALOR TRIMESTRAL AL', camposubtitle: "", fechaSubtitle: true },
-<<<<<<< HEAD
-    valor: { antesvalor: "", campovalor: "Cantidad", despuesvalor: "" },
-    variable: { dondebuscar: "Variación interanual", quebuscar: "En miles de trabajadores" },
-    variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
-    grafico: { ejex: "Fecha", ejey: "Cantidad" },
-    graficoTexto: "Cantidad",
-    nacion: true,
-=======
     valor: { antesvalor: "", campovalor: "Variación interanual", despuesvalor: "%" },
     variable: { dondebuscar: "Dat", quebuscar: "En miles de trabajadores" },
     variableOpc: { dondebuscarOpc: "", quebuscarOpc: "" },
@@ -373,7 +324,6 @@ export default [
     graficoTexto: "Variación interanual",
     nacion: true,
     dirOpuesta: false,
->>>>>>> 205be5ad38d99006da79e437b188bc77712fed23
   }, 
 
   //"https://especialess3.lanacion.com.ar/monitor-economia-real/data/trabajadores_registrados.json", //"Dat": "En miles de trabajadores", "Cantidad": "12.034,30", tratar captura de dato diferente
