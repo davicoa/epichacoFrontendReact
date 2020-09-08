@@ -99,7 +99,7 @@ const ListView = (props) => {
     <div>
       {edit ? (
         <div>
-          <span>editando</span>
+          <span className="editando">Editando</span>
           <props.formToEdit saveToDb={editeToDb} obj={obj} />
         </div>
       ) : (

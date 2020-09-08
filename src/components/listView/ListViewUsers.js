@@ -72,13 +72,13 @@ const ListViewUsers = (props) => {
     if (window.confirm("Esta seguro que desea eliminar fecha: " + fecha)) {
       const res = await AdminService.adminDelete(props.route, id);
       if (res.status === 200) {
-        props.reload();
-        setEdit(false);
+        props.reload("test/all");
         alert.success(res.data.msg);
       } else {
         alert.error(res.data.msg);
       }
     }
+    setEdit(false);
   };
 
   const editeToDb = async (body) => {

@@ -1,25 +1,30 @@
+.navContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 245, 245, 0.938);
+  width: 100%;
+}
 .navbarContainer {
   display: flex;
   justify-content: space-around;
   height: 3em;
-  background-color: rgba(245, 245, 245, 0.938);
   align-items: center;
+  width: 72%;
 }
-
 nav {
   cursor: pointer;
   font-family: Arial;
   color: #4b4b4b;
   transition: color 0.4s ease 0s;
-  padding-left: 2em;
-  padding-right: 5em;
 }
+
 ul {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-.navbarContainer  >  ul {
+.navbarContainer > ul {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -28,10 +33,64 @@ ul {
   border-radius: 5%;
 }
 
-.navbarContainer  >  ul:hover {
-  background-color: rgba(57, 128, 221, 0.507);
+.navbarContainer > ul:hover {
+  background-color: #5cbbd1;
+  color: white;
+}
+
+.activeNavTab {
+  background-color: #5cbbd1;
+  color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s linear;
+  position: absolute;
+  padding-top: 0.5vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  left: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 60px 0px rgba(36, 36, 36, 0.137);
+  z-index: 1;
 }
 
 .activeNavTab{
-  background-color: rgba(57, 128, 221, 0.507);
+  color: white !important;
 }
+
+/* Links inside the dropdown */
+.dropdown-content span {
+  color: black;
+  padding: 1vh 30px;
+  width: 9vw;
+  display: block;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {
+  background-color: #5cbbd1;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+

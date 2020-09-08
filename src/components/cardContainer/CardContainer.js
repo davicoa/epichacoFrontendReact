@@ -19,7 +19,9 @@ const CardContainer = () => {
         const interval = setInterval(() => {
             reloadCard()
         }, 900000);
-        return () => clearInterval(interval);
+        return ( ()=>{
+            clearInterval(interval)
+         });
     }, []);
 
     

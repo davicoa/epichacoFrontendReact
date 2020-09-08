@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 5vh;
+  padding-top: 2.2vh;
   background-color:#EBEBEB;
 }
 .grid_items > div {

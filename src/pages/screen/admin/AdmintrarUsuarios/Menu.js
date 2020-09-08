@@ -17,7 +17,20 @@ const Menu = (props) => {
             props.screen("listUser");
           }}
         >
-          Usuario
+          Crear Usuario
+        </span>
+        <span
+          className={
+            active === 2
+              ? "menuProduccionprimaria activeNavTabPanel"
+              : "menuProduccionprimaria"
+          }
+          onClick={() => {
+            setAtive(2);
+            props.screen("listUserActivity");
+          }}
+        >
+          Actividad de usuarios
         </span>
       </ul>
     </nav>
