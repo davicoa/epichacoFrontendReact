@@ -131,7 +131,7 @@ const Card = (props) => {
         index = EjeY.length - 2
       }
     }
-    if (EjeY[index] < 0) {              
+    if (EjeY[index] < 0 && EjeY[EjeY.length - 1] < 0) {              
       if (Math.abs(EjeY[index]) - Math.abs(EjeY[EjeY.length - 1]) > 0) {
         setArrowAndColor(1)
         dirflecha = 1;
@@ -143,11 +143,30 @@ const Card = (props) => {
         setArrowColor(EjeY[EjeY.length - 1])
         arrowColor2 = EjeY[EjeY.length - 1]
       }
-    } else {
-      setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
-      dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
-      setArrowColor(EjeY[EjeY.length - 1])
-      arrowColor2 = EjeY[EjeY.length - 1]
+    }else if (EjeY[index] > 0 && EjeY[EjeY.length - 1] > 0) {
+      if (EjeY[EjeY.length - 1] - EjeY[index]  > 0) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
+      }
+    }else{
+      if (Math.abs(EjeY[index]) - Math.abs(EjeY[EjeY.length - 1]) < 0) {
+        setArrowAndColor(1)
+        dirflecha = 1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
+      } else {
+        setArrowAndColor(-1)
+        dirflecha = -1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
+      }
     }
 
     // carousel
@@ -253,22 +272,11 @@ const Card = (props) => {
                     <img
                       src={
                         dirOpuesta !== null ?
-                        /* arrowAndColor < 0
-                        ? (dirOpuesta) ? upRedArrow : upGreenArrow
-                        : arrowAndColor > 0
-                          ? (dirOpuesta) ? downGreenArrow : downRedArrow
-                          : ""
-                        :
-                        arrowAndColor < 0
-                          ? (dirOpuesta) ? arrowUpGray : arrowUpGray
-                          : arrowAndColor > 0
-                            ? (dirOpuesta) ? arrowDownGray : arrowDownGray : ""
-                        */
                           dirOpuesta ?
-                            arrowAndColor > 0 ? //flecha abajo
-                              arrowColor > 0 ? downRedArrow : downGreenArrow :
-                              arrowAndColor < 0 ? //flecha arriba
-                                arrowColor > 0 ? upRedArrow : upGreenArrow
+                            arrowAndColor < 0 ? //flecha abajo
+                              arrowColor < 0 ? downGreenArrow : downRedArrow :
+                              arrowAndColor > 0 ? //flecha arriba
+                                arrowColor < 0 ? upGreenArrow : upRedArrow
                                 : ""
                             :
                             arrowAndColor < 0 ? //flecha abajo

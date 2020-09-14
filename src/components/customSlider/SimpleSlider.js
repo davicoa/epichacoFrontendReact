@@ -73,10 +73,10 @@ const SimpleSlider = (props) => {
                   src={
                     element.dirOpuesta !== null ?
                       element.dirOpuesta ?
-                        element.arrowAndColor > 0 ? //flecha abajo
-                          element.arrowColor > 0 ? downRedArrow : downGreenArrow :
-                          element.arrowAndColor < 0 ? //flecha arriba
-                            element.arrowColor > 0 ? upRedArrow : upGreenArrow
+                        element.arrowAndColor < 0 ? //flecha abajo
+                          element.arrowColor < 0 ? downGreenArrow : downRedArrow :
+                          element.arrowAndColor > 0 ? //flecha arriba
+                            element.arrowColor < 0 ? upGreenArrow : upRedArrow
                             : arrowNone
                         :
                         element.arrowAndColor < 0 ? //flecha abajo
@@ -86,20 +86,6 @@ const SimpleSlider = (props) => {
                             : arrowNone
                       : element.arrowColor < 0 ? arrowDownGray : arrowUpGray
                   }
-                  /* src={
-                    element.dirOpuesta !== null ?
-                      element.dirflecha < 0
-                        ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
-                        : element.dirflecha > 0
-                          ? (element.dirOpuesta) ? downGreenArrow : downRedArrow
-                          : arrowNone
-                      : 
-                      element.dirflecha < 0
-                        ? (element.dirOpuesta) ? arrowUpGray : arrowUpGray
-                        : element.dirflecha > 0
-                          ? (element.dirOpuesta) ? arrowDownGray : arrowDownGray
-                          : arrowNone
-                  } */
                   alt=""
                   height="auto"
                   width="40%"

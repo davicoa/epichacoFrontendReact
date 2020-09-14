@@ -552,7 +552,7 @@ export default [
     grafico: { ejex: "Fecha", ejey: "Variación interanual" },
     graficoTexto: "Variación:",
     nacion: true,
-    arrow: { dirOpuesta: true, varIntAnual: false },
+    arrow: { dirOpuesta: false, varIntAnual: false },
     dateFormart: { subtitle: "MM/YYYY", graph: "MM/YYYY" },
     decimalPrecision: { maximumFractionDigits: 2, minimumFractionDigits: 2 }
   },
