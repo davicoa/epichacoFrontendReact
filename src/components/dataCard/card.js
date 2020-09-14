@@ -24,8 +24,11 @@ const Card = (props) => {
   const [subtitle, setSubtitle] = useState("");
   const [valueView, setValueView] = useState("");
   const [arrowAndColor, setArrowAndColor] = useState("");
-  const {dirOpuesta, varIntAnual} = props.dataGraph.arrow;
-  const {maximumFractionDigits, minimumFractionDigits} = props.dataGraph.decimalPrecision;
+
+  const [arrowColor, setArrowColor] = useState("");
+
+  const { dirOpuesta, varIntAnual } = props.dataGraph.arrow;
+  const { maximumFractionDigits, minimumFractionDigits } = props.dataGraph.decimalPrecision;
 
   useEffect(() => {
     dataFromApi();
@@ -65,8 +68,8 @@ const Card = (props) => {
             EjeY.push(
               parseFloat(
                 item[ejey]
-                .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
-                .replace(/,/g, ".")
+                  .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                  .replace(/,/g, ".")
               )
             ); //dato
             if (item[campotitle]) {
@@ -96,8 +99,8 @@ const Card = (props) => {
           EjeY.push(
             parseFloat(
               item[ejey]
-              .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
-              .replace(/,/g, ".")
+                .replace(/[&/\\#+()$~%'":*?<>{}.]/g, "")
+                .replace(/,/g, ".")
             )
           ); //dato
           if (item[campotitle]) {
@@ -120,32 +123,43 @@ const Card = (props) => {
 
     //   Arrow
     let dirflecha = 0
+    let arrowColor2 = 0
     let index = EjeY.length - 2
-    if(varIntAnual){
+    if (varIntAnual) {
       index = EjeX.findIndex(element => moment(element, 'DD/MM/YYYY').format("MM/YYYY") === moment(EjeX.slice(-1), 'DD/MM/YYYY').subtract(1, 'years').format("MM/YYYY"))
       if (index === -1) {
         index = EjeY.length - 2
       }
     }
     if (EjeY[index] < 0) {
-      if (EjeY[index] > EjeY[EjeY.length-1]) {
+      if (EjeY[index] > EjeY[EjeY.length - 1]) {
         setArrowAndColor(1)
         dirflecha = 1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
       } else {
         setArrowAndColor(-1)
         dirflecha = -1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
       }
     } else if (EjeY[index] < 0) {
-      if (EjeY[index] < EjeY[EjeY.length-1]) {
+      if (EjeY[index] < EjeY[EjeY.length - 1]) {
         setArrowAndColor(1)
         dirflecha = 1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
       } else {
         setArrowAndColor(-1)
         dirflecha = -1;
+        setArrowColor(EjeY[EjeY.length - 1])
+        arrowColor2 = EjeY[EjeY.length - 1]
       }
     } else {
       setArrowAndColor(Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]));
       dirflecha = Math.abs(EjeY.slice(-2)[0]) - Math.abs(EjeY.slice(-1)[0]);
+      setArrowColor(EjeY[EjeY.length - 1])
+      arrowColor2 = EjeY[EjeY.length - 1]
     }
 
     // carousel
@@ -153,8 +167,9 @@ const Card = (props) => {
       titulo: antestitle + " " + nametitle + " " + despuestitle,
       valor: props.dataGraph.valor.antesvalor + " " + valor.slice(-1) + " " + props.dataGraph.valor.despuesvalor,
       dirOpuesta: dirOpuesta,
-      dirflecha: dirflecha.toFixed(2),
-      nacion: props.dataGraph.nacion
+      arrowAndColor: dirflecha.toFixed(2),
+      nacion: props.dataGraph.nacion,
+      arrowColor: arrowColor2
     })
 
     //tittle
@@ -217,6 +232,8 @@ const Card = (props) => {
                     className="headerGraphicon"
                     src={props.dataGraph.nacion ? logoEscudo : logoChaco}
                     alt="Escudo"
+                    height={props.dataGraph.nacion ? "115%" : "90%"}
+                    width={props.dataGraph.nacion ? "auto" : "auto"}
                   ></img>
                 </div>
                 <br />
@@ -248,16 +265,19 @@ const Card = (props) => {
                     <img
                       src={
                         dirOpuesta !== null ?
-                          arrowAndColor < 0
-                            ? (dirOpuesta) ? upRedArrow : upGreenArrow
-                            : arrowAndColor > 0
-                              ? (dirOpuesta) ? downGreenArrow : downRedArrow
-                              : ""
-                          :
-                          arrowAndColor < 0
-                            ? (dirOpuesta) ? arrowUpGray : arrowUpGray
-                            : arrowAndColor > 0
-                              ? (dirOpuesta) ? arrowDownGray : arrowDownGray : ""
+                          dirOpuesta ?
+                            arrowAndColor > 0 ? //flecha abajo
+                              arrowColor > 0 ? downRedArrow : downGreenArrow :
+                              arrowAndColor < 0 ? //flecha arriba
+                                arrowColor > 0 ? upRedArrow : upGreenArrow
+                                : ""
+                            :
+                            arrowAndColor < 0 ? //flecha abajo
+                              arrowColor < 0 ? downRedArrow : downGreenArrow :
+                              arrowAndColor > 0 ? //flecha arriba
+                                arrowColor < 0 ? upRedArrow : upGreenArrow
+                                : ""
+                          : arrowColor < 0 ? arrowDownGray : arrowUpGray
                       }
                       alt=""
                       height="auto"
@@ -267,11 +287,7 @@ const Card = (props) => {
                       style={{
                         color:
                           dirOpuesta !== null ?
-                            arrowAndColor < 0
-                              ? dirOpuesta ? "red" : "#3bb54c"
-                              : arrowAndColor > 0
-                                ? dirOpuesta ? "#3bb54c" : "red"
-                                : "#5F5F5F"
+                            dirOpuesta ? arrowColor < 0 ? "#3bb54c" : "red" : arrowColor > 0 ? "#3bb54c" : "red"
                             : "#5F5F5F"
                       }}
                     >

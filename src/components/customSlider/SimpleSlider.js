@@ -14,6 +14,8 @@ import arrowDownGray from "images/arrow/arrowDownGray.png"
 import arrowUpGray from "images/arrow/arrowUpGray.png"
 
 const SimpleSlider = (props) => {
+  
+  //console.log(props.slider);
 
   const [sliderCard, setSliderCard] = useState("");
   const [toShow, setToShow] = useState(window.innerWidth <= 600 ? 2 : 6);
@@ -56,15 +58,35 @@ const SimpleSlider = (props) => {
         <div key={i}>
           <div className="sliderCardContainer"
             style={{
-              backgroundColor: (element.nacion ? "rgb(224, 245, 255, 1)" : "rgb(218, 255, 214, 1)"),
+              backgroundColor: (element.nacion ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 1)"),
             }}>
-            <div className="titleSider">
+            <div className="titleSider" style={{
+              borderBottom: '5px solid',
+              borderBottomColor: (element.nacion ? "rgba(178, 227, 251, 1)" : "rgba(187, 252, 178, 1)"),
+              borderBottomWidth: '4px',
+            }}>
               {element.titulo}
             </div>
             <div className="sliderValue">
               <div className="sValue1">
                 <img
                   src={
+                    element.dirOpuesta !== null ?
+                      element.dirOpuesta ?
+                        element.arrowAndColor > 0 ? //flecha abajo
+                          element.arrowColor > 0 ? downRedArrow : downGreenArrow :
+                          element.arrowAndColor < 0 ? //flecha arriba
+                            element.arrowColor > 0 ? upRedArrow : upGreenArrow
+                            : arrowNone
+                        :
+                        element.arrowAndColor < 0 ? //flecha abajo
+                          element.arrowColor < 0 ? downRedArrow : downGreenArrow :
+                          element.arrowAndColor > 0 ? //flecha arriba
+                            element.arrowColor < 0 ? upRedArrow : upGreenArrow
+                            : arrowNone
+                      : element.arrowColor < 0 ? arrowDownGray : arrowUpGray
+                  }
+                  /* src={
                     element.dirOpuesta !== null ?
                       element.dirflecha < 0
                         ? (element.dirOpuesta) ? upRedArrow : upGreenArrow
@@ -77,7 +99,7 @@ const SimpleSlider = (props) => {
                         : element.dirflecha > 0
                           ? (element.dirOpuesta) ? arrowDownGray : arrowDownGray
                           : arrowNone
-                  }
+                  } */
                   alt=""
                   height="auto"
                   width="40%"
@@ -87,11 +109,7 @@ const SimpleSlider = (props) => {
                 <span style={{
                   color:
                     element.dirOpuesta !== null ?
-                      element.dirflecha < 0
-                        ? element.dirOpuesta ? "red" : "#3bb54c"
-                        : element.dirflecha > 0
-                          ? element.dirOpuesta ? "#3bb54c" : "red"
-                          : "#5F5F5F"
+                      element.dirOpuesta ? element.arrowColor < 0 ? "#3bb54c" : "red" : element.arrowColor > 0 ? "#3bb54c" : "red"
                       : "#5F5F5F"
                 }}>
                   {element.valor}
@@ -105,7 +123,7 @@ const SimpleSlider = (props) => {
   }
 
   return (
-    <Slider {...settings} style={{ maxHeight: '10vh' }}>
+    <Slider {...settings} style={{ maxHeight: '10vh', width: '100%' }}>
       {sliderCard}
     </Slider>
   )
