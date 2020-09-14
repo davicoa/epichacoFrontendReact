@@ -155,8 +155,9 @@ const Card = (props) => {
         setArrowColor(EjeY[EjeY.length - 1])
         arrowColor2 = EjeY[EjeY.length - 1]
       }
-    }else{
-      if (Math.abs(EjeY[index]) - Math.abs(EjeY[EjeY.length - 1]) < 0) {
+    }else{ 
+      
+      if (EjeY[EjeY.length - 1] > 0) {
         setArrowAndColor(1)
         dirflecha = 1;
         setArrowColor(EjeY[EjeY.length - 1])
