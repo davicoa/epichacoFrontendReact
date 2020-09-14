@@ -131,20 +131,8 @@ const Card = (props) => {
         index = EjeY.length - 2
       }
     }
-    if (EjeY[index] < 0) {
-      if (EjeY[index] > EjeY[EjeY.length - 1]) {
-        setArrowAndColor(1)
-        dirflecha = 1;
-        setArrowColor(EjeY[EjeY.length - 1])
-        arrowColor2 = EjeY[EjeY.length - 1]
-      } else {
-        setArrowAndColor(-1)
-        dirflecha = -1;
-        setArrowColor(EjeY[EjeY.length - 1])
-        arrowColor2 = EjeY[EjeY.length - 1]
-      }
-    } else if (EjeY[index] < 0) {
-      if (EjeY[index] < EjeY[EjeY.length - 1]) {
+    if (EjeY[index] < 0) {              
+      if (Math.abs(EjeY[index]) - Math.abs(EjeY[EjeY.length - 1]) > 0) {
         setArrowAndColor(1)
         dirflecha = 1;
         setArrowColor(EjeY[EjeY.length - 1])
@@ -265,6 +253,17 @@ const Card = (props) => {
                     <img
                       src={
                         dirOpuesta !== null ?
+                        /* arrowAndColor < 0
+                        ? (dirOpuesta) ? upRedArrow : upGreenArrow
+                        : arrowAndColor > 0
+                          ? (dirOpuesta) ? downGreenArrow : downRedArrow
+                          : ""
+                        :
+                        arrowAndColor < 0
+                          ? (dirOpuesta) ? arrowUpGray : arrowUpGray
+                          : arrowAndColor > 0
+                            ? (dirOpuesta) ? arrowDownGray : arrowDownGray : ""
+                        */
                           dirOpuesta ?
                             arrowAndColor > 0 ? //flecha abajo
                               arrowColor > 0 ? downRedArrow : downGreenArrow :
