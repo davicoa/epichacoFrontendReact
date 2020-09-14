@@ -1,8 +1,8 @@
 import React from "react"
 import "./style.css"
-import logoMinisterio from "images/logo1.png"
-import logoChaco from "images/logo2.png"
-import logoSubsecretaria from "images/subse_empleo.png"
+import logoMinisterio from "images/logo1.svg"
+import logoChaco from "images/logo2.svg"
+import logoSubsecretaria from "images/subse_empleo.svg"
 
 const Footer = () => {
     return (
